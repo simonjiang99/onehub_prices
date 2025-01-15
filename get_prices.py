@@ -1,0 +1,54 @@
+import json
+import os
+
+import requests
+
+api_key = os.getenv("SILICONFLOW_API_KEY")
+assert api_key is not None, "SILICONFLOW_API_KEY is not set"
+
+url = "https://busy-bear.siliconflow.cn/api/v1/playground/comprehensive/all"
+headers = {"Authorization": f"Bearer {api_key}"}
+
+siliconflow_channel_type = 45  # reference https://your-oneapi-url/api/ownedby
+
+response = requests.get(url, headers=headers)
+
+# Print the response
+print(response.status_code)
+
+model_json = response.json()["data"]["models"]
+
+
+# 假设 response 是之前请求的响应对象
+with open("siliconflow_models.json", "w", encoding="utf-8") as f:
+    json.dump(model_json, f, ensure_ascii=False, indent=4)
+
+
+oneapi_price_json = []
+for model in model_json:
+    model_name = model["modelName"]
+    model_price = float(model["price"])
+    model_price_unit = model["priceUnit"]
+    if model_price_unit in ["/ M Tokens", "/ M UTF-8 bytes", "/ M px / Steps"]:
+        price_data = {
+            "model": model_name,
+            "type": "tokens",
+            "channel_type": siliconflow_channel_type,
+            "input": model_price / 1000,
+            "output": model_price / 1000,
+        }
+    elif model_price_unit in ["/ Video", "/ Image", ""]:
+        print(f"special price unit: {model_price_unit}")
+        print(f"Model Name: {model_name}, Price: {model_price} {model_price_unit}")
+
+        price_data = {
+            "model": model_name,
+            "type": "times",
+            "channel_type": siliconflow_channel_type,
+            "input": model_price,
+            "output": model_price,
+        }
+    oneapi_price_json.append(price_data)
+
+with open("oneapi_prices.json", "w", encoding="utf-8") as f:
+    json.dump({"data": oneapi_price_json}, f, ensure_ascii=False, indent=2)
