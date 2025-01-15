@@ -13,13 +13,10 @@ siliconflow_channel_type = 45  # reference https://your-oneapi-url/api/ownedby
 
 response = requests.get(url, headers=headers)
 
-# Print the response
 print(response.status_code)
 
 model_json = response.json()["data"]["models"]
 
-
-# 假设 response 是之前请求的响应对象
 with open("siliconflow_models.json", "w", encoding="utf-8") as f:
     json.dump(model_json, f, ensure_ascii=False, indent=4)
 
@@ -29,6 +26,8 @@ for model in model_json:
     model_name = model["modelName"]
     model_price = float(model["price"])
     model_price_unit = model["priceUnit"]
+    print(f"Model Name: {model_name}, Price: {model_price} {model_price_unit}")
+
     if model_price_unit in ["/ M Tokens", "/ M UTF-8 bytes", "/ M px / Steps"]:
         price_data = {
             "model": model_name,
@@ -39,7 +38,6 @@ for model in model_json:
         }
     elif model_price_unit in ["/ Video", "/ Image", ""]:
         print(f"special price unit: {model_price_unit}")
-        print(f"Model Name: {model_name}, Price: {model_price} {model_price_unit}")
 
         price_data = {
             "model": model_name,
@@ -49,6 +47,7 @@ for model in model_json:
             "output": model_price,
         }
     oneapi_price_json.append(price_data)
+    print("-" * 40)
 
 with open("oneapi_prices.json", "w", encoding="utf-8") as f:
     json.dump({"data": oneapi_price_json}, f, ensure_ascii=False, indent=2)
