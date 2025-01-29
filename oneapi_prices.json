@@ -1,6 +1,13 @@
 {
   "data": [
     {
+      "model": "deepseek-ai/Janus-Pro-7B",
+      "type": "times",
+      "channel_type": 45,
+      "input": 0.0,
+      "output": 0.0
+    },
+    {
       "model": "Qwen/QVQ-72B-Preview",
       "type": "tokens",
       "channel_type": 45,
@@ -27,6 +34,13 @@
       "channel_type": 45,
       "input": 0.00413,
       "output": 0.00413
+    },
+    {
+      "model": "tencent/HunyuanVideo-HD",
+      "type": "times",
+      "channel_type": 45,
+      "input": 2.8,
+      "output": 2.8
     },
     {
       "model": "genmo/mochi-1-preview",
@@ -118,13 +132,6 @@
       "channel_type": 45,
       "input": 0.14,
       "output": 0.14
-    },
-    {
-      "model": "TeleAI/TeleMM",
-      "type": "tokens",
-      "channel_type": 45,
-      "input": 0.00133,
-      "output": 0.00133
     },
     {
       "model": "Qwen/Qwen2.5-72B-Instruct-128K",

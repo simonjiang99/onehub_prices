@@ -1,5 +1,88 @@
 [
     {
+        "modelId": "17885302720",
+        "modelName": "deepseek-ai/Janus-Pro-7B",
+        "mf": "deepseek-ai",
+        "desc": "Janus-Pro 是一款统一理解与生成的多模态大语言模型 (MLLM)，在多模态理解和生成任务中实现了视觉编码的解耦。其架构基于 DeepSeek-LLM-7b-base。在图像生成方面，模型采用来自特定来源的 tokenizer，并支持 16 倍下采样率处理，提升了生成效率和质量。",
+        "tags": [
+            "7B"
+        ],
+        "icon": "https://sf-maas-uat-prod.oss-cn-shanghai.aliyuncs.com/Model_LOGO/DeepSeek.svg",
+        "publishTime": {
+            "seconds": 1737993600
+        },
+        "size": 7,
+        "contextLen": 0,
+        "price": "0",
+        "currency": "¥",
+        "operationLabel": [
+            "限免",
+            " 上新"
+        ],
+        "needAuth": false,
+        "onlineDemo": true,
+        "type": "image",
+        "subType": "text-to-image",
+        "DisplayName": "Janus-Pro-7B",
+        "sort": 4100,
+        "sameSeries": [],
+        "language": [],
+        "modelInfo": [
+            {
+                "Level": 0,
+                "RPM": -1,
+                "TPM": -1,
+                "IPM": 2,
+                "IPD": 400
+            },
+            {
+                "Level": 1,
+                "RPM": -1,
+                "TPM": -1,
+                "IPM": 2,
+                "IPD": 400
+            },
+            {
+                "Level": 2,
+                "RPM": -1,
+                "TPM": -1,
+                "IPM": 2,
+                "IPD": 400
+            },
+            {
+                "Level": 3,
+                "RPM": -1,
+                "TPM": -1,
+                "IPM": 2,
+                "IPD": 400
+            },
+            {
+                "Level": 4,
+                "RPM": -1,
+                "TPM": -1,
+                "IPM": 2,
+                "IPD": 400
+            },
+            {
+                "Level": 5,
+                "RPM": -1,
+                "TPM": -1,
+                "IPM": 2,
+                "IPD": 400
+            }
+        ],
+        "priceUnit": "/ Image",
+        "status": "normal",
+        "jsonModeSupport": false,
+        "functionCallSupport": false,
+        "fimCompletionSupport": false,
+        "chatPrefixCompletionSupport": false,
+        "vlm": false,
+        "onlyByChargeBalance": false,
+        "supportFT": false,
+        "targetModelName": "deepseek-ai/Janus-Pro-7B"
+    },
+    {
         "modelId": "17885302698",
         "modelName": "Qwen/QVQ-72B-Preview",
         "mf": "QVQ",
@@ -334,6 +417,88 @@
         "targetModelName": "meta-llama/Llama-3.3-70B-Instruct"
     },
     {
+        "modelId": "17885302703",
+        "modelName": "tencent/HunyuanVideo-HD",
+        "mf": "hunyuan",
+        "desc": "HunyuanVideo 是腾讯推出的开源视频生成基础模型，拥有超过 130 亿参数，是目前最大的开源视频生成模型。该模型采用统一的图像和视频生成架构，集成了数据整理、图像-视频联合模型训练和高效基础设施等关键技术。模型使用多模态大语言模型作为文本编码器，通过 3D VAE 进行空间-时间压缩，并提供提示词重写功能。根据专业人工评估结果，HunyuanVideo 在文本对齐、运动质量和视觉质量等方面的表现优于现有最先进的模型",
+        "tags": [
+            "13B"
+        ],
+        "icon": "https://sf-maas-uat-prod.oss-cn-shanghai.aliyuncs.com/Model_LOGO/hunyuan.svg",
+        "publishTime": {
+            "seconds": 1733155200
+        },
+        "size": 13,
+        "contextLen": 0,
+        "price": "2.8",
+        "currency": "¥",
+        "operationLabel": [
+            "New"
+        ],
+        "needAuth": false,
+        "onlineDemo": true,
+        "type": "video",
+        "subType": "text-to-video",
+        "DisplayName": "HunyuanVideo (HD)",
+        "sort": 3600,
+        "sameSeries": [],
+        "language": [],
+        "modelInfo": [
+            {
+                "Level": 0,
+                "RPM": -1,
+                "TPM": -1,
+                "IPM": 5,
+                "IPD": 200
+            },
+            {
+                "Level": 1,
+                "RPM": -1,
+                "TPM": -1,
+                "IPM": 5,
+                "IPD": 300
+            },
+            {
+                "Level": 2,
+                "RPM": -1,
+                "TPM": -1,
+                "IPM": 5,
+                "IPD": 400
+            },
+            {
+                "Level": 3,
+                "RPM": -1,
+                "TPM": -1,
+                "IPM": 5,
+                "IPD": 500
+            },
+            {
+                "Level": 4,
+                "RPM": -1,
+                "TPM": -1,
+                "IPM": 5,
+                "IPD": 600
+            },
+            {
+                "Level": 5,
+                "RPM": -1,
+                "TPM": -1,
+                "IPM": 5,
+                "IPD": 3000
+            }
+        ],
+        "priceUnit": "/ Video",
+        "status": "normal",
+        "jsonModeSupport": false,
+        "functionCallSupport": false,
+        "fimCompletionSupport": false,
+        "chatPrefixCompletionSupport": false,
+        "vlm": false,
+        "onlyByChargeBalance": false,
+        "supportFT": false,
+        "targetModelName": "tencent/HunyuanVideo-HD"
+    },
+    {
         "modelId": "17885302647",
         "modelName": "genmo/mochi-1-preview",
         "mf": "genmo",
@@ -431,9 +596,7 @@
         "contextLen": 0,
         "price": "0.7",
         "currency": "¥",
-        "operationLabel": [
-            "New"
-        ],
+        "operationLabel": [],
         "needAuth": false,
         "onlineDemo": true,
         "type": "video",
@@ -1389,86 +1552,6 @@
         "onlyByChargeBalance": false,
         "supportFT": false,
         "targetModelName": "Lightricks/LTX-Video"
-    },
-    {
-        "modelId": "17885302607",
-        "modelName": "TeleAI/TeleMM",
-        "mf": "DianXin",
-        "desc": "TeleMM多模态大模型是由中国电信自主研发的多模态理解大模型，能够处理文本、图像等多种模态输入，支持图像理解、图表分析等功能，为用户提供跨模态的理解服务。模型能够与用户进行多模态交互，准确理解输入内容，回答问题、协助创作，并高效提供多模态信息和灵感支持。在细粒度感知，逻辑推理等多模态任务上有出色表现",
-        "tags": [
-            "32K"
-        ],
-        "icon": "https://sf-maas-uat-prod.oss-cn-shanghai.aliyuncs.com/Model_LOGO/Property%201%3D5G.svg",
-        "publishTime": {
-            "seconds": 1730390400
-        },
-        "size": 72,
-        "contextLen": 32768,
-        "price": "1.33",
-        "currency": "¥",
-        "operationLabel": [],
-        "needAuth": false,
-        "onlineDemo": true,
-        "type": "text",
-        "subType": "chat",
-        "DisplayName": "TeleMM",
-        "sort": 2700,
-        "sameSeries": [],
-        "language": [],
-        "modelInfo": [
-            {
-                "Level": 0,
-                "RPM": 1000,
-                "TPM": 20000,
-                "IPM": -1,
-                "IPD": -1
-            },
-            {
-                "Level": 1,
-                "RPM": 1200,
-                "TPM": 30000,
-                "IPM": -1,
-                "IPD": -1
-            },
-            {
-                "Level": 2,
-                "RPM": 2000,
-                "TPM": 40000,
-                "IPM": -1,
-                "IPD": -1
-            },
-            {
-                "Level": 3,
-                "RPM": 4000,
-                "TPM": 80000,
-                "IPM": -1,
-                "IPD": -1
-            },
-            {
-                "Level": 4,
-                "RPM": 8000,
-                "TPM": 250000,
-                "IPM": -1,
-                "IPD": -1
-            },
-            {
-                "Level": 5,
-                "RPM": 10000,
-                "TPM": 1000000,
-                "IPM": -1,
-                "IPD": -1
-            }
-        ],
-        "priceUnit": "/ M Tokens",
-        "status": "normal",
-        "jsonModeSupport": false,
-        "functionCallSupport": false,
-        "fimCompletionSupport": false,
-        "chatPrefixCompletionSupport": false,
-        "vlm": true,
-        "onlyByChargeBalance": false,
-        "supportFT": false,
-        "targetModelName": "TeleAI/TeleMM"
     },
     {
         "modelId": "17885302587",
