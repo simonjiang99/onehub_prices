@@ -1,6 +1,20 @@
 {
   "data": [
     {
+      "model": "deepseek-ai/DeepSeek-R1",
+      "type": "tokens",
+      "channel_type": 45,
+      "input": 0.016,
+      "output": 0.016
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V3",
+      "type": "tokens",
+      "channel_type": 45,
+      "input": 0.002,
+      "output": 0.002
+    },
+    {
       "model": "deepseek-ai/Janus-Pro-7B",
       "type": "times",
       "channel_type": 45,
