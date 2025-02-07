@@ -1,4 +1,4 @@
-name: Run get_prices.py
+name: Run get_prices.py and commit changes
 
 on:
   schedule:
@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -23,3 +25,11 @@ jobs:
           SILICONFLOW_API_KEY: ${{ secrets.SILICONFLOW_API_KEY }}
         run: |
           python get_prices.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add oneapi_prices.json siliconflow_models.json
+          git commit -m "Auto-update price and model data"
+          git push origin master
