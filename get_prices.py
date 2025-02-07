@@ -1,25 +1,27 @@
+import http.client
 import json
 import os
-
-import requests
 
 api_key = os.getenv("SILICONFLOW_API_KEY")
 assert api_key is not None, "SILICONFLOW_API_KEY is not set"
 
-url = "https://busy-bear.siliconflow.cn/api/v1/playground/comprehensive/all"
+url = "busy-bear.siliconflow.cn"  # Note: Removed 'https://' as http.client needs the host part
+endpoint = "/api/v1/playground/comprehensive/all"
 headers = {"Authorization": f"Bearer {api_key}"}
 
 siliconflow_channel_type = 45  # reference https://your-oneapi-url/api/ownedby
 
-response = requests.get(url, headers=headers)
+conn = http.client.HTTPSConnection(url)
+conn.request("GET", endpoint, headers=headers)
 
-print(response.status_code)
+response = conn.getresponse()
+print(response.status)
 
-model_json = response.json()["data"]["models"]
+body = response.read().decode("utf-8")
+model_json = json.loads(body)["data"]["models"]
 
 with open("siliconflow_models.json", "w", encoding="utf-8") as f:
     json.dump(model_json, f, ensure_ascii=False, indent=4)
-
 
 oneapi_price_json = []
 for model in model_json:
