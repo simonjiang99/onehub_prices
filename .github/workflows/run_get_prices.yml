@@ -3,6 +3,9 @@ name: Run get_prices.py and commit changes
 on:
   schedule:
     - cron: "0 0 * * *" # 每天 UTC 时间 00:00 执行
+  push:
+    branches:
+      - master # 当 master 分支有推送时触发
   workflow_dispatch: # 允许手动触发
 
 jobs:
@@ -32,4 +35,4 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add oneapi_prices.json siliconflow_models.json
           git commit -m "Auto-update price and model data"
-          git push origin master
+          git push origin master  # 确保分支名称是 master
