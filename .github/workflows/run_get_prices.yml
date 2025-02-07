@@ -1,4 +1,4 @@
-name: Run get_prices.py and commit changes
+name: Run get_prices.py and Auto-Commit Changes
 
 on:
   schedule:
@@ -8,20 +8,29 @@ on:
       - master # 当 master 分支有推送时触发
   workflow_dispatch: # 允许手动触发
 
+permissions:
+  contents: write # 授予写入仓库的权限
+
 jobs:
-  run-script:
+  update-prices:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout Code
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: true # 确保后续步骤可以使用凭据
+          fetch-depth: 0 # 获取完整的历史记录
 
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.12" # 使用你需要的 Python 版本
+
+      # - name: Install dependencies
+      #   run: |
+      #     python -m pip install --upgrade pip
+      #     pip install -r requirements.txt  # 如果有依赖项的话
 
       - name: Run get_prices.py
         env:
@@ -29,10 +38,20 @@ jobs:
         run: |
           python get_prices.py
 
-      - name: Commit and push changes
+      - name: Set up Git Configuration
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+
+      - name: Prepare Commit
+        run: |
+          commit_messages=("Update prices: ⏰" "Refresh data: 🔄" "Renew JSON files: 🌟" "Revise prices: 📝")
+          random_msg=${commit_messages[$RANDOM % ${#commit_messages[@]}]}
+
           git add oneapi_prices.json siliconflow_models.json
-          git commit -m "Auto-update price and model data"
-          git push origin master  # 确保分支名称是 master
+          git commit -m "$random_msg - $(date '+%Y-%m-%d %H:%M:%S')" || echo "No changes to commit."
+
+      - name: Push Changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
