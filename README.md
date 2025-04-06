@@ -45,7 +45,7 @@
 
 **重要提示**：
 
-- 使用任何价格表前，请务必检查[ownedby.json](https://oaklight.github.io/onehub_prices/ownedby.json)以确保供应商 ID 与本项目版本一致
+- 使用任何价格表前，请务必检查[ownedby.json](https://raw.githubusercontent.com/Oaklight/onehub_prices/master/ownedby.json) ([jsDelivr CDN](https://cdn.jsdelivr.net/gh/Oaklight/onehub_prices@master/ownedby.json)) 以确保供应商 ID 与本项目版本一致
 - 如需使用除了 onehub 默认定义的供应商之外的价格，请确保你的`模型归属`页面与 ownedby.json 中的定义一致
 
 根据不同的使用场景选择相应的价格表：
@@ -55,31 +55,31 @@
    - 包含所有供应商的价格信息
    - 适用于需要完整价格数据的场景
    - 地址:
-     - GitHub Pages: [`https://oaklight.github.io/onehub_prices/oneapi_prices.json`](https://oaklight.github.io/onehub_prices/oneapi_prices.json)
-     - Raw GitHub: [`https://raw.githubusercontent.com/Oaklight/onehub_prices/refs/heads/master/oneapi_prices.json`](https://raw.githubusercontent.com/Oaklight/onehub_prices/refs/heads/master/oneapi_prices.json)
+     - GitHub Raw: [`https://raw.githubusercontent.com/Oaklight/onehub_prices/master/oneapi_prices.json`](https://raw.githubusercontent.com/Oaklight/onehub_prices/master/oneapi_prices.json)
+     - jsDelivr CDN: [`https://cdn.jsdelivr.net/gh/Oaklight/onehub_prices@master/oneapi_prices.json`](https://cdn.jsdelivr.net/gh/Oaklight/onehub_prices@master/oneapi_prices.json)
 
 2. **核心供应商价格表** (onehub_only_prices.json)
 
    - 仅包含供应商 id <= 1000 的核心供应商
    - 适用于只需要核心供应商价格的场景
    - 地址:
-     - GitHub Pages: [`https://oaklight.github.io/onehub_prices/onehub_only_prices.json`](https://oaklight.github.io/onehub_prices/onehub_only_prices.json)
-     - Raw GitHub: [`https://raw.githubusercontent.com/Oaklight/onehub_prices/refs/heads/master/onehub_only_prices.json`](https://raw.githubusercontent.com/Oaklight/onehub_prices/refs/heads/master/onehub_only_prices.json)
+     - GitHub Raw: [`https://raw.githubusercontent.com/Oaklight/onehub_prices/master/onehub_only_prices.json`](https://raw.githubusercontent.com/Oaklight/onehub_prices/master/onehub_only_prices.json)
+     - jsDelivr CDN: [`https://cdn.jsdelivr.net/gh/Oaklight/onehub_prices@master/onehub_only_prices.json`](https://cdn.jsdelivr.net/gh/Oaklight/onehub_prices@master/onehub_only_prices.json)
 
 3. **Siliconflow 原始价格表** (siliconflow_prices.json)
 
    - 来自 Siliconflow 官方的原始价格数据
    - 适用于需要原始价格数据的场景
    - 地址:
-     - GitHub Pages: [`https://oaklight.github.io/onehub_prices/siliconflow_prices.json`](https://oaklight.github.io/onehub_prices/siliconflow_prices.json)
-     - Raw GitHub: [`https://raw.githubusercontent.com/Oaklight/onehub_prices/refs/heads/master/siliconflow_prices.json`](https://raw.githubusercontent.com/Oaklight/onehub_prices/refs/heads/master/siliconflow_prices.json)
+     - GitHub Raw: [`https://raw.githubusercontent.com/Oaklight/onehub_prices/master/siliconflow_prices.json`](https://raw.githubusercontent.com/Oaklight/onehub_prices/master/siliconflow_prices.json)
+     - jsDelivr CDN: [`https://cdn.jsdelivr.net/gh/Oaklight/onehub_prices@master/siliconflow_prices.json`](https://cdn.jsdelivr.net/gh/Oaklight/onehub_prices@master/siliconflow_prices.json)
 
 4. **OpenRouter 原始价格表** (openrouter_prices.json)
    - 来自 OpenRouter 官方的原始价格数据
    - 适用于需要原始价格数据的场景
    - 地址:
-     - GitHub Pages: [`https://oaklight.github.io/onehub_prices/openrouter_prices.json`](https://oaklight.github.io/onehub_prices/openrouter_prices.json)
-     - Raw GitHub: [`https://raw.githubusercontent.com/Oaklight/onehub_prices/refs/heads/master/openrouter_prices.json`](https://raw.githubusercontent.com/Oaklight/onehub_prices/main/openrouter_prices.json)
+     - GitHub Raw: [`https://raw.githubusercontent.com/Oaklight/onehub_prices/master/openrouter_prices.json`](https://raw.githubusercontent.com/Oaklight/onehub_prices/master/openrouter_prices.json)
+     - jsDelivr CDN: [`https://cdn.jsdelivr.net/gh/Oaklight/onehub_prices@master/openrouter_prices.json`](https://cdn.jsdelivr.net/gh/Oaklight/onehub_prices@master/openrouter_prices.json)
 
 **使用步骤**：
 
@@ -92,15 +92,16 @@
 
 近期主要更新包括：
 
-1. **新增供应商支持**：添加了 Coreshub, Pollinations.AI, OpenRouter, Moonshot 等新供应商的价格支持
-2. **脚本改进**：
+1. **分支结构调整**：所有价格表文件已迁移至 prices 分支
+2. **新增供应商支持**：添加了 Coreshub, Pollinations.AI, OpenRouter, Moonshot 等新供应商的价格支持
+3. **脚本改进**：
    - 新增 `get_ownedby.py` 用于获取供应商归属信息
    - 改进 `get_siliconflow_prices.py` 的模型排序逻辑
    - 优化 `merge_prices.py` 生成 `onehub_only_prices.json`
-3. **价格表维护**：
+4. **价格表维护**：
    - 新增多个供应商的手动价格配置
    - 优化价格合并逻辑，确保数据一致性
-4. **自动化流程**：
+5. **自动化流程**：
    - 每日自动更新价格数据
    - 自动生成核心供应商价格表
    - 自动验证数据完整性

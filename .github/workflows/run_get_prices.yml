@@ -2,7 +2,7 @@ name: Run get_prices.py and Auto-Commit Changes
 
 on:
   schedule:
-    - cron: "0 0 * * *" # 每天 UTC 时间 00:00 执行
+    - cron: "0 */2 * * *" # 每两小时执行
   push:
     branches:
       - master # 当 master 分支有推送时触发
@@ -16,11 +16,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
+      - name: Checkout Code (master)
         uses: actions/checkout@v3
         with:
           persist-credentials: true # 确保后续步骤可以使用凭据
           fetch-depth: 0 # 获取完整的历史记录
+          ref: master # 检出master分支获取代码
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -59,7 +60,7 @@ jobs:
           commit_messages=("Update prices: ⏰" "Refresh data: 🔄" "Renew JSON files: 🌟" "Revise prices: 📝")
           random_msg=${commit_messages[$RANDOM % ${#commit_messages[@]}]}
 
-          git add oneapi_prices.json siliconflow_models.json siliconflow_prices.json ownedby.json onehub_only_prices.json openrouter_prices.json
+          git add oneapi_prices.json siliconflow_prices.json ownedby.json onehub_only_prices.json openrouter_prices.json
           git commit -m "$random_msg - $(date '+%Y-%m-%d %H:%M:%S')" || echo "No changes to commit."
 
       - name: Push Changes

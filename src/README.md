@@ -7,7 +7,7 @@
 | 脚本名称                  | 功能描述                 | 运行方式                                                                    | 输出文件                                           |
 | ------------------------- | ------------------------ | --------------------------------------------------------------------------- | -------------------------------------------------- |
 | get_ownedby.py            | 获取 ownedby 数据        | `python get_ownedby.py`                                                     | ownedby.json                                       |
-| get_siliconflow_prices.py | 获取硅基流动平台价格数据 | `export SILICONFLOW_API_KEY=your_key`<br>`python get_siliconflow_prices.py` | siliconflow_prices.json<br>siliconflow_models.json |
+| get_siliconflow_prices.py | 获取硅基流动平台价格数据 | `export SILICONFLOW_API_KEY=your_key`<br>`python get_siliconflow_prices.py` | siliconflow_prices.json<br>~~siliconflow_models.json~~ |
 | get_openrouter_prices.py  | 获取 OpenRouter 价格数据 | `python get_openrouter_prices.py`                                           | openrouter_prices.json                             |
 | merge_prices.py           | 合并所有价格数据         | `python merge_prices.py`                                                    | oneapi_prices.json<br>onehub_only_prices.json      |
 
