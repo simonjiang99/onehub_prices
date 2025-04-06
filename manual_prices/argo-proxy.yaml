@@ -17,6 +17,7 @@ models:
       input: 0
       output: 0
     argo:gpt-4o:
+      aliases: argo:gpt-4o-latest
       input: 0
       output: 0
     # reasoning models
