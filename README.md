@@ -8,10 +8,11 @@
 本项目管理多个 AI 供应商的价格信息，支持自动获取和手动维护多种来源的价格数据。包含以下价格表：
 
 1. **oneapi_prices.json**: 适用于 one-hub 的完整价格表，包含所有供应商
-2. **siliconflow_prices.json**: 来自 siliconflow 官方的原始价格数据
-3. **onehub_only_prices.json**: 仅包含供应商 id <= 1000 的核心供应商价格表
+2. **onehub_only_prices.json**: 仅包含供应商 id <= 1000 的核心供应商价格表
+3. **siliconflow_prices.json**: 来自 siliconflow 官方的原始价格数据
+4. **openrouter_prices.json**: 来自 openrouter 官方的原始价格数据
 
-所有价格数据每日自动更新，确保信息及时准确。请关注价格表最末尾的更新时间提示图标。
+所有价格数据每2小时自动更新，确保信息及时准确。请关注价格表最末尾的更新时间提示图标。
 
 项目维护者：[Oaklight](https://github.com/Oaklight)
 
@@ -92,7 +93,7 @@
 
 近期主要更新包括：
 
-1. **分支结构调整**：所有价格表文件已迁移至 prices 分支
+1. **自动刷新间隔调整为每两小时**：github action的运行时间从原来的每天一次改为每两小时一次。
 2. **新增供应商支持**：添加了 Coreshub, Pollinations.AI, OpenRouter, Moonshot 等新供应商的价格支持
 3. **脚本改进**：
    - 新增 `get_ownedby.py` 用于获取供应商归属信息
