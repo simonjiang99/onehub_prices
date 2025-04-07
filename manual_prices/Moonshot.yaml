@@ -1,33 +1,36 @@
 models:
   Moonshot:
-    moonshot-v1-128k:
-      input: 60 rmb / M
-      output: 60 rmb / M
+    # v1
+    moonshot-v1-8k:
+      input: 2 rmb / M
+      output: 10 rmb / M
     moonshot-v1-32k:
       aliases: moonshot-v1-auto
-      input: 24 rmb / M
-      output: 24 rmb / M
-    moonshot-v1-8k:
-      input: 12 rmb / M
-      output: 12 rmb / M
+      input: 5 rmb / M
+      output: 20 rmb / M
+    moonshot-v1-128k:
+      input: 10 rmb / M
+      output: 30 rmb / M
 
+    # v1 vision
     moonshot-v1-8k-vision-preview:
-      input: 12 rmb / M
-      output: 12 rmb / M
+      input: 2 rmb / M
+      output: 10 rmb / M
     moonshot-v1-32k-vision-preview:
-      input: 24 rmb / M
-      output: 24 rmb / M
+      input: 5 rmb / M
+      output: 20 rmb / M
     moonshot-v1-128k-vision-preview:
-      input: 60 rmb / M
-      output: 60 rmb / M
+      input: 10 rmb / M
+      output: 30 rmb / M
 
-    kimi-latest-128k:
-      input: 60 rmb / M
-      output: 60 rmb / M
+    # kimi latest (vision)
+    kimi-latest-8k:
+      input: 2 rmb / M
+      output: 10 rmb / M
     kimi-latest-32k:
       aliases: kimi-latest
-      input: 24 rmb / M
-      output: 24 rmb / M
-    kimi-latest-8k:
-      input: 12 rmb / M
-      output: 12 rmb / M
+      input: 5 rmb / M
+      output: 20 rmb / M
+    kimi-latest-128k:
+      input: 10 rmb / M
+      output: 30 rmb / M
