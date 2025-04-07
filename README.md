@@ -63,7 +63,6 @@
      - GitHub Raw: [`https://raw.githubusercontent.com/Oaklight/onehub_prices/master/openrouter_prices.json`](https://raw.githubusercontent.com/Oaklight/onehub_prices/master/openrouter_prices.json)
      - jsDelivr CDN: [`https://cdn.jsdelivr.net/gh/Oaklight/onehub_prices@master/openrouter_prices.json`](https://cdn.jsdelivr.net/gh/Oaklight/onehub_prices@master/openrouter_prices.json)
 
-
 ### 价格同步指导
 
 #### 通过 OneHub 运营界面更新
@@ -77,7 +76,7 @@
 
 #### 通过 OneHub API 脚本更新
 
-[`pricing_sync.py`](src/pricing_sync.py) 是一个用于同步价格数据的脚本。可选择json文件或url地址作为数据源。
+[`pricing_sync.py`](src/pricing_sync.py) 是一个用于同步价格数据的脚本。可选择 json 文件或 url 地址作为数据源。
 
 #### 使用步骤
 
@@ -90,7 +89,13 @@
 2. 运行脚本以同步价格数据：
 
    ```bash
-   python src/pricing_sync.py [--json_file=path/to/json/file] [--json_url=url]
+   python src/pricing_sync.py [--json_file=path/to/json] [--json_url=url/to/json]
+   ```
+
+   示例：
+
+   ```bash
+   python src/pricing_sync.py --json_url=https://cdn.jsdelivr.net/gh/Oaklight/onehub_prices@master/oneapi_prices.json
    ```
 
    如果未指定 `--json_file` 或 `--json_url` 参数，脚本将默认加载 `./oneapi_prices.json`。
@@ -104,6 +109,7 @@
 - `pricing_sync.py` 脚本支持通过以下环境变量进行配置，并支持以下参数：
   - `--json_file`: 指定 JSON 文件路径
   - `--json_url`: 指定 JSON 数据的 URL
+  - 优先使用 url，其次使用文件
   - `ONEHUB_URL`: API 基础 URL
   - `ONEHUB_ADMIN_TOKEN`: 管理员认证令牌
   - `SYNC_PRICE_OVERWRITE`: 是否覆盖现有价格（默认为 `True`）
@@ -115,9 +121,8 @@ export ONEHUB_URL="https://onehub.your.link" # 仅基础url,不要附带api subp
 export ONEHUB_ADMIN_TOKEN="your_admin_token" # 网页管理后台获得
 export SYNC_PRICE_OVERWRITE=True # 是否覆盖现有价格
 
-python src/pricing_sync.py [--json_file=./oneapi_prices.json]
+python src/pricing_sync.py [--json_file=./oneapi_prices.json] [--json_url=https://cdn.jsdelivr.net/gh/Oaklight/onehub_prices@master/oneapi_prices.json]
 ```
-
 
 ## 更新说明
 
@@ -129,6 +134,7 @@ python src/pricing_sync.py [--json_file=./oneapi_prices.json]
    - 新增 `get_ownedby.py` 用于获取供应商归属信息
    - 改进 `get_siliconflow_prices.py` 的模型排序逻辑
    - 优化 `merge_prices.py` 生成 `onehub_only_prices.json`
+   - 新增 `pricing_sync.py` 用于同步价格数据，支持通过 JSON 文件或 URL 数据源
 4. **价格表维护**：
    - 新增多个供应商的手动价格配置
    - 优化价格合并逻辑，确保数据一致性

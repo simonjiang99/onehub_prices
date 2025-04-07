@@ -4,17 +4,19 @@
 
 ## 脚本功能概览
 
-| 脚本名称                  | 功能描述                 | 运行方式                                                                    | 输出文件                                               |
-| ------------------------- | ------------------------ | --------------------------------------------------------------------------- | ------------------------------------------------------ |
-| get_ownedby.py            | 获取 ownedby 数据        | `python get_ownedby.py`                                                     | ownedby.json                                           |
-| get_siliconflow_prices.py | 获取硅基流动平台价格数据 | `export SILICONFLOW_API_KEY=your_key`<br>`python get_siliconflow_prices.py` | siliconflow_prices.json<br>~~siliconflow_models.json~~ |
-| get_openrouter_prices.py  | 获取 OpenRouter 价格数据 | `python get_openrouter_prices.py`                                           | openrouter_prices.json                                 |
-| merge_prices.py           | 合并所有价格数据         | `python merge_prices.py`                                                    | oneapi_prices.json<br>onehub_only_prices.json          |
-| pricing_sync.py           | 同步价格数据             | `python pricing_sync.py [--json_file=path/to/json/file] [--json_url=url]` | 更新后的价格表文件                                     |
+| 脚本名称                  | 功能描述                 | 运行方式                                                                     | 输出文件                                               |
+| ------------------------- | ------------------------ | ---------------------------------------------------------------------------- | ------------------------------------------------------ |
+| get_ownedby.py            | 获取 ownedby 数据        | `python get_ownedby.py`                                                      | ownedby.json                                           |
+| get_siliconflow_prices.py | 获取硅基流动平台价格数据 | `export SILICONFLOW_API_KEY=your_key`<br>`python get_siliconflow_prices.py`  | siliconflow_prices.json<br>~~siliconflow_models.json~~ |
+| get_openrouter_prices.py  | 获取 OpenRouter 价格数据 | `python get_openrouter_prices.py`                                            | openrouter_prices.json                                 |
+| merge_prices.py           | 合并所有价格数据         | `python merge_prices.py`                                                     | oneapi_prices.json<br>onehub_only_prices.json          |
+| pricing_sync.py           | 同步价格数据             | `python pricing_sync.py [--json_file=path/to/json] [--json_url=url/to/json]` | 更新后的价格表文件                                     |
 
 Note: `pricing_sync.py` 脚本支持通过以下环境变量进行配置，并支持以下参数：
+
 - `--json_file`: 指定 JSON 文件路径
 - `--json_url`: 指定 JSON 数据的 URL
+- 优先使用 url，其次使用文件
 
 - `ONEHUB_URL`: API 基础 URL
 - `ONEHUB_ADMIN_TOKEN`: 管理员认证令牌
@@ -38,6 +40,16 @@ python get_ownedby.py
 python get_siliconflow_prices.py
 python get_openrouter_prices.py
 python merge_prices.py
+```
+
+### 价格同步流程
+
+```bash
+export ONEHUB_URL="https://onehub.your.link" # 仅基础url,不要附带api subpath
+export ONEHUB_ADMIN_TOKEN="your_admin_token" # 网页管理后台获得
+export SYNC_PRICE_OVERWRITE=True # 是否覆盖现有价格
+
+python src/pricing_sync.py [--json_file=./oneapi_prices.json] [--json_url=https://cdn.jsdelivr.net/gh/Oaklight/onehub_prices@master/oneapi_prices.json]
 ```
 
 ### 自动执行
