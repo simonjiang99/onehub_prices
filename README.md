@@ -12,37 +12,18 @@
 3. **siliconflow_prices.json**: 来自 siliconflow 官方的原始价格数据
 4. **openrouter_prices.json**: 来自 openrouter 官方的原始价格数据
 
-所有价格数据每2小时自动更新，确保信息及时准确。请关注价格表最末尾的更新时间提示图标。
+所有价格数据每 2 小时自动更新，确保信息及时准确。请关注价格表最末尾的更新时间提示图标。
 
 项目维护者：[Oaklight](https://github.com/Oaklight)
 
+## 目录
+
+1. [主要文件说明](#主要文件说明)
+2. [价格同步指导](#价格同步指导)
+   - [通过 OneHub 运营界面更新](#通过-onehub-运营界面更新)
+   - [通过 OneHub API 脚本更新](#通过-onehub-api-脚本更新)
+
 ## 主要文件说明
-
-- `oneapi_prices.json`: 适用于 one-hub 的完整价格表 \
-  ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/Oaklight/onehub_prices/master?path=oneapi_prices.json&display_timestamp=author&style=flat-square)
-- `onehub_only_prices.json`: 仅包含供应商 id <= 1000 的核心供应商价格表 \
-  ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/Oaklight/onehub_prices/master?path=onehub_only_prices.json&display_timestamp=author&style=flat-square)
-- `openrouter_prices.json`: 来自 OpenRouter 官方的原始价格数据 \
-  ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/Oaklight/onehub_prices/master?path=openrouter_prices.json&display_timestamp=author&style=flat-square)
-- `siliconflow_prices.json`: 来自 siliconflow 官方的原始价格数据 \
-  ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/Oaklight/onehub_prices/master?path=siliconflow_prices.json&display_timestamp=author&style=flat-square)
-- `manual_prices/`目录: 包含各供应商的独立价格文件，包括 \
-  ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/Oaklight/onehub_prices/master?path=manual_prices&display_timestamp=author&style=flat-square)
-  - 阿里云百炼
-  - 零一万物
-  - 字节火山引擎
-  - Baidu
-  - Deepseek
-  - Google Gemini
-  - MiniMax
-  - Moonshot
-  - OpenRouter
-  - Pollinations.AI
-  - Zhipu
-  - 腾讯混元
-  - 等
-
-## 使用说明
 
 **重要提示**：
 
@@ -82,6 +63,11 @@
      - GitHub Raw: [`https://raw.githubusercontent.com/Oaklight/onehub_prices/master/openrouter_prices.json`](https://raw.githubusercontent.com/Oaklight/onehub_prices/master/openrouter_prices.json)
      - jsDelivr CDN: [`https://cdn.jsdelivr.net/gh/Oaklight/onehub_prices@master/openrouter_prices.json`](https://cdn.jsdelivr.net/gh/Oaklight/onehub_prices@master/openrouter_prices.json)
 
+
+### 价格同步指导
+
+#### 通过 OneHub 运营界面更新
+
 **使用步骤**：
 
 1. 进入`运营 -> 模型价格 -> 更新价格`
@@ -89,11 +75,55 @@
 3. 点击`获取数据`
 4. 按需选择`覆盖数据`或`仅添加新增`
 
+#### 通过 OneHub API 脚本更新
+
+[`pricing_sync.py`](src/pricing_sync.py) 是一个用于同步价格数据的脚本。可选择json文件或url地址作为数据源。
+
+#### 使用步骤
+
+1. 确保已安装依赖项：
+
+   ```bash
+   pip install requests
+   ```
+
+2. 运行脚本以同步价格数据：
+
+   ```bash
+   python src/pricing_sync.py [--json_file=path/to/json/file] [--json_url=url]
+   ```
+
+   如果未指定 `--json_file` 或 `--json_url` 参数，脚本将默认加载 `./oneapi_prices.json`。
+
+3. 检查生成的价格表文件是否更新成功。
+
+#### 注意事项
+
+- 请确保网络连接正常，以便脚本能够访问外部 API。
+- 如果需要手动调整价格数据，请编辑 `manual_prices/` 目录中的 YAML 文件。
+- `pricing_sync.py` 脚本支持通过以下环境变量进行配置，并支持以下参数：
+  - `--json_file`: 指定 JSON 文件路径
+  - `--json_url`: 指定 JSON 数据的 URL
+  - `ONEHUB_URL`: API 基础 URL
+  - `ONEHUB_ADMIN_TOKEN`: 管理员认证令牌
+  - `SYNC_PRICE_OVERWRITE`: 是否覆盖现有价格（默认为 `True`）
+
+例如
+
+```bash
+export ONEHUB_URL="https://onehub.your.link" # 仅基础url,不要附带api subpath
+export ONEHUB_ADMIN_TOKEN="your_admin_token" # 网页管理后台获得
+export SYNC_PRICE_OVERWRITE=True # 是否覆盖现有价格
+
+python src/pricing_sync.py [--json_file=./oneapi_prices.json]
+```
+
+
 ## 更新说明
 
 近期主要更新包括：
 
-1. **自动刷新间隔调整为每两小时**：github action的运行时间从原来的每天一次改为每两小时一次。
+1. **自动刷新间隔调整为每两小时**：github action 的运行时间从原来的每天一次改为每两小时一次。
 2. **新增供应商支持**：添加了 Coreshub, Pollinations.AI, OpenRouter, Moonshot 等新供应商的价格支持
 3. **脚本改进**：
    - 新增 `get_ownedby.py` 用于获取供应商归属信息

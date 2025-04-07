@@ -4,18 +4,27 @@
 
 ## 脚本功能概览
 
-| 脚本名称                  | 功能描述                 | 运行方式                                                                    | 输出文件                                           |
-| ------------------------- | ------------------------ | --------------------------------------------------------------------------- | -------------------------------------------------- |
-| get_ownedby.py            | 获取 ownedby 数据        | `python get_ownedby.py`                                                     | ownedby.json                                       |
+| 脚本名称                  | 功能描述                 | 运行方式                                                                    | 输出文件                                               |
+| ------------------------- | ------------------------ | --------------------------------------------------------------------------- | ------------------------------------------------------ |
+| get_ownedby.py            | 获取 ownedby 数据        | `python get_ownedby.py`                                                     | ownedby.json                                           |
 | get_siliconflow_prices.py | 获取硅基流动平台价格数据 | `export SILICONFLOW_API_KEY=your_key`<br>`python get_siliconflow_prices.py` | siliconflow_prices.json<br>~~siliconflow_models.json~~ |
-| get_openrouter_prices.py  | 获取 OpenRouter 价格数据 | `python get_openrouter_prices.py`                                           | openrouter_prices.json                             |
-| merge_prices.py           | 合并所有价格数据         | `python merge_prices.py`                                                    | oneapi_prices.json<br>onehub_only_prices.json      |
+| get_openrouter_prices.py  | 获取 OpenRouter 价格数据 | `python get_openrouter_prices.py`                                           | openrouter_prices.json                                 |
+| merge_prices.py           | 合并所有价格数据         | `python merge_prices.py`                                                    | oneapi_prices.json<br>onehub_only_prices.json          |
+| pricing_sync.py           | 同步价格数据             | `python pricing_sync.py [--json_file=path/to/json/file] [--json_url=url]` | 更新后的价格表文件                                     |
+
+Note: `pricing_sync.py` 脚本支持通过以下环境变量进行配置，并支持以下参数：
+- `--json_file`: 指定 JSON 文件路径
+- `--json_url`: 指定 JSON 数据的 URL
+
+- `ONEHUB_URL`: API 基础 URL
+- `ONEHUB_ADMIN_TOKEN`: 管理员认证令牌
+- `SYNC_PRICE_OVERWRITE`: 是否覆盖现有价格（默认为 `True`）
 
 ## 详细使用说明
 
 ### 环境准备
 
-1. 最低要求 Python 3.6+ （github action需要更高版本，目前使用3.12）
+1. 最低要求 Python 3.6+ （github action 需要更高版本，目前使用 3.12）
 2. 安装依赖: `pip install -r ../requirements.txt`
 
 ### 手动执行流程
