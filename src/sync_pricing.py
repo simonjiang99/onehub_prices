@@ -1,8 +1,14 @@
 import argparse
 import json
 import os
+import sys
 
 import requests
+
+_current_dir = os.path.abspath(os.path.dirname(__file__))
+sys.path.extend([_current_dir])
+
+from utils import get_channel_id_mapping
 
 
 def sync_pricing(
@@ -79,6 +85,8 @@ def main() -> None:
 
     sync_pricing(API_URL, ADMIN_TOKEN, prices, OVERWRITE)
 
+    # download the latest ownedby.json to local for git purpose
+    get_channel_id_mapping(save_to_file=True)
 
 if __name__ == "__main__":
     main()

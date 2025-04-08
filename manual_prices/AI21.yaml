@@ -1,0 +1,14 @@
+models:
+  AI21:
+    jamba-large:
+      aliases:
+        - jamba-large-1.6
+        - jamba-large-1.6-2025-03
+      input: 0.2 usd / M
+      output: 0.4 usd / M
+    jamba-mini:
+      aliases:
+        - jamba-mini-1.6
+        - jamba-mini-1.6-2025-03
+      input: 2 usd / M
+      output: 8 usd / M

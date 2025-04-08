@@ -1,0 +1,15 @@
+models:
+  InternLM:
+    internlm3-latest:
+      aliases: internlm3-8b-instruct
+      input: 0
+      output: 0
+    internlm2.5-latest:
+      input: 0
+      output: 0
+    internvl-latest:
+      aliases:
+        - internvl2.5-78b
+        - internvl2.5-latest
+      input: 0
+      output: 0
