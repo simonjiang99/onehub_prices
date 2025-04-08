@@ -18,11 +18,12 @@ def get_channel_id_mapping(save_to_file=False):
                 str(k): v
                 for k, v in sorted(data["data"].items(), key=lambda item: int(item[0]))
             }
-            data["data"] = sorted_data
+            result = {}
+            result["data"] = sorted_data
 
             # 保存排序后的 JSON 数据到文件
             with open("ownedby.json", "w", encoding="utf-8") as f:
-                json.dump(data, f, indent=2, ensure_ascii=False)
+                json.dump(result, f, indent=2, ensure_ascii=False)
         else:
             mapping = {}
             for key, value in data["data"].items():
