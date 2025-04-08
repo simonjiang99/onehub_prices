@@ -11,6 +11,7 @@
 | get_openrouter_prices.py  | 获取 OpenRouter 价格数据 | `python get_openrouter_prices.py`                                            | openrouter_prices.json                                 |
 | merge_prices.py           | 合并所有价格数据         | `python merge_prices.py`                                                     | oneapi_prices.json<br>onehub_only_prices.json          |
 | sync_pricing.py           | 同步价格数据             | `python sync_pricing.py [--json_file=path/to/json] [--json_url=url/to/json]` | 更新后的价格表文件                                     |
+| sync_ownedby.py           | 同步 ownedby 数据        | `python sync_ownedby.py [--json_file=path/to/json] [--json_url=url/to/json]` | 更新后的 ownedby 表文件                                |
 
 Note: `sync_pricing.py` 脚本支持通过以下环境变量进行配置，并支持以下参数：
 
@@ -42,7 +43,18 @@ python get_openrouter_prices.py
 python merge_prices.py
 ```
 
-### 价格同步流程
+### 数据同步流程
+
+#### 同步 ownedby 数据
+
+```bash
+export ONEHUB_URL="https://onehub.your.link" # 仅基础url,不要附带api subpath
+export ONEHUB_ADMIN_TOKEN="your_admin_token" # 网页管理后台获得
+
+python src/sync_ownedby.py [--json_file=./ownedby.json] [--json_url=https://cdn.jsdelivr.net/gh/Oaklight/onehub_prices@master/ownedby.json]
+```
+
+#### 同步价格数据
 
 ```bash
 export ONEHUB_URL="https://onehub.your.link" # 仅基础url,不要附带api subpath

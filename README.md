@@ -86,7 +86,23 @@
    pip install requests
    ```
 
-2. 运行脚本以同步价格数据：
+2. 运行脚本以同步 ownedby 数据：
+
+   ```bash
+   python src/sync_ownedby.py [--json_file=path/to/json] [--json_url=url/to/json]
+   ```
+
+   示例：
+
+   ```bash
+   python src/sync_ownedby.py --json_url=https://cdn.jsdelivr.net/gh/Oaklight/onehub_prices@master/ownedby.json
+   ```
+
+   如果未指定 `--json_file` 或 `--json_url` 参数，脚本将默认加载 `./ownedby.json`。
+
+3. 检查生成的 ownedby 表文件是否更新成功。
+
+4. 运行脚本以同步价格数据：
 
    ```bash
    python src/sync_pricing.py [--json_file=path/to/json] [--json_url=url/to/json]
@@ -100,7 +116,7 @@
 
    如果未指定 `--json_file` 或 `--json_url` 参数，脚本将默认加载 `./oneapi_prices.json`。
 
-3. 检查生成的价格表文件是否更新成功。
+5. 检查生成的价格表文件是否更新成功。
 
 #### 注意事项
 
@@ -135,6 +151,7 @@ python src/sync_pricing.py [--json_file=./oneapi_prices.json] [--json_url=https:
    - 改进 `get_siliconflow_prices.py` 的模型排序逻辑
    - 优化 `merge_prices.py` 生成 `onehub_only_prices.json`
    - 新增 `sync_pricing.py` 用于同步价格数据，支持通过 JSON 文件或 URL 数据源
+   - 新增 `sync_ownedby.py` 用于同步 ownedby 数据，支持通过 JSON 文件或 URL 数据源
 4. **价格表维护**：
    - 新增多个供应商的手动价格配置
    - 优化价格合并逻辑，确保数据一致性
