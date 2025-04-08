@@ -77,7 +77,35 @@ jobs:
           git add oneapi_prices.json siliconflow_prices.json ownedby.json onehub_only_prices.json openrouter_prices.json
           git commit -m "$random_msg - $(date '+%Y-%m-%d %H:%M:%S')" || echo "No changes to commit."
 
-      - name: Push Changes
+      - name: Copy Results to Temporary Directory
+        run: |
+          mkdir -p temp_results
+          cp oneapi_prices.json siliconflow_prices.json ownedby.json onehub_only_prices.json openrouter_prices.json temp_results/
+
+      - name: Checkout or Create Orphan Branch (prices)
+        run: |
+          git checkout --orphan prices
+          git rm -rf .
+
+      - name: Sync Remote Branch
+        run: |
+          git fetch origin prices || echo "Remote branch prices does not exist."
+          git reset --hard origin/prices || echo "No remote branch to reset."
+
+      - name: Copy Results to Target Branch
+        run: |
+          cp -r temp_results/* .
+
+      - name: Prepare Commit for Target Branch
+        run: |
+          commit_messages=("Update results: ⏰" "Refresh results: 🔄" "Renew results: 🌟" "Revise results: 📝")
+          random_msg=${commit_messages[$RANDOM % ${#commit_messages[@]}]}
+
+          git add oneapi_prices.json siliconflow_prices.json ownedby.json onehub_only_prices.json openrouter_prices.json
+          git commit -m "$random_msg - $(date '+%Y-%m-%d %H:%M:%S')" || echo "No changes to commit."
+
+      - name: Push Changes to Target Branch
         uses: ad-m/github-push-action@v0.6.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: prices
