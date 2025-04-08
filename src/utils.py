@@ -13,7 +13,14 @@ def get_channel_id_mapping(save_to_file=False):
         data = response.json()
 
         if save_to_file:
-            # 保存JSON数据到文件
+            # 对数据的 key 按数值排序
+            sorted_data = {
+                str(k): v
+                for k, v in sorted(data["data"].items(), key=lambda item: int(item[0]))
+            }
+            data["data"] = sorted_data
+
+            # 保存排序后的 JSON 数据到文件
             with open("ownedby.json", "w", encoding="utf-8") as f:
                 json.dump(data, f, indent=2, ensure_ascii=False)
         else:
