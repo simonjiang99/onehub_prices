@@ -3,14 +3,14 @@ import json
 import os
 from utils import yaml_to_json, integrate_prices
 
-api_key = os.getenv("SILICONFLOW_API_KEY")
+api_key: str = os.getenv("SILICONFLOW_API_KEY")
 assert api_key is not None, "SILICONFLOW_API_KEY is not set"
 
 url = "busy-bear.siliconflow.cn"  # Note: Removed 'https://' as http.client needs the host part
 endpoint = "/api/v1/playground/comprehensive/all"
 headers = {"Authorization": f"Bearer {api_key}"}
 
-siliconflow_channel_type = 45  # reference https://your-oneapi-url/api/ownedby
+siliconflow_channel_type: int = 45  # reference https://your-oneapi-url/api/ownedby
 
 conn = http.client.HTTPSConnection(url)
 conn.request("GET", endpoint, headers=headers)

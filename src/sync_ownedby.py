@@ -10,7 +10,16 @@ import yaml
 def load_ownedby(json_file_path: str = None, url: str = None) -> List:
     """
     Load data from either a local JSON file or a URL.
-    One of `json_file_path` or `url` must be provided.
+
+    Args:
+        json_file_path (str, optional): Path to the local JSON file.
+        url (str, optional): URL to fetch JSON data from.
+
+    Returns:
+        List: A list of ownedby data.
+
+    Raises:
+        ValueError: If neither `json_file_path` nor `url` is provided.
     """
     if not json_file_path and not url:
         raise ValueError("Either `json_file_path` or `url` must be provided.")
@@ -41,12 +50,15 @@ def update_ownedby(
     ownedby_manual: Dict[str, Dict[str, str]],
 ) -> Dict[str, List]:
     """
-    Compare original and manual versions and derive a list of to_delete and to_add
-    if an entry is not in original, it's to_add
-    if an entry in original is not in manual, it's to_delete
-    if an entry is in both, compare the values and if they are different, it's to_delete and to_add
-    """
+    Compare original and manual versions and derive a list of to_delete and to_add.
 
+    Args:
+        ownedby_original (Dict[str, Dict[str, str]]): Original ownedby data.
+        ownedby_manual (Dict[str, Dict[str, str]]): Manual ownedby data.
+
+    Returns:
+        Dict[str, List]: A dictionary containing lists of entries to delete and add.
+    """
     to_delete = []
     to_add = []
 
@@ -72,13 +84,17 @@ def update_ownedby(
     return {"to_delete": to_delete, "to_add": to_add}
 
 
-def delete_ownedby(api_url, admin_token, ownedby_id):
+def delete_ownedby(api_url: str, admin_token: str, ownedby_id: str) -> None:
     """
     Sends a DELETE request to the ownedby endpoint to delete data.
 
-    :param api_url: Base URL of the API (e.g., 'http://localhost:8080/api/model_ownedby')
-    :param admin_token: Admin authentication token
-    :param ownedby_id: ID of the ownedby entry to delete
+    Args:
+        api_url (str): Base URL of the API (e.g., 'http://localhost:8080/api/model_ownedby').
+        admin_token (str): Admin authentication token.
+        ownedby_id (str): ID of the ownedby entry to delete.
+
+    Returns:
+        None
     """
     headers = {
         "Authorization": f"Bearer {admin_token}",
@@ -91,13 +107,17 @@ def delete_ownedby(api_url, admin_token, ownedby_id):
         print("Delete failed:", response.status_code, response.text)
 
 
-def add_ownedby(api_url, admin_token, ownedby_data):
+def add_ownedby(api_url: str, admin_token: str, ownedby_data: Dict) -> None:
     """
     Sends a POST request to the ownedby endpoint to add data.
 
-    :param api_url: Base URL of the API (e.g., 'http://localhost:8080/api/model_ownedby')
-    :param admin_token: Admin authentication token
-    :param ownedby_data: Dictionary containing ownedby data to add
+    Args:
+        api_url (str): Base URL of the API (e.g., 'http://localhost:8080/api/model_ownedby').
+        admin_token (str): Admin authentication token.
+        ownedby_data (Dict): Dictionary containing ownedby data to add.
+
+    Returns:
+        None
     """
     headers = {
         "Authorization": f"Bearer {admin_token}",

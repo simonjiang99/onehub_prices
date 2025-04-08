@@ -10,6 +10,25 @@ sys.path.extend([_current_dir])
 from utils import yaml_to_json, integrate_prices
 
 
+def filter_onehub_only_prices(prices: dict) -> dict:
+    """
+    Filter prices to only include suppliers with id <= 1000.
+
+    Args:
+        prices (dict): Dictionary containing price data.
+
+    Returns:
+        dict: Filtered price data.
+    """
+    return {
+        "data": [
+            item
+            for item in prices["data"]
+            if isinstance(item["channel_type"], int) and item["channel_type"] <= 1000
+        ]
+    }
+
+
 if __name__ == "__main__":
     # 加载所有手工定价表格
     yaml_dir_path = "manual_prices"
@@ -48,17 +67,6 @@ if __name__ == "__main__":
 
     # 集成 provider 的价格，确保手动价格优先
     final_prices = integrate_prices(integrated_prices, upstream_martialbe_onehub_prices)
-
-    def filter_onehub_only_prices(prices):
-        """Filter prices to only include suppliers with id <= 1000"""
-        return {
-            "data": [
-                item
-                for item in prices["data"]
-                if isinstance(item["channel_type"], int)
-                and item["channel_type"] <= 1000
-            ]
-        }
 
     # 将集成后的价格数据保存到 oneapi_prices.json 文件
     with open("oneapi_prices.json", "w", encoding="utf-8") as file:

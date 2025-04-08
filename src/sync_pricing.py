@@ -5,14 +5,20 @@ import os
 import requests
 
 
-def sync_pricing(api_url, admin_token, prices, overwrite=False):
+def sync_pricing(
+    api_url: str, admin_token: str, prices: list, overwrite: bool = False
+) -> None:
     """
     Sends a POST request to the syncPricing endpoint to update pricing data.
 
-    :param api_url: Base URL of the API (e.g., 'http://localhost:8080/api/prices/sync')
-    :param admin_token: Admin authentication token
-    :param prices: List of price objects to sync
-    :param overwrite: Whether to overwrite existing prices (default: False)
+    Args:
+        api_url (str): Base URL of the API (e.g., 'http://localhost:8080/api/prices/sync').
+        admin_token (str): Admin authentication token.
+        prices (list): List of price objects to sync.
+        overwrite (bool, optional): Whether to overwrite existing prices (default: False).
+
+    Returns:
+        None
     """
     headers = {
         "Authorization": f"Bearer {admin_token}",
@@ -28,7 +34,7 @@ def sync_pricing(api_url, admin_token, prices, overwrite=False):
 
 
 # Example usage
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(description="Sync pricing data.")
     parser.add_argument(
         "--json_file",

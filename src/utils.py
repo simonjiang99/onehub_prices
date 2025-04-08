@@ -5,7 +5,7 @@ import json
 import yaml
 
 
-def get_channel_id_mapping(save_to_file=False):
+def get_channel_id_mapping(save_to_file: bool = False) -> dict:
     try:
         # 发送请求获取数据
         response = requests.get("https://oneapi.service.oaklight.cn/api/ownedby")
@@ -37,9 +37,18 @@ def get_channel_id_mapping(save_to_file=False):
     return {}
 
 
-def load_yaml_from_directory(directory_path, file_name=None):
-    """从目录中加载并合并 YAML 文件，同时处理重复项，并确保 'oaklight-load-balancer.yaml' 最后应用。
-    如果传入 file_name 参数，则只处理该文件。
+def load_yaml_from_directory(directory_path: str, file_name: str = None) -> dict:
+    """
+    Load and merge YAML files from a directory, handling duplicates and ensuring
+    'oaklight-load-balancer.yaml' is applied last. If `file_name` is provided,
+    only process that file.
+
+    Args:
+        directory_path (str): Path to the directory containing YAML files.
+        file_name (str, optional): Specific file name to process.
+
+    Returns:
+        dict: Merged YAML data.
     """
     yaml_data = {"models": {}}
     special_file = "oaklight-load-balancer.yaml"
@@ -85,7 +94,7 @@ def load_yaml_from_directory(directory_path, file_name=None):
     return yaml_data
 
 
-def convert_price(price_str):
+def convert_price(price_str: str) -> float:
     # 初始化价格和缩放因子
     price = 0
     scale_factor = 1
@@ -128,9 +137,17 @@ def convert_price(price_str):
     return price / scale_factor
 
 
-def yaml_to_json(directory_path, file_name=None):
-    """将目录中的 YAML 数据转换为 JSON 格式，同时处理别名和价格转换。
-    如果指定 file_name，则只处理该 YAML 文件。
+def yaml_to_json(directory_path: str, file_name: str = None) -> dict:
+    """
+    Convert YAML data in a directory to JSON format, handling aliases and price conversion.
+    If `file_name` is specified, only process that YAML file.
+
+    Args:
+        directory_path (str): Path to the directory containing YAML files.
+        file_name (str, optional): Specific file name to process.
+
+    Returns:
+        dict: Converted JSON data.
     """
 
     def create_model_entry(
@@ -196,7 +213,7 @@ def yaml_to_json(directory_path, file_name=None):
 
 
 # Function to sort the prices list based on channel_type (primary) and model (secondary)
-def sort_prices(prices):
+def sort_prices(prices: dict) -> dict:
     print(prices)
     prices["data"] = sorted(
         prices["data"], key=lambda x: (x["channel_type"], x["model"])
@@ -205,7 +222,7 @@ def sort_prices(prices):
 
 
 # Updated integrate_prices function to include sorting
-def integrate_prices(primary_prices, secondary_prices):
+def integrate_prices(primary_prices: dict, secondary_prices: dict) -> dict:
     # 创建一个字典，用于快速查找 primary_prices 中的条目，键为 (model, channel_type) 元组
     primary_dict = {
         (item["model"], item["channel_type"]): item for item in primary_prices["data"]

@@ -9,7 +9,7 @@ sys.path.extend([_current_dir])
 from utils import integrate_prices, yaml_to_json
 
 
-def round_to_three(num):
+def round_to_three(num: float) -> float:
     return round(num * 1000) / 1000
 
 
