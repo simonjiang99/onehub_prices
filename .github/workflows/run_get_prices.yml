@@ -36,6 +36,13 @@ jobs:
         run: |
           python src/get_ownedby.py
 
+      - name: Run sync_ownedby.py
+        env:
+          ONEHUB_URL: ${{ secrets.ONEHUB_URL }}
+          ONEHUB_ADMIN_TOKEN: ${{ secrets.ONEHUB_ADMIN_TOKEN }}
+        run: |
+          python src/sync_ownedby.py --source_json ownedby.json --manual_json ownedby_manual.json
+
       - name: Run get siliconflow prices
         env:
           SILICONFLOW_API_KEY: ${{ secrets.SILICONFLOW_API_KEY }}
