@@ -29,14 +29,6 @@ def sync_pricing(api_url, admin_token, prices, overwrite=False):
 
 # Example usage
 def main():
-    ONEHUB_URL = os.getenv("ONEHUB_URL").strip("/")
-    API_URL = f"{ONEHUB_URL}/api/prices/sync"
-    ADMIN_TOKEN = os.getenv("ONEHUB_ADMIN_TOKEN")  # Replace with a valid admin token
-    OVERWRITE = os.getenv("SYNC_PRICE_OVERWRITE", True)
-
-    assert ONEHUB_URL is not None, "ONEHUB_URL is not set"
-    assert ADMIN_TOKEN is not None, "ONEHUB_ADMIN_TOKEN is not set"
-
     parser = argparse.ArgumentParser(description="Sync pricing data.")
     parser.add_argument(
         "--json_file",
@@ -53,6 +45,14 @@ def main():
         help="URL to the JSON data containing pricing information",
     )
     args = parser.parse_args()
+
+    ONEHUB_URL = os.getenv("ONEHUB_URL").strip("/")
+    API_URL = f"{ONEHUB_URL}/api/prices/sync"
+    ADMIN_TOKEN = os.getenv("ONEHUB_ADMIN_TOKEN")  # Replace with a valid admin token
+    OVERWRITE = os.getenv("SYNC_PRICE_OVERWRITE", True)
+
+    assert ONEHUB_URL is not None, "ONEHUB_URL is not set"
+    assert ADMIN_TOKEN is not None, "ONEHUB_ADMIN_TOKEN is not set"
 
     price_json = None
     if args.json_url:

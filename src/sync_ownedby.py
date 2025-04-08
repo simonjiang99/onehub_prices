@@ -112,13 +112,6 @@ def add_ownedby(api_url, admin_token, ownedby_data):
 
 
 if __name__ == "__main__":
-    ONEHUB_URL = os.getenv("ONEHUB_URL").strip("/")
-    API_URL = f"{ONEHUB_URL}/api/model_ownedby"
-    ADMIN_TOKEN = os.getenv("ONEHUB_ADMIN_TOKEN")  # Replace with a valid admin token
-
-    assert ONEHUB_URL is not None, "ONEHUB_URL is not set"
-    assert ADMIN_TOKEN is not None, "ONEHUB_ADMIN_TOKEN is not set"
-
     parser = argparse.ArgumentParser(description="Merge ownedby data.")
     parser.add_argument(
         "--source_json",
@@ -147,6 +140,13 @@ if __name__ == "__main__":
         raise ValueError("Either `source_json` or `source_url` must be provided.")
     if not args.manual_json and not args.manual_url:
         raise ValueError("Either `manual_json` or `manual_url` must be provided.")
+
+    ONEHUB_URL = os.getenv("ONEHUB_URL").strip("/")
+    API_URL = f"{ONEHUB_URL}/api/model_ownedby"
+    ADMIN_TOKEN = os.getenv("ONEHUB_ADMIN_TOKEN")  # Replace with a valid admin token
+
+    assert ONEHUB_URL is not None, "ONEHUB_URL is not set"
+    assert ADMIN_TOKEN is not None, "ONEHUB_ADMIN_TOKEN is not set"
 
     ownedby_original = load_ownedby(
         json_file_path=args.source_json, url=args.source_url
