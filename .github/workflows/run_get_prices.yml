@@ -50,12 +50,12 @@ jobs:
         run: |
           python src/merge_prices.py
 
-      - name: Run pricing_sync.py
+      - name: Run sync_pricing.py
         env:
           ONEHUB_URL: ${{ secrets.ONEHUB_URL }}
           ONEHUB_ADMIN_TOKEN: ${{ secrets.ONEHUB_ADMIN_TOKEN }}
         run: |
-          python src/pricing_sync.py
+          python src/sync_pricing.py
 
       - name: Set up Git Configuration
         run: |

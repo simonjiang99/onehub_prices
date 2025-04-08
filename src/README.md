@@ -10,9 +10,9 @@
 | get_siliconflow_prices.py | 获取硅基流动平台价格数据 | `export SILICONFLOW_API_KEY=your_key`<br>`python get_siliconflow_prices.py`  | siliconflow_prices.json<br>~~siliconflow_models.json~~ |
 | get_openrouter_prices.py  | 获取 OpenRouter 价格数据 | `python get_openrouter_prices.py`                                            | openrouter_prices.json                                 |
 | merge_prices.py           | 合并所有价格数据         | `python merge_prices.py`                                                     | oneapi_prices.json<br>onehub_only_prices.json          |
-| pricing_sync.py           | 同步价格数据             | `python pricing_sync.py [--json_file=path/to/json] [--json_url=url/to/json]` | 更新后的价格表文件                                     |
+| sync_pricing.py           | 同步价格数据             | `python sync_pricing.py [--json_file=path/to/json] [--json_url=url/to/json]` | 更新后的价格表文件                                     |
 
-Note: `pricing_sync.py` 脚本支持通过以下环境变量进行配置，并支持以下参数：
+Note: `sync_pricing.py` 脚本支持通过以下环境变量进行配置，并支持以下参数：
 
 - `--json_file`: 指定 JSON 文件路径
 - `--json_url`: 指定 JSON 数据的 URL
@@ -49,7 +49,7 @@ export ONEHUB_URL="https://onehub.your.link" # 仅基础url,不要附带api subp
 export ONEHUB_ADMIN_TOKEN="your_admin_token" # 网页管理后台获得
 export SYNC_PRICE_OVERWRITE=True # 是否覆盖现有价格
 
-python src/pricing_sync.py [--json_file=./oneapi_prices.json] [--json_url=https://cdn.jsdelivr.net/gh/Oaklight/onehub_prices@master/oneapi_prices.json]
+python src/sync_pricing.py [--json_file=./oneapi_prices.json] [--json_url=https://cdn.jsdelivr.net/gh/Oaklight/onehub_prices@master/oneapi_prices.json]
 ```
 
 ### 自动执行
