@@ -21,7 +21,7 @@ models:
       input: 0
       output: 0
     # reasoning models
-    argo:gpt-o1-preview:
+    argo:gpt-o1:
       input: 0
       output: 0
     argo:gpt-o1-mini:
