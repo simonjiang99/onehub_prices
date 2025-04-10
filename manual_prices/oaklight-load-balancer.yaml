@@ -48,7 +48,7 @@ models:
     deepseek-v3-sensecore: # 商汤大装置
       input: 0.002 rmb / K
       output: 0.008 rmb / K
-    deepseek-v3-infiniai: # 无问芯穹
+    deepseek-v3-infinigence: # 无问芯穹
       input: 0.002 rmb / K
       output: 0.008 rmb / K
     deepseek-v3-openrouter:free: # OpenRouter (free)
@@ -78,7 +78,7 @@ models:
     deepseek-r1-sensecore: # 商汤大装置
       input: 0.004 rmb / K
       output: 0.016 rmb / K
-    deepseek-r1-infiniai: # 无问芯穹
+    deepseek-r1-infinigence: # 无问芯穹
       input: 0.004 rmb / K
       output: 0.016 rmb / K
     deepseek-r1-openrouter:free: # OpenRouter (free)
@@ -93,7 +93,7 @@ models:
     bge-m3-siliconflow: # 硅基流动
       input: 0 rmb / M
       output: 0 rmb / M
-    bge-m3-infiniai: # 无问芯穹
+    bge-m3-infinigence: # 无问芯穹
       input: 0 rmb / M
       output: 0 rmb / M
 
@@ -101,7 +101,7 @@ models:
     bge-reranker-v2-m3-siliconflow: # 硅基流动
       input: 0 rmb / M
       output: 0 rmb / M
-    bge-reranker-v2-m3-infiniai: # 无问芯穹
+    bge-reranker-v2-m3-infinigence: # 无问芯穹
       input: 0 rmb / M
       output: 0 rmb / M
 
