@@ -1,6 +1,9 @@
-import os
-import requests
 import json
+import os
+import token
+from typing import Tuple
+
+import requests
 
 import yaml
 
@@ -94,47 +97,84 @@ def load_yaml_from_directory(directory_path: str, file_name: str = None) -> dict
     return yaml_data
 
 
-def convert_price(price_str: str) -> float:
-    # 初始化价格和缩放因子
-    price = 0
-    scale_factor = 1
+def split_price_string(price_str: str) -> Tuple[float, str]:
+    """
+    Split a price string into numeric part and text part.
 
-    # 检查价格字符串中是否包含 "usd"
-    if "usd" in price_str:
-        scale_factor = 0.002
-        price = float(
-            price_str.replace("usd", "")
-            .replace("/", "")
-            .replace("M", "")
-            .replace("K", "")
-            .strip()
-        )
-        # 如果价格字符串中包含 "M"，将价格除以1000000
-        if "M" in price_str:
-            price = price / 1000
-        # 如果价格字符串中包含 "K"，将价格除以1000
-        elif "K" in price_str:
-            price = price
-    # 检查价格字符串中是否包含 "rmb"
-    elif "rmb" in price_str:
+    Examples:
+    - "10 usd" → (10.0, "usd")
+    - "5.5 rmb / M" → (5.5, "rmb / M")
+    - "100 /image" → (100.0, "/image")
+
+    :param price_str: The input price string
+    :return: Tuple of (numeric_value, text_part)
+    """
+    import re
+
+    match = re.match(r"^([\d.]+)\s*(.*)$", price_str.strip())
+    if not match:
+        raise ValueError(f"Invalid price format: {price_str}")
+    return (float(match.group(1)), match.group(2))
+
+
+def convert_price(price_str: str) -> Tuple[float, str]:
+    """
+    Convert a price string to a unit-normalized float value and price type.
+
+    Supported formats:
+    - "xxx usd"
+    - "xxx usd / M"
+    - "xxx usd / K"
+    - "xxx rmb"
+    - "xxx rmb / M"
+    - "xxx rmb / K"
+    - Including variations like "/ M" or "/ K"
+
+    Conversion factors:
+    - 'usd': normalized to 1.0
+    - 'rmb': converted to 'usd' using a factor of 0.014
+
+    Suffix meanings:
+    - '/M' or '/ M': price is divided by 1,000,000
+    - '/K' or '/ K': price is divided by 1,000
+
+    Price types:
+    - 'tokens': for /M or /K suffixes
+    - 'times': for all other cases
+
+    :param price_str: The input price string.
+    :return: Tuple of (normalized_price, price_type)
+    """
+    # Split into numeric value and text part
+    try:
+        numeric_value, text_part = split_price_string(price_str)
+    except ValueError as e:
+        raise ValueError(f"Invalid price format: {price_str}")
+
+    text_part = text_part.lower()
+
+    # Determine currency scale factor
+    if "rmb" in text_part:
         scale_factor = 0.014
-        price = float(
-            price_str.replace("rmb", "")
-            .replace("/", "")
-            .replace("M", "")
-            .replace("K", "")
-            .strip()
-        )
-        # 如果价格字符串中包含 "M"，将价格除以1000000
-        if "M" in price_str:
-            price = price / 1000
-        # 如果价格字符串中包含 "K"，将价格除以1000
-        elif "K" in price_str:
-            price = price
-    else:
-        price = float(price_str)
-    # 返回根据缩放因子调整后的价格
-    return price / scale_factor
+    else:  # Default to USD
+        scale_factor = 0.002
+
+    # Determine division factor and price type
+    if "/m" in text_part or "/ m" in text_part:
+        division_factor = 1_000
+        price_type = "tokens"
+    elif "/k" in text_part or "/ k" in text_part:
+        division_factor = 1
+        price_type = "tokens"
+    elif text_part:  # text_part exists and doesn't contain /m or /k
+        division_factor = 1
+        price_type = "times"
+    else:  # text_part is empty, by default we take it as tokens type
+        division_factor = 1
+        price_type = "tokens"
+
+    normalized_price = numeric_value / (division_factor * scale_factor)
+    return (normalized_price, price_type)
 
 
 def yaml_to_json(directory_path: str, file_name: str = None) -> dict:
@@ -178,12 +218,20 @@ def yaml_to_json(directory_path: str, file_name: str = None) -> dict:
 
         # 遍历每个模型及其信息
         for model_name, model_info in models.items():
-            # 转换价格
-            input_price = convert_price(str(model_info["input"]))
-            output_price = convert_price(str(model_info["output"]))
+            # 转换价格（处理可能缺失的input/output字段）
+            input_price, input_price_type = (
+                convert_price(str(model_info["input"]))
+                if "input" in model_info
+                else (0, "times")
+            )
+            output_price, output_price_type = (
+                convert_price(str(model_info["output"]))
+                if "output" in model_info
+                else (0, "times")
+            )
 
-            # 获取模型类型（如果未指定，则默认为 "tokens"）
-            model_type = model_info.get("type", "tokens")
+            # 获取模型类型（优先使用price_type，其次使用显式指定的type）
+            model_type = model_info.get("type", input_price_type)
 
             # 添加主模型条目
             json_data["data"].append(

@@ -1,6 +1,35 @@
 models:
   xAI:
     # current models
+    grok-3:
+      aliases:
+        - grok-3-beta
+        - grok-3
+        - grok-3-latest
+      input: 3 usd / M
+      output: 15 usd / M
+    grok-3-fast:
+      aliases:
+        - grok-3-fast-beta
+        - grok-3-fast
+        - grok-3-fast-latest
+      input: 5 usd / M
+      output: 25 usd / M
+    grok-3-mini:
+      aliases:
+        - grok-3-mini-beta
+        - grok-3-mini
+        - grok-3-mini-latest
+      input: 0.3 usd / M
+      output: 0.5 usd / M
+    grok-3-mini-fast:
+      aliases:
+        - grok-3-mini-fast-beta
+        - grok-3-mini-fast
+        - grok-3-mini-fast-latest
+      input: 0.6 usd / M
+      output: 4 usd / M
+
     grok-2:
       aliases:
         - grok-2-1212
@@ -13,6 +42,12 @@ models:
         - grok-2-vision-latest
       input: 2 usd / M
       output: 10 usd / M
+    grok-2-image:
+      aliases:
+        - grok-2-image-1212
+        - grok-2-image
+        - grok-2-image-latest
+      output: 0.07 usd / time
 
     # past models
     grok-beta:
