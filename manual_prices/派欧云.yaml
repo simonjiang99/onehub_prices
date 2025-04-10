@@ -1,0 +1,14 @@
+models:
+  派欧云:
+    llama-4-maverick:
+      aliases:
+        - llama-4-maverick-ppio
+        - meta-llama/llama-4-maverick-17b-128e-instruct-fp8
+      input: 1.45 rmb / M
+      output: 6.2 rmb / M
+    llama-4-scout:
+      aliases:
+        - llama-4-scout-ppio
+        - meta-llama/llama-4-scout-17b-16e-instruct
+      input: 0.725 rmb / M
+      output: 3.6 rmb / M

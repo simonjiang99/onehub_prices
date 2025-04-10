@@ -117,7 +117,7 @@ models:
   字节火山引擎:
     # deepseek @ 字节火山引擎
     deepseek-v3-volcengine:
-      aliases: 
+      aliases:
         - deepseek-v3-241226
         - deepseek-v3-250324
       input: 0.002 rmb / K
@@ -175,3 +175,14 @@ models:
     deepseek-r1-distill-qwen-1.5b-siliconflow:
       input: 0 rmb / M
       output: 0 rmb / M
+
+  派欧云:
+    # deepseek @ 派欧云
+    deepseek-v3-ppio: # 派欧云
+      aliases: deepseek-v3-ppio-turbo
+      input: 2 rmb / M
+      output: 8 rmb / M
+    deepseek-r1-ppio: # 派欧云
+      aliases: deepseek-r1-ppio-turbo
+      input: 4 rmb / M
+      output: 16 rmb / M
