@@ -53,3 +53,8 @@ models:
     # 生图
     step-1x-medium:
       output: 0.1 rmb / image
+
+    # 语音
+    step-1o-audio:
+      input: 0
+      output: 0
