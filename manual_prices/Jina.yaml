@@ -1,0 +1,13 @@
+models:
+  Jina:
+    # jina only do 1B tokens batch sales, so we treat them as aliases
+    # readerlm is not conventional and not supported by onehub, so omitted
+    jina-*:
+      aliases:
+        - jina-reranker-m0
+        - jina-clip-v2
+        - jina-embeddings-v3
+        - jina-colbert-v2
+        - jina-reranker-v2-base-multilingual
+        - jina-embeddings-v2-base-code
+      input: 0.02 usd / M

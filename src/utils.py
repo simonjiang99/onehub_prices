@@ -230,8 +230,13 @@ def yaml_to_json(directory_path: str, file_name: str = None) -> dict:
                 else (0, "times")
             )
 
+            if any([input_price_type == "times", output_price_type == "times"]):
+                model_type_default = "times"
+            else:
+                model_type_default = "tokens"
+
             # 获取模型类型（优先使用price_type，其次使用显式指定的type）
-            model_type = model_info.get("type", input_price_type)
+            model_type = model_info.get("type", model_type_default)
 
             # 添加主模型条目
             json_data["data"].append(
