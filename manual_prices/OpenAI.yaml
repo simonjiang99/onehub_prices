@@ -6,17 +6,17 @@ models:
       input: 75 usd / M
       output: 150 usd / M
     gpt-4.1:
-      aliases: 
+      aliases:
         - gpt-4.1-2025-04-14
       input: 2 usd / M
       output: 8 usd / M
     gpt-4.1-mini:
-      aliases: 
+      aliases:
         - gpt-4.1-mini-2025-04-14
       input: 0.4 usd / M
       output: 1.6 usd / M
     gpt-4.1-nano:
-      aliases: 
+      aliases:
         - gpt-4.1-nano-2025-04-14
       input: 0.1 usd / M
       output: 0.4 usd / M
@@ -67,6 +67,16 @@ models:
         - o1-pro-2025-03-19
       input: 150 usd / M
       output: 600 usd / M
+    o3:
+      aliases:
+        - o3-2025-04-16
+      input: 10 usd / M
+      output: 40 usd / M
+    o4-mini:
+      aliases:
+        - o4-mini-2025-04-16
+      input: 1.1 usd / M
+      output: 4.4 usd / M
     o3-mini:
       aliases:
         - o3-mini-2025-01-31
