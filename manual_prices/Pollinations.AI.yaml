@@ -1,18 +1,18 @@
 models:
   Pollinations.AI:
-    pl:gpt-4o-mini:
+    pl:gpt-4.1-nano:
       input: 0
       output: 0
-    pl:gpt-4o:
-      input: 0
-      output: 0
-    pl:gpt-o3-mini:
+    pl:gpt-4.1-mini:
       input: 0
       output: 0
     pl:gpt-4o-audio-preview:
       input: 0
       output: 0
     pl:searchgpt:
+      input: 0
+      output: 0
+    pl:llama-4-scout:
       input: 0
       output: 0
     pl:llama-3.3-70b:
@@ -31,15 +31,6 @@ models:
       input: 0
       output: 0
     pl:midijourney:
-      input: 0
-      output: 0
-    pl:gemini-2.0-flash:
-      input: 0
-      output: 0
-    pl:gemini-2.0-flash-thinking:
-      input: 0
-      output: 0
-    pl:qwq-32b:
       input: 0
       output: 0
     pl:*:
