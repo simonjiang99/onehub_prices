@@ -4,9 +4,9 @@ models:
     # reasoning models
     doubao-1-5-thinking-pro:
       aliases:
+        - doubao-1-5-thinking-pro-vision
         - doubao-1-5-thinking-pro-250415
         - doubao-1-5-thinking-pro-vision-250415
-        - doubao-1-5-thinking-pro-vision
       input: 0.004 rmb / K
       output: 0.016 rmb / K
 
@@ -22,8 +22,11 @@ models:
       aliases: doubao-1-5-pro-256k-250115
       input: 0.0050 rmb / K
       output: 0.0090 rmb / K
-    doubao-1.5-lite-32k:
-      aliases: doubao-1-5-lite-32k-250115
+
+    doubao-1.5-lite:
+      aliases:
+        - doubao-1-5-lite-32k-250115
+        - doubao-1.5-lite-32k
       input: 0.0003 rmb / K
       output: 0.0006 rmb / K
 
@@ -40,7 +43,7 @@ models:
         - doubao-1.5-vision-lite-250315
       input: 0.0015 rmb / K
       output: 0.0045 rmb / K
-    
+
     # gui agent model
     doubao-1.5-ui-tars:
       aliases: doubao-1.5-ui-tars-250328
