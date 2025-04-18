@@ -1,10 +1,12 @@
 models:
   Google Gemini:
     # experimental models
-    gemini-2.5-pro-exp-03-25:
+    gemini-2.5-pro-exp:
+      aliases: gemini-2.5-pro-exp-03-25
       input: 0
       output: 0
-    gemini-2.0-pro-exp-02-05:
+    gemini-2.0-pro-exp:
+      aliases: gemini-2.0-pro-exp-02-05
       input: 0
       output: 0
     learnlm-1.5-pro-experimental:
@@ -22,7 +24,14 @@ models:
       output: 0
 
     # preview models
-    gemini-2.5-pro-preview-03-25:
+    gemini-2.5-flash-preview:
+      aliases:
+        - gemini-2.5-flash-preview-04-17
+      input: 0.15 usd / M # 0.15 美元（文字 / 图片 / 视频）；1.00 美元（音频）
+      output: 0.6 usd / M # 非思考：0.60 美元；思考：3.50 美元
+    gemini-2.5-pro-preview:
+      aliases:
+        - gemini-2.5-pro-preview-03-25
       input: 1.25 usd / M # 2.5 usd / M when prompt is larger than 200,000 tokens
       output: 10 usd / M # 15 usd / M when prompt is larger than 200,000 tokens
     gemini-2.0-flash-live-001:
