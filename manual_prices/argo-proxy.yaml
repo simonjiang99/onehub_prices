@@ -1,6 +1,6 @@
 models:
   argo-proxy:
-    argo:*
+    argo:*:
       input: 0
       output: 0
     # chat models
