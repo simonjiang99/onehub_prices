@@ -25,15 +25,19 @@ models:
       output: 0
     # reasoning models
     argo:gpt-o1:
+      aliases: argo:o1
       input: 0
       output: 0
     argo:gpt-o1-preview:
+      aliases: argo:o1-preview
       input: 0
       output: 0
     argo:gpt-o1-mini:
+      aliases: argo:o1-mini
       input: 0
       output: 0
     argo:gpt-o3-mini:
+      aliases: argo:o3-mini
       input: 0
       output: 0
     # embedding models
