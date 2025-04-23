@@ -6,7 +6,8 @@ models:
       aliases:
         - doubao-1-5-thinking-pro-vision
         - doubao-1-5-thinking-pro-250415
-        - doubao-1-5-thinking-pro-vision-250415
+        - doubao-1-5-thinking-pro-m
+        - doubao-1-5-thinking-pro-m-250415
       input: 0.004 rmb / K
       output: 0.016 rmb / K
 
