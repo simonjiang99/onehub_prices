@@ -1,0 +1,45 @@
+models:
+  Mistral:
+    # premier models
+    mistral-large-latest:
+      input: 2 usd / M
+      output: 6 usd / M
+    pixtral-large-latest:
+      input: 2 usd / M
+      output: 6 usd / M
+    mistral-saba-latest:
+      input: 0.2 usd / M
+      output: 0.6 usd / M
+    codestral-latest:
+      input: 0.3 usd / M
+      output: 0.9 usd / M
+    ministral-8b-latest:
+      input: 0.1 usd / M
+      output: 0.1 usd / M
+    ministral-3b-latest:
+      input: 0.04 usd / M
+      output: 0.04 usd / M
+    mistral-embed:
+      input: 0.1 usd / M
+    mistral-moderation-latest:
+      input: 0.1 usd / M
+
+    # open-source models
+    pixtral-12b:
+      input: 0.15 usd / M
+      output: 0.15 usd / M
+    mistral-small-latest:
+      input: 0.1 usd / M
+      output: 0.3 usd / M
+    mistral-nemo:
+      input: 0.15 usd / M
+      output: 0.15 usd / M
+    open-mistral-7b:
+      input: 0.25 usd / M
+      output: 0.25 usd / M
+    open-mixtral-8x7b:
+      input: 0.7 usd / M
+      output: 0.7 usd / M
+    open-mixtral-8x22b:
+      input: 2 usd / M
+      output: 6 usd / M
