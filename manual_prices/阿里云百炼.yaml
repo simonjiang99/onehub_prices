@@ -23,7 +23,7 @@ models:
       aliases: qwen-turbo-latest
       input: 0.0003 rmb / K
       output: 0.0006 rmb / K
-    
+
     # 长文本
     qwen-long:
       aliases: qwen-long-latest
@@ -69,6 +69,15 @@ models:
       aliases: qwen-coder-turbo-latest
       input: 0.002 rmb / K
       output: 0.006 rmb / K
+    qwen2.5-coder-32b-instruct:
+      input: 0.002 rmb / K
+      output: 0.006 rmb / K
+    qwen2.5-coder-14b-instruct:
+      input: 0.002 rmb / K
+      output: 0.006 rmb / K
+    qwen2.5-coder-7b-instruct:
+      input: 0.001 rmb / K
+      output: 0.002 rmb / K
 
     # 翻译模型
     qwen-mt-plus:
