@@ -1,12 +1,28 @@
 models:
   Baidu:
+    # ernie-4.5
+    ernie-4.5-turbo:
+      aliases:
+        - ernie-4.5-turbo-32k
+        - ernie-4.5-turbo-128k
+      input: 0.0008 rmb / K
+      output: 0.0032 rmb / K
+    ernie-4.5-turbo-vl:
+      aliases: ernie-4.5-turbo-vl-32k
+      input: 0.0008 rmb / K
+      output: 0.0032 rmb / K
     ernie-4.5:
       aliases: ernie-4.5-8k-preview
       input: 0.004 rmb / K
       output: 0.016 rmb / K
+
+    # 推理模型
+    ernie-x1-turbo:
+      aliases: ernie-x1-turbo-32k
+      input: 0.001 rmb / K
+      output: 0.004 rmb / K
     ernie-x1:
-      aliases: 
-        - ernie-x1-32k
+      aliases:
         - ernie-x1-32k-preview
       input: 0.002 rmb / K
       output: 0.008 rmb / K
@@ -16,14 +32,30 @@ models:
         - ernie-4.0-turbo-8k
         - ernie-4.0-turbo-8k-preview
         - ernie-4.0-turbo-8k-latest
-        - ernie-4.0-turbo-8k-0628        
+        - ernie-4.0-turbo-8k-0628
       input: 0.003 rmb / K
       output: 0.009 rmb / K
+
+    # 免费模型
     ernie-speed:
       aliases:
         - ernie-speed-128k
         - ernie-speed-8k
         - ernie-lite-8k
+        - ernie-lite-128k-0722
         - ernie-tiny-8k
+        - ernie-tiny-128k-0929
       input: 0
       output: 0
+
+    llama-4-maverick:
+      aliases:
+        - llama-4-maverick-17b-128e-instruct
+      input: 0.007 rmb / K
+      output: 0.021 rmb / K
+
+    llama-4-scout:
+      aliases:
+        - llama-4-scout-17b-16e-instruct
+      input: 0.006 rmb / K
+      output: 0.018 rmb / K
