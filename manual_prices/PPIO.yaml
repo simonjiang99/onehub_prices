@@ -1,0 +1,15 @@
+models:
+  PPIO:
+    qwen/qwen3-235b-a22b-fp8:
+      input: 1.45 rmb / M
+      output: 5.8 rmb / M
+    qwen/qwen3-30b-a3b-fp8:
+      input: 0.72 rmb / M
+      output: 3.26 rmb / M
+    qwen/qwen3-32b-fp8:
+      input: 0.72 rmb / M
+      output: 3.26 rmb / M
+
+    deepseek/deepseek-prover-v2-671b:
+      input: 4 rmb / M
+      output: 16 rmb / M
