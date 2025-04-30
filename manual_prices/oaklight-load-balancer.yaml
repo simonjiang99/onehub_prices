@@ -104,6 +104,9 @@ models:
     bge-m3-infinigence: # 无问芯穹
       input: 0 rmb / M
       output: 0 rmb / M
+    bge-m3-ppio: # 派欧云
+      input: 0 rmb / M
+      output: 0 rmb / M
 
     # +++++++ rerank aliases +++++++
     bge-reranker-v2-m3-siliconflow: # 硅基流动
