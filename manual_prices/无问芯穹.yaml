@@ -1,0 +1,17 @@
+models:
+  无问芯穹:
+    qwen3-30b-a3b:
+      input: 0
+      output: 0
+    qwen3-235b-a22b:
+      input: 0
+      output: 0
+    qwen3-32b:
+      input: 0
+      output: 0
+    qwen3-14b:
+      input: 0
+      output: 0
+    qwen3-8b:
+      input: 0
+      output: 0
