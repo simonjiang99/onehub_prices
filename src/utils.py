@@ -4,7 +4,6 @@ import token
 from typing import Tuple
 
 import requests
-
 import yaml
 
 
@@ -177,17 +176,25 @@ def convert_price(price_str: str) -> Tuple[float, str]:
     return (normalized_price, price_type)
 
 
-def process_extra_ratios(extra_ratios: list, input_price: float) -> dict:
+def process_extra_ratios(
+    extra_ratios: list, input_price: float, output_price: float
+) -> dict:
     """
     处理extra_ratios字段，转换为指定格式的字典
 
     Args:
         extra_ratios: YAML中的extra_ratios列表
-        input_price: 模型的input价格(用于计算比率)
+        input_price: 模型的input/output价格(用于计算比率)
+        output_price: 模型的input/output价格(用于计算比率)
 
     Returns:
         转换后的extra_ratios字典
     """
+    if input_price == 0:
+        input_price = 1  # 避免除以零错误
+    if output_price == 0:
+        output_price = 1  # 避免除以零错误
+
     result = {}
     for item in extra_ratios:
         for key, value in item.items():
@@ -197,7 +204,11 @@ def process_extra_ratios(extra_ratios: list, input_price: float) -> dict:
             ):
                 # 带单位的情况，先convert_price再计算比率
                 normalized_price, _ = convert_price(value)
-                ratio = normalized_price / input_price
+                if "output" in key:
+                    ratio = normalized_price / output_price
+                else:
+                    ratio = normalized_price / input_price
+
             else:
                 # 不带单位的情况，直接使用
                 ratio = float(value)
@@ -217,7 +228,9 @@ def create_model_entry(
         "output": output_price,
     }
     if extra_ratios:
-        entry["extra_ratios"] = process_extra_ratios(extra_ratios, input_price)
+        entry["extra_ratios"] = process_extra_ratios(
+            extra_ratios, input_price, output_price
+        )
     return entry
 
 
