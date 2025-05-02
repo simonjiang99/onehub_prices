@@ -1,5 +1,9 @@
 models:
   阶跃星辰:
+    # 模型定价：https://platform.stepfun.com/docs/pricing/details
+
+    # 缓存定价：https://platform.stepfun.com/docs/guide/prompt_cache#%E6%88%91%E6%98%AF%E5%90%A6%E9%9C%80%E8%A6%81%E4%B8%BA-prompt-%E7%BC%93%E5%AD%98%E9%A2%9D%E5%A4%96%E4%BB%98%E8%B4%B9
+
     # 视觉理解大模型
     step-1o-turbo-vision:
       input: 2.5 rmb / M
@@ -10,45 +14,57 @@ models:
     step-1v-8k:
       input: 5 rmb / M
       output: 20 rmb / M
+      extra_ratios:
+        - cached_tokens: 0.2
     step-1v-32k:
       input: 15 rmb / M
       output: 70 rmb / M
+      extra_ratios:
+        - cached_tokens: 0.2
     step-1.5v-mini:
       input: 8 rmb / M
       output: 35 rmb / M
+      extra_ratios:
+        - cached_tokens: 0.2
 
     # 推理大模型
     step-r1-v-mini:
       input: 2.5 rmb / M
       output: 8 rmb / M
 
-    # 文本模型 step-1
-    step-1-8k:
-      input: 5 rmb / M
-      output: 20 rmb / M
-    step-1-32k:
-      input: 15 rmb / M
-      output: 70 rmb / M
-    step-1-128k: # deprecating 4/30/2024
-      input: 40 rmb / M
-      output: 200 rmb / M
-    step-1-256k:
-      input: 95 rmb / M
-      output: 300 rmb / M
-    step-1-flash: # deprecating 4/30/2024
-      input: 1 rmb / M
-      output: 4 rmb / M
-
     # 文本模型 step-2
     step-2-mini:
       input: 1 rmb / M
       output: 2 rmb / M
+      extra_ratios:
+        - cached_tokens: 0.2
     step-2-16k:
       input: 38 rmb / M
       output: 120 rmb / M
+      extra_ratios:
+        - cached_tokens: 0.2
     step-2-16k-exp:
       input: 38 rmb / M
       output: 120 rmb / M
+      extra_ratios:
+        - cached_tokens: 0.2
+
+    # 文本模型 step-1
+    step-1-8k:
+      input: 5 rmb / M
+      output: 20 rmb / M
+      extra_ratios:
+        - cached_tokens: 0.2
+    step-1-32k:
+      input: 15 rmb / M
+      output: 70 rmb / M
+      extra_ratios:
+        - cached_tokens: 0.2
+    step-1-256k:
+      input: 95 rmb / M
+      output: 300 rmb / M
+      extra_ratios:
+        - cached_tokens: 0.2
 
     # 生图
     step-1x-medium:
