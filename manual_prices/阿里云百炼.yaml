@@ -1,5 +1,7 @@
 models:
   阿里云百炼:
+    # 模型定价：https://help.aliyun.com/zh/model-studio/models?spm=5176.28197581.d_model-market.1.58275a9em6ZqE1#785eb398acxz7
+
     # 推理模型
     qwq-plus:
       aliases: qwq-plus-latest
@@ -11,18 +13,22 @@ models:
       output: 0.032 rmb / K
 
     # 大模型系列
-    qwen-max:
+    qwen-max: # 仍旧为qwen2.5
       aliases: qwen-max-latest
       input: 0.0024 rmb / K
       output: 0.0096 rmb / K
-    qwen-plus:
+    qwen-plus: # 已升级qwen3
       aliases: qwen-plus-latest
       input: 0.0008 rmb / K
       output: 0.002 rmb / K
-    qwen-turbo:
+      extra_ratio:
+        - reasoning_tokens: 0.016 rmb / K
+    qwen-turbo: # 已升级qwen3
       aliases: qwen-turbo-latest
       input: 0.0003 rmb / K
       output: 0.0006 rmb / K
+      extra_ratio:
+        - reasoning_tokens: 0.006 rmb / K
 
     # 长文本
     qwen-long:
@@ -107,3 +113,38 @@ models:
       aliases: qwen-audio-asr-latest
       input: 0
       output: 0
+
+    # qwen3
+    qwen3-235b-a22b:
+      input: 0.004 rmb / K
+      output: 0.012 rmb / K
+      extra_ratio:
+        - reasoning_tokens: 0.04 rmb / K
+    qwen3-32b:
+      input: 0.002 rmb / K
+      output: 0.008 rmb / K
+      extra_ratio:
+        - reasoning_tokens: 0.02 rmb / K
+    qwen3-30b-a3b:
+      input: 0.0015 rmb / K
+      output: 0.006 rmb / K
+      extra_ratio:
+        - reasoning_tokens: 0.015 rmb / K
+    qwen3-14b:
+      input: 0.001 rmb / K
+      output: 0.004 rmb / K
+      extra_ratio:
+        - reasoning_tokens: 0.01 rmb / K
+    qwen3-8b:
+      input: 0.0005 rmb / K
+      output: 0.002 rmb / K
+      extra_ratio:
+        - reasoning_tokens: 0.005 rmb / K
+    qwen3-4b:
+      aliases:
+        - qwen3-1.7b
+        - qwen3-0.6b
+      input: 0.0003 rmb / K
+      output: 0.0012 rmb / K
+      extra_ratio:
+        - reasoning_tokens: 0.003 rmb / K
