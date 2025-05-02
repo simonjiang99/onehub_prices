@@ -1,5 +1,7 @@
 models:
   Deepseek:
+    # 模型定价：https://api-docs.deepseek.com/zh-cn/quick_start/pricing/
+
     deepseek-chat:
       input: 2 rmb / M
       output: 8 rmb / M
