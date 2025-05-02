@@ -1,5 +1,8 @@
 models:
   Google Gemini:
+    # 模型列表：https://ai.google.dev/gemini-api/docs/models?hl=zh-cn
+    # 模型价格：https://ai.google.dev/gemini-api/docs/pricing?hl=zh-cn#2_0flash
+
     # experimental models
     gemini-2.5-pro-exp:
       aliases: gemini-2.5-pro-exp-03-25
@@ -29,31 +32,54 @@ models:
         - gemini-2.5-flash-preview-04-17
       input: 0.15 usd / M # 0.15 美元（文字 / 图片 / 视频）；1.00 美元（音频）
       output: 0.6 usd / M # 非思考：0.60 美元；思考：3.50 美元
+      extra_ratios:
+        - input_image_tokens: 0.15 usd / M # 图片输入
+        - input_audio_tokens: 1 usd / M # 音频输入
     gemini-2.5-pro-preview:
       aliases:
         - gemini-2.5-pro-preview-03-25
       input: 1.25 usd / M # 2.5 usd / M when prompt is larger than 200,000 tokens
       output: 10 usd / M # 15 usd / M when prompt is larger than 200,000 tokens
+      extra_ratios:
+        - cached_tokens: 0.31 usd / M
     gemini-2.0-flash-live-001:
       input: 0.35 usd / M # 输入：0.35 美元（文字）、2.10 美元（音频 / 图片 [视频]）
       output: 1.5 usd / M # 输出：1.50 美元（文字）、8.50 美元（音频）
+      extra_ratios:
+        - input_image_tokens: 2.1 usd / M
+        - input_audio_tokens: 2.1 usd / M
+        - output_audio_tokens: 8.5 usd / M
 
     # production models
     gemini-2.0-flash:
       input: 0.1 usd / M
       output: 0.4 usd / M
+      extra_ratios:
+        - cached_tokens: 0.025 usd / M # 0.025 美元 / 1,000,000 个令牌（文本/图片/视频）0.175 美元 / 1,000,000 个令牌（音频）
+        - input_image_tokens: 0.1 usd / M
+        - input_audio_tokens: 0.7 usd / M
+
     gemini-2.0-flash-lite:
       input: 0.075 usd / M
       output: 0.3 usd / M
+
     gemini-1.5-flash:
       input: 0.075 usd / M # 0.15 usd / M, when prompt is larger than 128,000 tokens
       output: 0.3 usd / M # 0.6 usd / M, when prompt is larger than 128,000 tokens
+      extra_ratios:
+        - cached_tokens: 0.01875 usd / M
+
     gemini-1.5-flash-8b:
       input: 0.0375 usd / M # 0.075 usd / M, when prompt is larger than 128,000 tokens
       output: 0.15 usd / M # 0.3 usd / M, when prompt is larger than 128,000 tokens
+      extra_ratios:
+        - cached_tokens: 0.01 usd / M
+
     gemini-1.5-pro:
       input: 1.25 usd / M # 2.5 usd / M, when prompt is larger than 128,000 tokens
       output: 5 usd / M # 10 usd / M, when prompt is larger than 128,000 tokens
+      extra_ratios:
+        - cached_tokens: 0.3125 usd / M
 
     # gemma models
     gemma-3-27b-it:
