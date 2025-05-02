@@ -5,27 +5,37 @@ models:
         - gpt-4.5-preview-2025-02-27
       input: 75 usd / M
       output: 150 usd / M
+      extra_ratios:
+        - cached_tokens: 37.5 usd / M
     gpt-4.1:
       aliases:
         - gpt-4.1-2025-04-14
       input: 2 usd / M
       output: 8 usd / M
+      extra_ratios:
+        - cached_tokens: 0.5 usd / M
     gpt-4.1-mini:
       aliases:
         - gpt-4.1-mini-2025-04-14
       input: 0.4 usd / M
       output: 1.6 usd / M
+      extra_ratios:
+        - cached_tokens: 0.1 usd / M
     gpt-4.1-nano:
       aliases:
         - gpt-4.1-nano-2025-04-14
       input: 0.1 usd / M
       output: 0.4 usd / M
+      extra_ratios:
+        - cached_tokens: 0.025 usd / M
     gpt-4o:
       aliases:
         - gpt-4o-2024-11-20
         - gpt-4o-2024-08-06
       input: 2.5 usd / M
       output: 10 usd / M
+      extra_ratios:
+        - cached_tokens: 1.25 usd / M
     gpt-4o-2024-05-13:
       input: 5 usd / M
       output: 15 usd / M
@@ -41,11 +51,15 @@ models:
         - gpt-4o-realtime-preview-2024-10-01
       input: 5 usd / M
       output: 20 usd / M
+      extra_ratios:
+        - cached_tokens: 2.5 usd / M
     gpt-4o-mini:
       aliases:
         - gpt-4o-mini-2024-07-18
       input: 0.15 usd / M
       output: 0.6 usd / M
+      extra_ratios:
+        - cached_tokens: 0.075 usd / M
     gpt-4o-mini-audio-preview:
       aliases:
         - gpt-4o-mini-audio-preview-2024-12-17
@@ -56,12 +70,16 @@ models:
         - gpt-4o-mini-realtime-preview-2024-12-17
       input: 0.6 usd / M
       output: 2.4 usd / M
+      extra_ratios:
+        - cached_tokens: 0.3 usd / M
     o1:
       aliases:
         - o1-2024-12-17
         - o1-preview-2024-09-12
       input: 15 usd / M
       output: 60 usd / M
+      extra_ratios:
+        - cached_tokens: 7.5 usd / M
     o1-pro:
       aliases:
         - o1-pro-2025-03-19
@@ -72,21 +90,29 @@ models:
         - o3-2025-04-16
       input: 10 usd / M
       output: 40 usd / M
+      extra_ratios:
+        - cached_tokens: 2.5 usd / M
     o4-mini:
       aliases:
         - o4-mini-2025-04-16
       input: 1.1 usd / M
       output: 4.4 usd / M
+      extra_ratios:
+        - cached_tokens: 0.275 usd / M
     o3-mini:
       aliases:
         - o3-mini-2025-01-31
       input: 1.1 usd / M
       output: 4.4 usd / M
+      extra_ratios:
+        - cached_tokens: 0.55 usd / M
     o1-mini:
       aliases:
         - o1-mini-2024-09-12
       input: 1.1 usd / M
       output: 4.4 usd / M
+      extra_ratios:
+        - cached_tokens: 0.55 usd / M
     gpt-4o-mini-search-preview:
       aliases:
         - gpt-4o-mini-search-preview-2025-03-11
@@ -104,7 +130,7 @@ models:
       output: 12 usd / M
     gpt-image-1:
       input: 5 usd / image
-    
+
     # transcription & speech generation
     gpt-4o-mini-tts:
       input: 0.6 usd / M
