@@ -1,12 +1,25 @@
 models:
   Siliconflow:
-    # some hidden models
-    AIDC-AI/Marco-o1:
+    # qwen3
+    Qwen/Qwen3-235B-A22B:
+      input: 2.5 rmb / M
+      output: 10 rmb / M
+    Qwen/Qwen3-30B-A3B:
+      input: 0.7 rmb / M
+      output: 2.8 rmb / M
+    Qwen/Qwen3-32B:
+      input: 1 rmb / M
+      output: 2 rmb / M
+    Qwen/Qwen3-14B:
+      input: 0.5 rmb / M
+      output: 2 rmb / M
+    Qwen/Qwen3-8B:
       input: 0
       output: 0
+
     # deepseek @ 硅基流动
     deepseek-v3-siliconflow:
-      aliases: Pro/deepseek-ai/DeepSeek-V3, deepseek-ai/DeepSeek-V3
+      aliases: Pro/deepseek-ai/DeepSeek-V3, deepseek-ai/DeepSeek-V3, Pro/deepseek-ai/DeepSeek-V3-1226
       input: 2 rmb / M
       output: 8 rmb / M
     deepseek-r1-siliconflow:
@@ -20,5 +33,5 @@ models:
       input: 1.26 rmb / M
       output: 1.26 rmb / M
     deepseek-r1-distill-qwen-1.5b-siliconflow:
-      input: 0 rmb / M
-      output: 0 rmb / M
+      input: 0
+      output: 0
