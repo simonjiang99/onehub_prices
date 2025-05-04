@@ -7,11 +7,11 @@ models:
       output: 0.012 rmb / K
       extra_ratios:
         - reasoning_tokens: 0.04 rmb / K
-    qwen3-mini: # qwen3-32b
-      input: 0.002 rmb / K
-      output: 0.008 rmb / K
+    qwen3-mini: # qwen3-30b-a3b
+      input: 0.0015 rmb / K
+      output: 0.006 rmb / K
       extra_ratios:
-        - reasoning_tokens: 0.02 rmb / K
+        - reasoning_tokens: 0.015 rmb / K
     qwen3-nano: # qwen3-8b
       input: 0.0005 rmb / K
       output: 0.002 rmb / K
