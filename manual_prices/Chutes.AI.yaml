@@ -1,0 +1,23 @@
+models:
+  Chutes.AI:
+    chutes:*:
+      input: 0
+      output: 0
+    chutes:deepseek-v3:
+      input: 0
+      output: 0
+    chutes:deepseek-r1:
+      input: 0
+      output: 0
+    chutes:deepseek-prover-v2:
+      input: 0
+      output: 0
+    chutes:qwen3:
+      input: 0
+      output: 0
+    chutes:qwen3-mini:
+      input: 0
+      output: 0
+    chutes:qwen3-nano:
+      input: 0
+      output: 0
