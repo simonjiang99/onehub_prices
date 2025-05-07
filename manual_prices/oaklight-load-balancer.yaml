@@ -17,6 +17,11 @@ models:
       output: 0.002 rmb / K
       extra_ratios:
         - reasoning_tokens: 0.005 rmb / K
+    qwen3-pico: # qwen3-0.6b
+      input: 0.0003 rmb / K
+      output: 0.0012 rmb / K
+      extra_ratios:
+        - reasoning_tokens: 0.003 rmb / K
 
     deepseek-v2.5:
       input: 1.33 rmb / M
