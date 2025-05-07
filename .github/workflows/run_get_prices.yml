@@ -2,7 +2,7 @@ name: Run get_prices.py and Auto-Commit Changes
 
 on:
   schedule:
-    - cron: "0 */2 * * *" # 每两小时执行
+    - cron: "0 */6 * * *" # 每六小时执行
   push:
     branches:
       - master # 当 master 分支有推送时触发
