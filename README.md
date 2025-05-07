@@ -150,7 +150,7 @@ python src/sync_pricing.py [--json_file=./oneapi_prices.json] [--json_url=https:
 
 近期主要更新包括：
 
-1. **自动刷新间隔调整为每两小时**：github action 的运行时间从原来的每天一次改为每两小时一次。
+1. **自动刷新间隔调整为每~两~六小时**：github action 的运行时间从原来的每天一次改为每~两~六小时一次。
 2. **新增供应商支持**：添加了 Coreshub, Pollinations.AI, OpenRouter, Moonshot 等新供应商的价格支持
 3. **脚本改进**：
    - 新增 `get_ownedby.py` 用于获取供应商归属信息
