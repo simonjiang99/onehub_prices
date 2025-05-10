@@ -41,7 +41,7 @@ jobs:
           ONEHUB_URL: ${{ secrets.ONEHUB_URL }}
           ONEHUB_ADMIN_TOKEN: ${{ secrets.ONEHUB_ADMIN_TOKEN }}
         run: |
-          python src/sync_ownedby.py --source_json ownedby.json --manual_json ownedby_manual.json
+          python src/sync_ownedby.py --source_url "${ONEHUB_URL}/api/ownedby" --manual_json ownedby_manual.json
 
       - name: Run get siliconflow prices
         env:
