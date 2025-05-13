@@ -32,6 +32,9 @@ models:
     deepseek-r1:
       input: 4 rmb / M
       output: 16 rmb / M
+    deepseek-prover-v2:
+      input: 4 rmb / M
+      output: 16 rmb / M
     deepseek-v3-free:
       input: 0
       output: 0
