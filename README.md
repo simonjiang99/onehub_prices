@@ -12,7 +12,7 @@
 3. **siliconflow_prices.json**: 来自 siliconflow 官方的原始价格数据
 4. **openrouter_prices.json**: 来自 openrouter 官方的原始价格数据
 
-所有价格数据每 2 小时自动更新，确保信息及时准确。为了保持整洁，目前的 JSON 格式的价格和 ownedby 更新结果均已迁移至 prices 分支。请关注价格表最末尾的更新时间提示图标。
+所有价格数据每 6 小时自动更新，确保信息及时准确。为了保持整洁，目前的 JSON 格式的价格和 ownedby 更新结果均已迁移至 prices 分支。请关注价格表最末尾的更新时间提示图标。
 
 项目维护者：[Oaklight](https://github.com/Oaklight)
 
@@ -150,7 +150,7 @@ python src/sync_pricing.py [--json_file=./oneapi_prices.json] [--json_url=https:
 
 近期主要更新包括：
 
-1. **自动刷新间隔调整为每~两~六小时**：github action 的运行时间从原来的每天一次改为每~两~六小时一次。
+1. **自动刷新间隔调整为每6六小时**：github action 的运行时间从原来的每天一次改为每6小时一次。
 2. **新增供应商支持**：添加了 Coreshub, Pollinations.AI, OpenRouter, Moonshot 等新供应商的价格支持
 3. **脚本改进**：
    - 新增 `get_ownedby.py` 用于获取供应商归属信息
