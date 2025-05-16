@@ -17,7 +17,7 @@ url = "openrouter.ai"
 endpoint = "/api/v1/models"
 headers = {"Content-Type": "application/json"}
 
-openrouter_channel_type = 1006  # Matches OpenRouter in ownedby.json
+openrouter_channel_type = 20  # Matches OpenRouter in ownedby.json
 
 conn = http.client.HTTPSConnection(url)
 conn.request("GET", endpoint, headers=headers)
