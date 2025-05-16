@@ -1135,13 +1135,6 @@
       "output": 0.55
     },
     {
-      "model": "mistral/ministral-8b",
-      "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.05,
-      "output": 0.05
-    },
-    {
       "model": "mistralai/codestral-2501",
       "type": "tokens",
       "channel_type": 1006,
@@ -1476,6 +1469,13 @@
       "channel_type": 1006,
       "input": 2.5,
       "output": 7.5
+    },
+    {
+      "model": "openai/codex-mini",
+      "type": "tokens",
+      "channel_type": 1006,
+      "input": 0.75,
+      "output": 3.0
     },
     {
       "model": "openai/gpt-3.5-turbo",
