@@ -9,7 +9,7 @@ models:
       output: 2.8 rmb / M
     Qwen/Qwen3-32B:
       input: 1 rmb / M
-      output: 2 rmb / M
+      output: 4 rmb / M
     Qwen/Qwen3-14B:
       input: 0.5 rmb / M
       output: 2 rmb / M
