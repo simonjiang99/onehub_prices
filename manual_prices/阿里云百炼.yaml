@@ -43,9 +43,26 @@ models:
 
     # 全模态系列
     qwen-omni-turbo:
-      aliases: qwen-omni-turbo-latest
+      aliases: 
+        - qwen-omni-turbo-latest
       input: 0.0004 rmb / K
       output: 0.0016 rmb / K
+      extra_ratios:
+        - input_audio_tokens: 0.025 rmb / K
+        - input_image_tokens: 0.0015 rmb / K
+        - output_audio_tokens: 0.05 rmb / K
+        - output_text_tokens: 0.0045 rmb / K # This's tricky, someone should test it out. For mixed text + image output, how does the usage section look like?
+    
+    qwen-omni-turbo-realtime:
+      aliases: 
+        - qwen-omni-turbo-realtime-latest
+      input: 0.0016 rmb / K
+      output: 0.0064 rmb / K
+      extra_ratios:
+        - input_audio_tokens: 0.025 rmb / K
+        - output_audio_tokens: 0.05 rmb / K
+        - output_text_tokens: 0.018 rmb / K # This's tricky, someone should test it out. For mixed text + image output, how does the usage section look like?
+
 
     # 视觉模型系列
     qwen-vl-max:
@@ -63,7 +80,7 @@ models:
     qwen-vl-ocr:
       aliases: qwen-vl-ocr-latest
       input: 0.005 rmb / K
-      output: 0
+      output: 0.005 rmb / K
 
     # 数学模型
     qwen-math-plus:
@@ -93,6 +110,12 @@ models:
     qwen2.5-coder-7b-instruct:
       input: 0.001 rmb / K
       output: 0.002 rmb / K
+    qwen2.5-coder-3b-instruct:
+      aliases:
+        - qwen2.5-coder-1.5b-instruct
+        - qwen2.5-coder-0.5b-instruct
+      input: 0
+      output: 0
 
     # 翻译模型
     qwen-mt-plus:
@@ -107,11 +130,9 @@ models:
       input: 0
       output: 0
     text-embedding-v3:
-      input: 0.0007 rmb / K
-      output: 0
-    gte-rerank:
-      input: 0
-      output: 0
+      input: 0.0005 rmb / K
+    gte-rerank-v2:
+      input: 0.0008 rmb / K
 
     # audio, asr, tts
     qwen-audio-turbo:
