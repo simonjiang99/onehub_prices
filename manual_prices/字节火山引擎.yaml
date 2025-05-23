@@ -70,6 +70,11 @@ models:
       input: 0.0035 rmb / K
       output: 0.012 rmb / K
 
+    # text2image
+    doubao-seedream-3:
+      aliases: doubao-seedream-3-0-t2i-250415
+      output: 0.2590 rmb / image
+
     # embedding models
     doubao-embedding-vision:
       aliases: doubao-embedding-vision-241215
