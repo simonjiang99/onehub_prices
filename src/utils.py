@@ -311,6 +311,8 @@ def yaml_to_json(directory_path: str, file_name: str = None) -> dict:
                             new_channel_type,
                             input_price,
                             output_price,
+                            # 确保别名也包含额外的比率信息
+                            model_info.get("extra_ratios", None),
                         )
                     )
 
