@@ -9,9 +9,9 @@ models:
       output: 0.0032 rmb / K
     ernie-4.5-turbo-vl:
       aliases: ernie-4.5-turbo-vl-32k
-      input: 0.0008 rmb / K
-      output: 0.0032 rmb / K
-    ernie-4.5:
+      input: 0.003 rmb / K
+      output: 0.009 rmb / K
+    ernie-4.5: # deprecation scheduled 06/26/2025
       aliases: ernie-4.5-8k-preview
       input: 0.004 rmb / K
       output: 0.016 rmb / K
@@ -21,7 +21,7 @@ models:
       aliases: ernie-x1-turbo-32k
       input: 0.001 rmb / K
       output: 0.004 rmb / K
-    ernie-x1:
+    ernie-x1: # deprecation scheduled 06/26/2025
       aliases:
         - ernie-x1-32k-preview
       input: 0.002 rmb / K
