@@ -337,13 +337,6 @@
       "output": 7.5
     },
     {
-      "model": "anthropic/claude-3.7-sonnet:thinking",
-      "type": "tokens",
-      "channel_type": 1006,
-      "input": 1.5,
-      "output": 7.5
-    },
-    {
       "model": "anthropic/claude-opus-4",
       "type": "tokens",
       "channel_type": 1006,
@@ -760,8 +753,8 @@
       "model": "google/gemma-2-9b-it",
       "type": "tokens",
       "channel_type": 1006,
-      "input": 0.01,
-      "output": 0.03
+      "input": 0.04,
+      "output": 0.04
     },
     {
       "model": "google/gemma-2-9b-it:free",
