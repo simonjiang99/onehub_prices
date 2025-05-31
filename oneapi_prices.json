@@ -5407,8 +5407,8 @@
       "model": "mistralai/devstral-small",
       "type": "tokens",
       "channel_type": 1006,
-      "input": 0.035,
-      "output": 0.05
+      "input": 0.03,
+      "output": 0.06
     },
     {
       "model": "mistralai/devstral-small:free",
