@@ -8,6 +8,8 @@ models:
         - grok-3-latest
       input: 3 usd / M
       output: 15 usd / M
+      extra_ratios:
+        - cached_tokens: 0.75 usd / M
     grok-3-fast:
       aliases:
         - grok-3-fast-beta
@@ -15,6 +17,8 @@ models:
         - grok-3-fast-latest
       input: 5 usd / M
       output: 25 usd / M
+      extra_ratios:
+        - cached_tokens: 1.25 usd / M
     grok-3-mini:
       aliases:
         - grok-3-mini-beta
@@ -22,6 +26,8 @@ models:
         - grok-3-mini-latest
       input: 0.3 usd / M
       output: 0.5 usd / M
+      extra_ratios:
+        - cached_tokens: 0.07 usd / M
     grok-3-mini-fast:
       aliases:
         - grok-3-mini-fast-beta
@@ -29,6 +35,8 @@ models:
         - grok-3-mini-fast-latest
       input: 0.6 usd / M
       output: 4 usd / M
+      extra_ratios:
+        - cached_tokens: 0.15 usd / M
 
     grok-2:
       aliases:
@@ -42,17 +50,12 @@ models:
         - grok-2-vision-latest
       input: 2 usd / M
       output: 10 usd / M
+      extra_ratios:
+        - input_image_tokens: 2 usd / M
+
     grok-2-image:
       aliases:
         - grok-2-image-1212
         - grok-2-image
         - grok-2-image-latest
       output: 0.07 usd / time
-
-    # past models
-    grok-beta:
-      input: 5 usd / M
-      output: 15 usd / M
-    grok-vision-beta:
-      input: 5 usd / M
-      output: 15 usd / M
