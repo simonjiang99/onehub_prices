@@ -501,8 +501,8 @@
       "model": "deepseek/deepseek-chat-v3-0324",
       "type": "tokens",
       "channel_type": 1006,
-      "input": 0.15,
-      "output": 0.44
+      "input": 0.125,
+      "output": 0.65
     },
     {
       "model": "deepseek/deepseek-chat-v3-0324:free",
@@ -1055,7 +1055,7 @@
       "type": "tokens",
       "channel_type": 1006,
       "input": 0.075,
-      "output": 0.425
+      "output": 0.3
     },
     {
       "model": "meta-llama/llama-4-maverick:free",
