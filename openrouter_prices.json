@@ -1054,8 +1054,8 @@
       "model": "meta-llama/llama-4-maverick",
       "type": "tokens",
       "channel_type": 1006,
-      "input": 0.08,
-      "output": 0.3
+      "input": 0.075,
+      "output": 0.425
     },
     {
       "model": "meta-llama/llama-4-maverick:free",
@@ -1166,8 +1166,8 @@
       "model": "microsoft/wizardlm-2-8x22b",
       "type": "tokens",
       "channel_type": 1006,
-      "input": 0.25,
-      "output": 0.25
+      "input": 0.24,
+      "output": 0.24
     },
     {
       "model": "minimax/minimax-01",
