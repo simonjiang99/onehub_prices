@@ -1286,7 +1286,7 @@
       "type": "tokens",
       "channel_type": 1006,
       "input": 0.005,
-      "output": 0.03
+      "output": 0.025
     },
     {
       "model": "mistralai/mistral-nemo:free",
@@ -1313,8 +1313,8 @@
       "model": "mistralai/mistral-small-24b-instruct-2501",
       "type": "tokens",
       "channel_type": 1006,
-      "input": 0.03,
-      "output": 0.06
+      "input": 0.025,
+      "output": 0.055
     },
     {
       "model": "mistralai/mistral-small-24b-instruct-2501:free",
