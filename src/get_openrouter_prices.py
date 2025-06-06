@@ -4,13 +4,9 @@ from utils import (
     SCALE_FACTOR_USD,
     fetch_and_sort_models,
     integrate_prices,
+    round_to_three,
     yaml_to_json,
 )
-
-
-def round_to_three(num: float) -> float:
-    return round(num * 1000) / 1000
-
 
 if __name__ == "__main__":
     url = "https://openrouter.ai"

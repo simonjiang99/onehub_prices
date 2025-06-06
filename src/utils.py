@@ -10,6 +10,10 @@ SCALE_FACTOR_CNY = 0.014
 SCALE_FACTOR_USD = 0.002
 
 
+def round_to_three(num: float) -> float:
+    return round(num * 1000) / 1000
+
+
 def fetch_and_sort_models(
     url, endpoint, headers, mode: Literal["siliconflow", "openrouter"]
 ):
