@@ -120,11 +120,16 @@ def load_yaml_from_directory(directory_path: str, file_name: str = None) -> dict
 
     # 处理收集到的每个文件
     for filename in files_to_process:
+        print(f"Processing file: {filename}")  # Debug print
         file_path = os.path.join(directory_path, filename)
         with open(file_path, "r", encoding="utf-8") as file:
             file_data = yaml.safe_load(file)
             if "models" in file_data:
                 for channel, models in file_data["models"].items():
+                    # 如果模型列表为空，跳过更新
+                    if not models:
+                        print(f"Skipping empty model list for channel: {channel}")
+                        continue
                     if channel in yaml_data["models"]:
                         # 更新已存在的模型，覆盖重复项
                         for model_name, model_info in models.items():
@@ -132,6 +137,7 @@ def load_yaml_from_directory(directory_path: str, file_name: str = None) -> dict
                     else:
                         yaml_data["models"][channel] = models
 
+    # print(yaml_data["models"]["OpenRouter"])
     return yaml_data
 
 
@@ -374,7 +380,6 @@ def yaml_to_json(directory_path: str, file_name: str = None) -> dict:
 
 # Function to sort the prices list based on channel_type (primary) and model (secondary)
 def sort_prices(prices: dict) -> dict:
-    print(prices)
     prices["data"] = sorted(
         prices["data"], key=lambda x: (x["channel_type"], x["model"])
     )
