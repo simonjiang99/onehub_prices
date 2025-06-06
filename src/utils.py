@@ -157,36 +157,46 @@ def split_price_string(price_str: str) -> Tuple[float, str]:
 
 def convert_price(price_str: str) -> Tuple[float, str]:
     """
-    Convert a price string to a unit-normalized float value and price type.
+    Converts a price string into a normalized numerical value and its price type.
 
-    Supported formats:
-    - "xxx usd"
-    - "xxx usd / M"
-    - "xxx usd / K"
-    - "xxx rmb"
-    - "xxx rmb / M"
-    - "xxx rmb / K"
-    - Including variations like "/ M" or "/ K"
+    Supported Formats:
+    - "<value> usd"
+    - "<value> usd / M"
+    - "<value> usd / K"
+    - "<value> rmb"
+    - "<value> rmb / M"
+    - "<value> rmb / K"
 
-    Conversion factors:
-    - 'usd': normalized to 1.0
-    - 'rmb': converted to 'usd' using a factor of 0.014
+    Conversion Details:
+    - Currency:
+      - USD: Normalized directly using SCALE_FACTOR_USD.
+      - RMB: Converted to normalized USD units using SCALE_FACTOR_CNY.
+    - Units:
+      - "/M": Values are divided by 1,000,000 to normalize.
+      - "/K": Values are divided by 1,000 to normalize.
 
-    Suffix meanings:
-    - '/M' or '/ M': price is divided by 1,000,000
-    - '/K' or '/ K': price is divided by 1,000
+    Pricing Types:
+    - "tokens": Represented by unit-based formats like '/M' or '/K'.
+    - "times": Used where no unit-based suffix is present.
 
-    Price types:
-    - 'tokens': for /M or /K suffixes
-    - 'times': for all other cases
+    Examples:
+    - "100 usd" -> (100.0, "times")
+    - "200 rmb / M" -> (normalized_float_value, "tokens")
 
-    :param price_str: The input price string.
-    :return: Tuple of (normalized_price, price_type)
+    Parameters:
+        price_str (str): The price string to parse and convert.
+
+    Returns:
+        Tuple[float, str]: A tuple containing the rounded normalized price value
+                           (to three decimal places) and its price type.
+
+    Raises:
+        ValueError: If the input string format is invalid.
     """
     # Split into numeric value and text part
     try:
         numeric_value, text_part = split_price_string(price_str)
-    except ValueError as e:
+    except ValueError:
         raise ValueError(f"Invalid price format: {price_str}")
 
     text_part = text_part.lower()
@@ -211,8 +221,9 @@ def convert_price(price_str: str) -> Tuple[float, str]:
         division_factor = 1
         price_type = "tokens"
 
-    normalized_price = numeric_value / (division_factor * scale_factor)
-    return (normalized_price, price_type)
+    # Normalize the price and round to three decimal places
+    normalized_price = round_to_three(numeric_value / (division_factor * scale_factor))
+    return normalized_price, price_type
 
 
 def process_extra_ratios(
