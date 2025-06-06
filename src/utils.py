@@ -61,36 +61,56 @@ def fetch_and_sort_models(
         raise requests.exceptions.RequestException(f"An HTTP error occurred: {e}")
 
 
-def get_channel_id_mapping(save_to_file: bool = False) -> dict:
+def get_channel_id_mapping(save_to_file: bool = False) -> Dict:
+    """
+    Fetches channel ID mapping data from an external API, optionally saves it to a file,
+    and returns a processed mapping.
+
+    Parameters:
+    save_to_file (bool): Whether to save the sorted data to a JSON file.
+
+    Returns:
+    dict: A mapping of channel names to IDs.
+
+    Raises:
+    requests.RequestException: For API request errors.
+    KeyError, ValueError: For errors while processing the data.
+    """
     try:
-        # 发送请求获取数据
+        # Fetch data from the API
         response = requests.get("https://oneapi.service.oaklight.cn/api/ownedby")
         response.raise_for_status()
+
+        # Parse JSON response
         data = response.json()
 
         if save_to_file:
-            # 对数据的 key 按数值排序
+            # Sort data by key and prepare for saving
             sorted_data = {
                 str(k): v
                 for k, v in sorted(data["data"].items(), key=lambda item: int(item[0]))
             }
-            result = {}
-            result["data"] = sorted_data
+            result = {"data": sorted_data}
 
-            # 保存排序后的 JSON 数据到文件
+            # Save the processed JSON data to a file
             with open("ownedby.json", "w", encoding="utf-8") as f:
                 json.dump(result, f, indent=2, ensure_ascii=False)
+
         else:
+            # Create a mapping from the retrieved data
             mapping = {}
-            for key, value in data["data"].items():
+            for key, value in data.get("data", {}).items():
                 mapping[value["name"]] = int(key)
             return mapping
 
+    except requests.ConnectionError as e:
+        raise requests.ConnectionError(f"Connection error occurred: {e}")
     except requests.RequestException as e:
-        print(f"请求出错: {e}")
+        raise requests.RequestException(f"HTTP request error: {e}")
+    except json.JSONDecodeError as e:
+        raise json.JSONDecodeError(f"JSON parsing error: {e}", doc=e.doc, pos=e.pos)
     except (KeyError, ValueError) as e:
-        print(f"解析数据出错: {e}")
-    return {}
+        raise RuntimeError(f"Data processing error: {e}") from e
 
 
 def load_yaml_from_directory(directory_path: str, file_name: str = None) -> dict:
