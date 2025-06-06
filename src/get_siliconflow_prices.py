@@ -53,7 +53,7 @@ if __name__ == "__main__":
             completion_price = extract_specific_price(model_pricing, "completion")
             prompt_price = extract_specific_price(model_pricing, "prompt")
             print(
-                f"Model Name: {model_name}, Completion Price: {completion_price} {model_price_unit}, , Prompt Price: {prompt_price} {model_price_unit}",
+                f"Model Name: {model_name}, Completion Price: {completion_price} {model_price_unit}, Prompt Price: {prompt_price} {model_price_unit}",
                 flush=True,
             )
             price_data = {
@@ -75,6 +75,9 @@ if __name__ == "__main__":
                     "input": model_price / 1000 / SCALE_FACTOR_CNY,
                     "output": model_price / 1000 / SCALE_FACTOR_CNY,
                 }
+                print(
+                    f"Model Name: {model_name}, Completion Price: {model_price} {model_price_unit}, Prompt Price: {model_price} {model_price_unit}"
+                )
             elif model_price_unit in ["/ Video", "/ Image", ""]:
                 price_data = {
                     "model": model_name,
@@ -83,11 +86,11 @@ if __name__ == "__main__":
                     "input": model_price,
                     "output": model_price,
                 }
+                print(
+                    f"Model Name: {model_name}, Pricing: {model_price} {model_price_unit}"
+                )
             else:
                 raise ValueError(f"Unknown price unit: {model_price_unit}")
-            print(
-                f"Model Name: {model_name}, Pricing Unit: {model_price_unit}, Pricing: {model_price}"
-            )
 
         processed_prices.append(price_data)
         print("-" * 40)
