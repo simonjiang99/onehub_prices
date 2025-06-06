@@ -1,12 +1,40 @@
 import json
 import os
-from typing import Tuple
+import urllib.request
+from typing import Literal, Tuple
 
 import requests
 import yaml
 
 SCALE_FACTOR_CNY = 0.014
 SCALE_FACTOR_USD = 0.002
+
+
+def fetch_and_sort_models(
+    url, endpoint, headers, mode: Literal["siliconflow", "openrouter"]
+):
+    """
+    Fetches models from the given URL and sorts them by modelName.
+
+    Parameters:
+    url (str): The base URL for the HTTPS connection.
+    endpoint (str): The endpoint to send the GET request to.
+    headers (dict): Dictionary containing any necessary headers.
+
+    Returns:
+    list: A sorted list of models based on modelName.
+    """
+    req = urllib.request.Request(f"{url}{endpoint}", headers=headers, method="GET")
+    with urllib.request.urlopen(req) as response:
+        body = response.read().decode("utf-8")
+
+    if mode == "siliconflow":
+        model_json = json.loads(body)["data"]["models"]
+        model_json = sorted(model_json, key=lambda x: x["modelName"])
+    else:
+        model_json = json.loads(body)["data"]
+    return model_json
+
 
 def get_channel_id_mapping(save_to_file: bool = False) -> dict:
     try:

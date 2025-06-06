@@ -1,31 +1,9 @@
 import json
 import os
-import urllib
-import urllib.request
 
 import dotenv
-from utils import SCALE_FACTOR_CNY
 
-
-def fetch_and_sort_models(url, endpoint, headers):
-    """
-    Fetches models from the given URL and sorts them by modelName.
-
-    Parameters:
-    url (str): The base URL for the HTTPS connection.
-    endpoint (str): The endpoint to send the GET request to.
-    headers (dict): Dictionary containing any necessary headers.
-
-    Returns:
-    list: A sorted list of models based on modelName.
-    """
-    req = urllib.request.Request(f"{url}{endpoint}", headers=headers, method="GET")
-    with urllib.request.urlopen(req) as response:
-        body = response.read().decode("utf-8")
-        model_json = json.loads(body)["data"]["models"]
-
-    sorted_models = sorted(model_json, key=lambda x: x["modelName"])
-    return sorted_models
+from utils import SCALE_FACTOR_CNY, fetch_and_sort_models
 
 
 def extract_specific_price(model_pricing, specification):
@@ -63,7 +41,7 @@ if __name__ == "__main__":
 
     siliconflow_channel_type: int = 45  # reference https://your-oneapi-url/api/ownedby
 
-    model_json = fetch_and_sort_models(url, endpoint, headers)
+    model_json = fetch_and_sort_models(url, endpoint, headers, mode="siliconflow")
 
     processed_prices = []
     for model in model_json:
