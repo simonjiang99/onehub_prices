@@ -1,7 +1,6 @@
 import json
 import os
-import urllib.request
-from typing import Literal, Tuple
+from typing import Dict, List, Literal, Tuple
 
 import requests
 import yaml
@@ -15,8 +14,11 @@ def round_to_three(num: float) -> float:
 
 
 def fetch_and_sort_models(
-    url, endpoint, headers, mode: Literal["siliconflow", "openrouter"]
-):
+    url: str,
+    endpoint: str,
+    headers: dict[str, str],
+    mode: Literal["siliconflow", "openrouter"],
+) -> dict:
     """
     Fetches models from the given URL and sorts them by modelName.
 
@@ -24,20 +26,39 @@ def fetch_and_sort_models(
     url (str): The base URL for the HTTPS connection.
     endpoint (str): The endpoint to send the GET request to.
     headers (dict): Dictionary containing any necessary headers.
+    mode (Literal): The mode, either "siliconflow" or "openrouter".
 
     Returns:
     list: A sorted list of models based on modelName.
-    """
-    req = urllib.request.Request(f"{url}{endpoint}", headers=headers, method="GET")
-    with urllib.request.urlopen(req) as response:
-        body = response.read().decode("utf-8")
 
-    if mode == "siliconflow":
-        model_json = json.loads(body)["data"]["models"]
-        model_json = sorted(model_json, key=lambda x: x["modelName"])
-    else:
-        model_json = json.loads(body)["data"]
-    return model_json
+    Raises:
+    requests.ConnectionError: If the connection fails.
+    json.JSONDecodeError: If the response body cannot be decoded into JSON.
+    requests.exceptions.RequestException: For other HTTP errors.
+    """
+    try:
+        response = requests.get(f"{url}{endpoint}", headers=headers)
+        response.raise_for_status()  # Raise exception for HTTP error responses
+        body = response.text
+
+        if mode == "siliconflow":
+            model_json = json.loads(body)["data"]["models"]
+            model_json = sorted(model_json, key=lambda x: x["modelName"])
+        else:
+            model_json = json.loads(body)["data"]
+
+        return model_json
+
+    except requests.ConnectionError as e:
+        raise requests.ConnectionError(f"Failed to connect to {url}: {e}")
+
+    except json.JSONDecodeError as e:
+        raise json.JSONDecodeError(
+            f"Failed to decode JSON response: {e}", doc=e.doc, pos=e.pos
+        )
+
+    except requests.exceptions.RequestException as e:
+        raise requests.exceptions.RequestException(f"An HTTP error occurred: {e}")
 
 
 def get_channel_id_mapping(save_to_file: bool = False) -> dict:
