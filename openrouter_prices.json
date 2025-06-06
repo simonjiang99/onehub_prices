@@ -1293,7 +1293,7 @@
       "type": "tokens",
       "channel_type": 1006,
       "input": 0.005,
-      "output": 0.015
+      "output": 0.014
     },
     {
       "model": "mistralai/mistral-nemo:free",
