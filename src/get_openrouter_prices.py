@@ -1,27 +1,25 @@
-import http.client
 import json
 
-from utils import SCALE_FACTOR_USD, integrate_prices, yaml_to_json
+from utils import (
+    SCALE_FACTOR_USD,
+    fetch_and_sort_models,
+    integrate_prices,
+    yaml_to_json,
+)
 
 
 def round_to_three(num: float) -> float:
     return round(num * 1000) / 1000
 
+
 if __name__ == "__main__":
-    url = "openrouter.ai"
+    url = "https://openrouter.ai"
     endpoint = "/api/v1/models"
     headers = {"Content-Type": "application/json"}
 
     openrouter_channel_type = 20  # Matches OpenRouter in ownedby.json
 
-    conn = http.client.HTTPSConnection(url)
-    conn.request("GET", endpoint, headers=headers)
-
-    response = conn.getresponse()
-    print(response.status)
-
-    body = response.read().decode("utf-8")
-    models = json.loads(body)["data"]
+    models = fetch_and_sort_models(url, endpoint, headers, mode="openrouter")
 
     openrouter_price_json = []
     for model in models:
