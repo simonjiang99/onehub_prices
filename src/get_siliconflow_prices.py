@@ -3,7 +3,7 @@ import os
 
 import dotenv
 
-from utils import SCALE_FACTOR_CNY, fetch_and_sort_models
+from utils import SCALE_FACTOR_CNY, fetch_and_sort_models, round_to_three
 
 
 def extract_specific_price(model_pricing, specification):
@@ -60,8 +60,8 @@ if __name__ == "__main__":
                 "model": model_name,
                 "type": "tokens",
                 "channel_type": siliconflow_channel_type,
-                "input": prompt_price / 1000 / SCALE_FACTOR_CNY,
-                "output": completion_price / 1000 / SCALE_FACTOR_CNY,
+                "input": round_to_three(prompt_price / 1000 / SCALE_FACTOR_CNY),
+                "output": round_to_three(completion_price / 1000 / SCALE_FACTOR_CNY),
             }
 
         else:
@@ -72,8 +72,8 @@ if __name__ == "__main__":
                     "model": model_name,
                     "type": "tokens",
                     "channel_type": siliconflow_channel_type,
-                    "input": model_price / 1000 / SCALE_FACTOR_CNY,
-                    "output": model_price / 1000 / SCALE_FACTOR_CNY,
+                    "input": round_to_three(model_price / 1000 / SCALE_FACTOR_CNY),
+                    "output": round_to_three(model_price / 1000 / SCALE_FACTOR_CNY),
                 }
                 print(
                     f"Model Name: {model_name}, Completion Price: {model_price} {model_price_unit}, Prompt Price: {model_price} {model_price_unit}"
@@ -83,8 +83,8 @@ if __name__ == "__main__":
                     "model": model_name,
                     "type": "times",
                     "channel_type": siliconflow_channel_type,
-                    "input": model_price,
-                    "output": model_price,
+                    "input": round_to_three(model_price),
+                    "output": round_to_three(model_price),
                 }
                 print(
                     f"Model Name: {model_name}, Pricing: {model_price} {model_price_unit}"
