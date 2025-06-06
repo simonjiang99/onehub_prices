@@ -4,6 +4,7 @@ import urllib
 import urllib.request
 
 import dotenv
+from utils import SCALE_FACTOR_CNY
 
 
 def fetch_and_sort_models(url, endpoint, headers):
@@ -63,7 +64,6 @@ if __name__ == "__main__":
     siliconflow_channel_type: int = 45  # reference https://your-oneapi-url/api/ownedby
 
     model_json = fetch_and_sort_models(url, endpoint, headers)
-    scale_factor = 0.014
 
     processed_prices = []
     for model in model_json:
@@ -82,8 +82,8 @@ if __name__ == "__main__":
                 "model": model_name,
                 "type": "tokens",
                 "channel_type": siliconflow_channel_type,
-                "input": prompt_price / 1000 / scale_factor,
-                "output": completion_price / 1000 / scale_factor,
+                "input": prompt_price / 1000 / SCALE_FACTOR_CNY,
+                "output": completion_price / 1000 / SCALE_FACTOR_CNY,
             }
 
         else:
@@ -94,8 +94,8 @@ if __name__ == "__main__":
                     "model": model_name,
                     "type": "tokens",
                     "channel_type": siliconflow_channel_type,
-                    "input": model_price / 1000 / scale_factor,
-                    "output": model_price / 1000 / scale_factor,
+                    "input": model_price / 1000 / SCALE_FACTOR_CNY,
+                    "output": model_price / 1000 / SCALE_FACTOR_CNY,
                 }
             elif model_price_unit in ["/ Video", "/ Image", ""]:
                 price_data = {

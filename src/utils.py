@@ -1,11 +1,12 @@
 import json
 import os
-import token
 from typing import Tuple
 
 import requests
 import yaml
 
+SCALE_FACTOR_CNY = 0.014
+SCALE_FACTOR_USD = 0.002
 
 def get_channel_id_mapping(save_to_file: bool = False) -> dict:
     try:
@@ -154,9 +155,9 @@ def convert_price(price_str: str) -> Tuple[float, str]:
 
     # Determine currency scale factor
     if "rmb" in text_part:
-        scale_factor = 0.014
+        scale_factor = SCALE_FACTOR_CNY
     else:  # Default to USD
-        scale_factor = 0.002
+        scale_factor = SCALE_FACTOR_USD
 
     # Determine division factor and price type
     if "/m" in text_part or "/ m" in text_part:

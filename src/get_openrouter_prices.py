@@ -1,12 +1,7 @@
 import http.client
 import json
-import os
-import sys
 
-_current_dir = os.path.abspath(os.path.dirname(__file__))
-sys.path.extend([_current_dir])
-
-from utils import integrate_prices, yaml_to_json
+from utils import SCALE_FACTOR_USD, integrate_prices, yaml_to_json
 
 
 def round_to_three(num: float) -> float:
@@ -32,8 +27,8 @@ openrouter_price_json = []
 for model in models:
     try:
         model_name = model["id"]
-        input_price = float(model["pricing"]["prompt"]) * 1000 / 0.002
-        output_price = float(model["pricing"]["completion"]) * 1000 / 0.002
+        input_price = float(model["pricing"]["prompt"]) * 1000 / SCALE_FACTOR_USD
+        output_price = float(model["pricing"]["completion"]) * 1000 / SCALE_FACTOR_USD
 
         input_price = round_to_three(input_price)
         output_price = round_to_three(output_price)
