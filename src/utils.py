@@ -269,7 +269,7 @@ def convert_price(price_str: str) -> Tuple[float, str]:
         price_type = "tokens"
 
     # Normalize the price and round to three decimal places
-    normalized_price = round_to_three(numeric_value / (division_factor * scale_factor))
+    normalized_price = numeric_value / (division_factor * scale_factor)
     return normalized_price, price_type
 
 
@@ -309,7 +309,7 @@ def process_extra_ratios(
             else:
                 # 不带单位的情况，直接使用
                 ratio = float(value)
-            result[key] = ratio
+            result[key] = round_to_three(ratio)
     return result
 
 
@@ -321,8 +321,8 @@ def create_model_entry(
         "model": model_name,
         "type": model_type,
         "channel_type": channel_type,
-        "input": input_price,
-        "output": output_price,
+        "input": round_to_three(input_price),
+        "output": round_to_three(output_price),
     }
     if extra_ratios:
         entry["extra_ratios"] = process_extra_ratios(
