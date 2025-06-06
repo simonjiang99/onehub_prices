@@ -3,7 +3,13 @@ import os
 
 import dotenv
 
-from utils import SCALE_FACTOR_CNY, fetch_and_sort_models, round_to_three
+from utils import (
+    SCALE_FACTOR_CNY,
+    fetch_and_sort_models,
+    integrate_prices,
+    round_to_three,
+    yaml_to_json,
+)
 
 
 def extract_specific_price(model_pricing, specification):
@@ -95,7 +101,12 @@ if __name__ == "__main__":
         processed_prices.append(price_data)
         print("-" * 40)
 
-    siliconflow_prices = {"data": processed_prices}
+    # Load and convert manual_prices/Siliconflow.yaml
+    manual_prices = yaml_to_json("manual_prices", "Siliconflow.yaml")
+
+    # Integrate manual prices and siliconflow_prices
+    integrated_prices = integrate_prices(manual_prices, {"data": processed_prices})
+
     # 保存集成后的价格数据
     with open("siliconflow_prices.json", "w", encoding="utf-8") as f:
-        json.dump(siliconflow_prices, f, ensure_ascii=False, indent=2)
+        json.dump(integrated_prices, f, ensure_ascii=False, indent=2)
