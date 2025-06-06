@@ -1,13 +1,8 @@
 import json
-import os
-import sys
 
 import requests
 
-_current_dir = os.path.abspath(os.path.dirname(__file__))
-sys.path.extend([_current_dir])
-
-from utils import yaml_to_json, integrate_prices
+from utils import integrate_prices, yaml_to_json
 
 
 def filter_onehub_only_prices(prices: dict) -> dict:

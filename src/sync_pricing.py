@@ -1,18 +1,14 @@
 import argparse
 import json
 import os
-import sys
 from typing import Literal
 
 import dotenv
 import requests
 
-dotenv.load_dotenv()  # Load environment variables from .env file
-
-_current_dir = os.path.abspath(os.path.dirname(__file__))
-sys.path.extend([_current_dir])
-
 from utils import get_channel_id_mapping
+
+dotenv.load_dotenv()  # Load environment variables from .env file
 
 
 def sync_pricing(
