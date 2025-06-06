@@ -84,6 +84,8 @@ def load_yaml_from_directory(directory_path: str, file_name: str = None) -> dict
 
     Returns:
         dict: Merged YAML data.
+    Raises:
+        FileNotFoundError: If the specified file_name does not exist.
     """
     yaml_data = {"models": {}}
     special_file = "oaklight-load-balancer.yaml"
@@ -91,6 +93,10 @@ def load_yaml_from_directory(directory_path: str, file_name: str = None) -> dict
     # 如果提供了 file_name，则只处理这个文件
     if file_name:
         file_path = os.path.join(directory_path, file_name)
+        if not os.path.exists(file_path):
+            raise FileNotFoundError(
+                f"The specified file '{file_name}' does not exist in the directory: {directory_path}"
+            )
         with open(file_path, "r", encoding="utf-8") as file:
             file_data = yaml.safe_load(file)
         if "models" in file_data:
