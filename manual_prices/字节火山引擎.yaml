@@ -1,19 +1,40 @@
 models:
   字节火山引擎:
+    # 模型定价：https://www.volcengine.com/docs/82379/1544106
     # 豆包大模型 @ 字节火山引擎
-    # reasoning models
     doubao-1.5-thinking-pro:
       aliases:
         # multimodal aliases
-        - doubao-1.5-thinking-pro-vision
         - doubao-1.5-thinking-pro-m
         # actual model ids
-        - doubao-1-5-thinking-pro-250415
-        - doubao-1-5-thinking-pro-m-250415
-        - doubao-1.5-thinking-pro-250415
+        - doubao-1.5-thinking-pro-m-250428 # default
         - doubao-1.5-thinking-pro-m-250415
-      input: 0.004 rmb / K
-      output: 0.016 rmb / K
+        - doubao-1.5-thinking-pro-250415
+      input: 4 rmb / M
+      output: 16 rmb / M
+
+    doubao-1.5-thinking-vision-pro:
+      aliases:
+        - doubao-1.5-thinking-vision-pro-250428
+      input: 3 rmb / M
+      output: 9 rmb / M
+
+    # vision models
+    doubao-1.5-vision-pro:
+      aliases:
+        # context length aliases
+        - doubao-1.5-vision-pro-32k
+        # actual models
+        - doubao-1.5-vision-pro-250328
+        - doubao-1.5-vision-pro-32k-250115 # function call enabled
+      input: 3 rmb / M
+      output: 9 rmb / M
+
+    doubao-1.5-vision-lite:
+      aliases:
+        - doubao-1.5-vision-lite-250315
+      input: 1.5 rmb / M
+      output: 4.5 rmb / M
 
     # text model
     doubao-1.5-pro:
@@ -23,68 +44,73 @@ models:
         - doubao-1.5-pro-32k-character
         - doubao-1.5-pro-character
         # actual models
-        - doubao-1-5-pro-32k-250115 # function call enabled
-        - doubao-1-5-pro-32k-character-250228
         - doubao-1.5-pro-32k-250115 # function call enabled
         - doubao-1.5-pro-32k-character-250228
-      input: 0.0008 rmb / K
-      output: 0.0020 rmb / K
+      input: 0.8 rmb / M
+      output: 2.0 rmb / M
+
     doubao-1.5-pro-256k:
-      aliases: 
-        - doubao-1-5-pro-256k-250115
+      aliases:
         - doubao-1.5-pro-256k-250115
-      input: 0.0050 rmb / K
-      output: 0.0090 rmb / K
+      input: 5 rmb / M
+      output: 9 rmb / M
 
     doubao-1.5-lite:
       aliases:
         # context length aliases
         - doubao-1.5-lite-32k
         # actual model
-        - doubao-1-5-lite-32k-250115 # function call enabled
         - doubao-1.5-lite-32k-250115 # function call enabled
-      input: 0.0003 rmb / K
-      output: 0.0006 rmb / K
-
-    # vision models
-    doubao-1.5-vision-pro:
-      aliases:
-        # context length aliases
-        - doubao-1.5-vision-pro-32k
-        - doubao-1.5-vision-pro-128k
-        # actual models
-        - doubao-1.5-vision-pro-250328
-        - doubao-1-5-vision-pro-32k-250115 # function call enabled
-        - doubao-1.5-vision-pro-32k-250115 # function call enabled
-      input: 0.003 rmb / K
-      output: 0.009 rmb / K
-    doubao-1.5-vision-lite:
-      aliases:
-        - doubao-1.5-vision-lite-250315
-      input: 0.0015 rmb / K
-      output: 0.0045 rmb / K
+      input: 0.3 rmb / M
+      output: 0.6 rmb / M
 
     # gui agent model
     doubao-1.5-ui-tars:
-      aliases: doubao-1.5-ui-tars-250328
-      input: 0.0035 rmb / K
-      output: 0.012 rmb / K
+      aliases:
+        - doubao-1-5-ui-tars-250428 # default
+        - doubao-1.5-ui-tars-250328
+      input: 3.5 rmb / M
+      output: 12 rmb / M
 
-    # text2image
-    doubao-seedream-3:
-      aliases: doubao-seedream-3-0-t2i-250415
+    # 图片模型
+    doubao-seedream-3.0:
+      aliases: doubao-seedream-3.0-t2i-250415
       output: 0.2590 rmb / image
 
+    # 视频生成模型
+    doubao-seedance-1.0-lite:
+      aliases:
+        - doubao-seedance-1-0-lite-i2v
+        - doubao-seedance-1-0-lite-t2v
+        - doubao-seedance-1-0-lite-i2v-250428
+        - doubao-seedance-1-0-lite-t2v-250428
+      input: 10 rmb / M
+      output: 10 rmb / M
+
+    doubao-seaweed:
+      input: 30 rmb / M
+      output: 30 rmb / M
+
     # embedding models
-    doubao-embedding-vision:
-      aliases: doubao-embedding-vision-241215
-      input: 0.0007 rmb / K # image input 0.0018 rmb / K
-      output: 0
     doubao-embedding-large:
-      aliases: doubao-embedding-large-text-240915
-      input: 0.0007 rmb / K
+      aliases:
+        - doubao-embedding-large-text-250515 # seed 1.5 embedding
+        - doubao-embedding-large-text-240915
+      input: 0.7 rmb / M
       output: 0
+
     doubao-embedding:
-      aliases: doubao-embedding-text-240715, doubao-embedding-text-240515
-      input: 0.0005 rmb / K
+      aliases:
+        - doubao-embedding-text-240715
+        - doubao-embedding-text-240515
+      input: 0.5 rmb / M
       output: 0
+
+    doubao-embedding-vision:
+      aliases:
+        - doubao-embedding-vision-250328
+        - doubao-embedding-vision-241215
+      input: 0.7 rmb / M
+      output: 0
+      extra_ratios:
+        - input_image_tokens: 1.8 rmb / M
