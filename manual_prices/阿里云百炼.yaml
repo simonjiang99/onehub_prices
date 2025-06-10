@@ -131,6 +131,8 @@ models:
       output: 0
     text-embedding-v3:
       input: 0.0005 rmb / K
+    text-embedding-v4:
+      input: 0.0005 rmb / K
     gte-rerank-v2:
       input: 0.0008 rmb / K
 
