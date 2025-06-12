@@ -28,37 +28,28 @@ models:
       extra_ratios:
         - cached_tokens: 0.1
 
-    doubao-1.5-thinking-pro:
+    doubao-1.5-thinking-pro*:
       aliases:
-        # multimodal aliases
-        - doubao-1.5-thinking-pro-m
-        # actual model ids
-        - doubao-1.5-thinking-pro-m-250428 # default
-        - doubao-1.5-thinking-pro-m-250415
-        - doubao-1.5-thinking-pro-250415
+        - doubao-1-5-thinking-pro*
       input: 4 rmb / M
       output: 16 rmb / M
 
-    doubao-1.5-thinking-vision-pro:
+    doubao-1.5-thinking-vision-pro*:
       aliases:
-        - doubao-1.5-thinking-vision-pro-250428
+        - doubao-1-5-thinking-vision-pro*
       input: 3 rmb / M
       output: 9 rmb / M
 
     # vision models
-    doubao-1.5-vision-pro:
+    doubao-1.5-vision-pro*:
       aliases:
-        # context length aliases
-        - doubao-1.5-vision-pro-32k
-        # actual models
-        - doubao-1.5-vision-pro-250328
-        - doubao-1.5-vision-pro-32k-250115 # function call enabled
+        - doubao-1-5-vision-pro*
       input: 3 rmb / M
       output: 9 rmb / M
 
-    doubao-1.5-vision-lite:
+    doubao-1-5-vision-lite*:
       aliases:
-        - doubao-1.5-vision-lite-250315
+        - doubao-1-5-vision-lite*
       input: 1.5 rmb / M
       output: 4.5 rmb / M
 
@@ -66,41 +57,34 @@ models:
     doubao-1.5-pro:
       aliases:
         # aliases
-        - doubao-1.5-pro-32k
-        - doubao-1.5-pro-32k-character
+        - doubao-1.5-pro-32k*
         - doubao-1.5-pro-character
-        # actual models
-        - doubao-1.5-pro-32k-250115 # function call enabled
-        - doubao-1.5-pro-32k-character-250228
+        - doubao-1-5-pro-32k*
+        - doubao-1-5-pro-character
       input: 0.8 rmb / M
       output: 2.0 rmb / M
 
-    doubao-1.5-pro-256k:
+    doubao-1.5-pro-256k*:
       aliases:
-        - doubao-1.5-pro-256k-250115
+        - doubao-1-5-pro-256k*
       input: 5 rmb / M
       output: 9 rmb / M
 
-    doubao-1.5-lite:
+    doubao-1.5-lite*:
       aliases:
-        # context length aliases
-        - doubao-1.5-lite-32k
-        # actual model
-        - doubao-1.5-lite-32k-250115 # function call enabled
+        - doubao-1-5-lite*
       input: 0.3 rmb / M
       output: 0.6 rmb / M
 
     # gui agent model
-    doubao-1.5-ui-tars:
+    doubao-1.5-ui-tars*:
       aliases:
-        - doubao-1-5-ui-tars-250428 # default
-        - doubao-1.5-ui-tars-250328
+        - doubao-1-5-ui-tars*
       input: 3.5 rmb / M
       output: 12 rmb / M
 
     # 图片模型
-    doubao-seedream-3.0:
-      aliases: doubao-seedream-3.0-t2i-250415
+    doubao-seedream-3.0*:
       output: 0.2590 rmb / image
 
     # 视频生成模型
@@ -121,24 +105,15 @@ models:
       output: 30 rmb / M
 
     # embedding models
-    doubao-embedding-large:
-      aliases:
-        - doubao-embedding-large-text-250515 # seed 1.5 embedding
-        - doubao-embedding-large-text-240915
+    doubao-embedding-large-text*:
       input: 0.7 rmb / M
       output: 0
 
-    doubao-embedding:
-      aliases:
-        - doubao-embedding-text-240715
-        - doubao-embedding-text-240515
+    doubao-embedding-text*:
       input: 0.5 rmb / M
       output: 0
 
-    doubao-embedding-vision:
-      aliases:
-        - doubao-embedding-vision-250328
-        - doubao-embedding-vision-241215
+    doubao-embedding-vision*:
       input: 0.7 rmb / M
       output: 0
       extra_ratios:
