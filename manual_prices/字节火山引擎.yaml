@@ -2,6 +2,32 @@ models:
   字节火山引擎:
     # 模型定价：https://www.volcengine.com/docs/82379/1544106
     # 豆包大模型 @ 字节火山引擎
+    doubao-seed-1.6-thinking*:
+      aliases:
+        - doubao-seed-1-6-thinking*
+      input: 1.2 rmb / M # 取32k～128k价格，最为常见
+      output: 16 rmb /M # 取32k～128k价格，最为常见
+      extra_ratios:
+        - cached_tokens: 0.1
+
+    doubao-seed-1.6:
+      aliases:
+        - doubao-seed-1-6
+        - doubao-seed-1.6-250615
+        - doubao-seed-1-6-250615
+      input: 1.2 rmb / M # 取32k～128k价格，最为常见
+      output: 16 rmb /M # 取32k～128k价格，最为常见
+      extra_ratios:
+        - cached_tokens: 0.1
+
+    doubao-seed-1.6-flash*:
+      aliases:
+        - doubao-seed-1-6-flash*
+      input: 0.3 rmb / M # 取32k～128k价格，最为常见
+      output: 3 rmb /M # 取32k～128k价格，最为常见
+      extra_ratios:
+        - cached_tokens: 0.1
+
     doubao-1.5-thinking-pro:
       aliases:
         # multimodal aliases
@@ -78,12 +104,15 @@ models:
       output: 0.2590 rmb / image
 
     # 视频生成模型
-    doubao-seedance-1.0-lite:
+    doubao-seedance-1.0-pro*
       aliases:
-        - doubao-seedance-1-0-lite-i2v
-        - doubao-seedance-1-0-lite-t2v
-        - doubao-seedance-1-0-lite-i2v-250428
-        - doubao-seedance-1-0-lite-t2v-250428
+        - doubao-seedance-1-0-pro*
+      input: 15 rmb / M
+      output: 15 rmb / M
+
+    doubao-seedance-1.0-lite*:
+      aliases:
+        - doubao-seedance-1-0-lite*
       input: 10 rmb / M
       output: 10 rmb / M
 
