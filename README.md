@@ -93,7 +93,7 @@
 1. 确保已安装依赖项：
 
    ```bash
-   pip install requests
+   pip install -r requirements.txt
    ```
 
 2. 运行脚本以同步 ownedby 数据：
