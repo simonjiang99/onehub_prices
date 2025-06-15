@@ -1,59 +1,46 @@
 models:
   Mistral:
     # premier models
-    mistral-medium:
-      aliases: mistral-medium-*
+    mistral-medium*:
       input: 0.4 usd / M
       output: 2 usd / M
-    codestral:
-      aliases: codestral-*
+    codestral*:
       input: 0.3 usd / M
       output: 0.9 usd / M
-    codestral-mamba:
-      aliases: codestral-mamba-*
+    codestral-mamba*:
       input: 0.25 usd / M
       output: 0.25 usd / M
-    mistral-saba:
-      aliases: mistral-saba-*
+    mistral-saba*:
       input: 0.2 usd / M
       output: 0.6 usd / M
-    mistral-large:
-      aliases: mistral-large-*
+    mistral-large*:
       input: 2 usd / M
       output: 6 usd / M
-    pixtral-large:
-      aliases: pixtral-large-*
+    pixtral-large*:
       input: 2 usd / M
       output: 6 usd / M
-    ministral-8b:
-      aliases: ministral-8b-*
+    ministral-8b*:
       input: 0.1 usd / M
       output: 0.1 usd / M
-    ministral-3b:
-      aliases: ministral-3b-*
+    ministral-3b*:
       input: 0.04 usd / M
       output: 0.04 usd / M
     mistral-embed:
       input: 0.1 usd / M
-    mistral-moderation:
-      aliases: mistral-moderation-*
+    mistral-moderation*:
       input: 0.1 usd / M
 
     # open-source models
-    mistral-small:
-      aliases: mistral-small-*
+    mistral-small*:
       input: 0.1 usd / M
       output: 0.3 usd / M
-    devstral-small:
-      aliases: devstral-small-*
+    devstral-small*:
       input: 0.1 usd / M
       output: 0.3 usd / M
-    pixtral-12b:
-      aliases: pixtral-12b-*
+    pixtral-12b*:
       input: 0.15 usd / M
       output: 0.15 usd / M
-    mistral-nemo:
-      aliases: mistral-nemo-*
+    mistral-nemo*:
       input: 0.15 usd / M
       output: 0.15 usd / M
     open-mistral-7b:
