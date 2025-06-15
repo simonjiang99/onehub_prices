@@ -4,6 +4,9 @@ models:
     mistral-medium*:
       input: 0.4 usd / M
       output: 2 usd / M
+    magistral-medium*:
+      input: 2 usd / M
+      output: 5 usd / M
     codestral*:
       input: 0.3 usd / M
       output: 0.9 usd / M
@@ -25,6 +28,8 @@ models:
     ministral-3b*:
       input: 0.04 usd / M
       output: 0.04 usd / M
+    codestral-embed*:
+      input: 0.15 usd / M
     mistral-embed:
       input: 0.1 usd / M
     mistral-moderation*:
@@ -34,6 +39,9 @@ models:
     mistral-small*:
       input: 0.1 usd / M
       output: 0.3 usd / M
+    magistral-small*:
+      input: 0.5 usd / M
+      output: 1.5 usd / M
     devstral-small*:
       input: 0.1 usd / M
       output: 0.3 usd / M
