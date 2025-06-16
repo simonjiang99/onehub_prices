@@ -3109,6 +3109,13 @@
       "output": 0.0
     },
     {
+      "model": "MiniMaxAI/MiniMax-M1-80k",
+      "type": "tokens",
+      "channel_type": 45,
+      "input": 1.1428571428571428,
+      "output": 1.1428571428571428
+    },
+    {
       "model": "Pro/01-ai/Yi-1.5-6B-Chat",
       "type": "tokens",
       "channel_type": 45,
@@ -5089,13 +5096,6 @@
       "output": 0.75
     },
     {
-      "model": "meta-llama/llama-2-70b-chat",
-      "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.45,
-      "output": 0.45
-    },
-    {
       "model": "meta-llama/llama-3-70b-instruct",
       "type": "tokens",
       "channel_type": 1006,
@@ -5205,7 +5205,7 @@
       "type": "tokens",
       "channel_type": 1006,
       "input": 0.03,
-      "output": 0.15
+      "output": 0.125
     },
     {
       "model": "meta-llama/llama-3.3-70b-instruct:free",
@@ -5566,13 +5566,6 @@
     },
     {
       "model": "moonshotai/kimi-vl-a3b-thinking:free",
-      "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.0,
-      "output": 0.0
-    },
-    {
-      "model": "moonshotai/moonlight-16b-a3b-instruct:free",
       "type": "tokens",
       "channel_type": 1006,
       "input": 0.0,
@@ -6154,13 +6147,6 @@
     },
     {
       "model": "qwen/qwen2.5-vl-32b-instruct:free",
-      "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.0,
-      "output": 0.0
-    },
-    {
-      "model": "qwen/qwen2.5-vl-3b-instruct:free",
       "type": "tokens",
       "channel_type": 1006,
       "input": 0.0,
