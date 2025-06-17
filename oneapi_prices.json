@@ -5141,7 +5141,7 @@
       "model": "meta-llama/llama-3.1-8b-instruct",
       "type": "tokens",
       "channel_type": 1006,
-      "input": 0.009,
+      "input": 0.008,
       "output": 0.015
     },
     {
@@ -5478,7 +5478,7 @@
       "type": "tokens",
       "channel_type": 1006,
       "input": 0.005,
-      "output": 0.013
+      "output": 0.012
     },
     {
       "model": "mistralai/mistral-nemo:free",
@@ -5563,6 +5563,13 @@
       "channel_type": 1006,
       "input": 1.0,
       "output": 3.0
+    },
+    {
+      "model": "moonshotai/kimi-dev-72b:free",
+      "type": "tokens",
+      "channel_type": 1006,
+      "input": 0.0,
+      "output": 0.0
     },
     {
       "model": "moonshotai/kimi-vl-a3b-thinking:free",
