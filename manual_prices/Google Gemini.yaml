@@ -4,6 +4,9 @@ models:
     # 模型价格：https://ai.google.dev/gemini-api/docs/pricing
 
     # experimental models
+    gemini-2.5-flash-exp-native-audio-thinking-dialog:
+      input: 0
+      output: 0
     learnlm-2.0-flash-experimental:
       input: 0
       output: 0
