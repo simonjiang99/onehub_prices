@@ -11,27 +11,33 @@ models:
       input: 0
       output: 0
 
-    # Gemini 2.5 Flash Preview
+    # Gemini 2.5 Flash
     # https://ai.google.dev/gemini-api/docs/pricing#gemini-2.5-flash
-    gemini-2.5-flash-preview:
-      aliases:
-        - gemini-2.5-flash-preview-05-20
-      input: 0.15 usd / M # 0.15 美元（文字 / 图片 / 视频）；1.00 美元（音频）
-      output: 0.6 usd / M # 非思考：0.60 美元；思考：3.50 美元
+    gemini-2.5-flash:
+      input: 0.3 usd / M # 0.15 美元（文字 / 图片 / 视频）；1.00 美元（音频）
+      output: 2.5 usd / M # 非思考：0.60 美元；思考：3.50 美元
       extra_ratios:
-        - input_image_tokens: 0.15 usd / M # 图片输入
+        - input_image_tokens: 0.3 usd / M # 图片输入
         - input_audio_tokens: 1 usd / M # 音频输入
-        - reasoning_tokens: 3.5 usd / M # 思考
 
-    # Gemini 2.5 Pro Preview
-    # https://ai.google.dev/gemini-api/docs/pricing#gemini-2.5-pro-preview
-    gemini-2.5-pro-preview:
-      aliases:
-        - gemini-2.5-pro-preview-06-05
+    # Gemini 2.5 Pro
+    # https://ai.google.dev/gemini-api/docs/pricing#gemini-2.5-pro
+    gemini-2.5-pro:
       input: 1.25 usd / M # 2.5 usd / M when prompt is larger than 200,000 tokens
       output: 10 usd / M # 15 usd / M when prompt is larger than 200,000 tokens
       extra_ratios:
         - cached_tokens: 0.31 usd / M
+
+    # Gemini 2.5 Flash Lite Preview
+    # https://ai.google.dev/gemini-api/docs/models#gemini-2.5-flash-lite
+    gemini-2.5-flash-lite-preview:
+      aliases:
+        - gemini-2.5-flash-lite-preview-06-17
+      input: 0.1 usd / M
+      output: 0.4 usd / M
+      extra_ratios:
+        - input_audio_tokens: 0.5 usd / M
+        - cached_tokens: 0.025 usd / M
 
     # Gemini 2.5 Flash Native Audio
     # https://ai.google.dev/gemini-api/docs/pricing#gemini-2.5-flash-native-audio
