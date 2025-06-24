@@ -824,7 +824,7 @@
       "type": "tokens",
       "channel_type": 1006,
       "input": 0.05,
-      "output": 0.095
+      "output": 0.09
     },
     {
       "model": "google/gemma-3-27b-it:free",
