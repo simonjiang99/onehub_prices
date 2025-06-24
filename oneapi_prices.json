@@ -4701,7 +4701,7 @@
       "type": "tokens",
       "channel_type": 1006,
       "input": 0.14,
-      "output": 0.575
+      "output": 0.44
     },
     {
       "model": "deepseek/deepseek-chat-v3-0324:free",
@@ -5156,7 +5156,7 @@
       "type": "tokens",
       "channel_type": 1006,
       "input": 0.008,
-      "output": 0.014
+      "output": 0.012
     },
     {
       "model": "meta-llama/llama-3.1-8b-instruct:free",
@@ -5219,7 +5219,7 @@
       "type": "tokens",
       "channel_type": 1006,
       "input": 0.025,
-      "output": 0.115
+      "output": 0.1
     },
     {
       "model": "meta-llama/llama-3.3-70b-instruct:free",
@@ -5506,7 +5506,7 @@
       "type": "tokens",
       "channel_type": 1006,
       "input": 0.005,
-      "output": 0.009
+      "output": 0.007
     },
     {
       "model": "mistralai/mistral-nemo:free",
