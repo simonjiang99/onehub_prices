@@ -1020,7 +1020,7 @@
       "type": "tokens",
       "channel_type": 1006,
       "input": 0.025,
-      "output": 0.1
+      "output": 0.095
     },
     {
       "model": "meta-llama/llama-3.3-70b-instruct:free",
