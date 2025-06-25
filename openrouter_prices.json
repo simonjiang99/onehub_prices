@@ -957,7 +957,7 @@
       "type": "tokens",
       "channel_type": 1006,
       "input": 0.008,
-      "output": 0.012
+      "output": 0.011
     },
     {
       "model": "meta-llama/llama-3.1-8b-instruct:free",
@@ -1020,7 +1020,7 @@
       "type": "tokens",
       "channel_type": 1006,
       "input": 0.025,
-      "output": 0.095
+      "output": 0.09
     },
     {
       "model": "meta-llama/llama-3.3-70b-instruct:free",
@@ -1300,7 +1300,7 @@
       "type": "tokens",
       "channel_type": 1006,
       "input": 0.005,
-      "output": 0.007
+      "output": 0.006
     },
     {
       "model": "mistralai/mistral-nemo:free",
