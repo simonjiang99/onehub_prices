@@ -4700,8 +4700,8 @@
       "model": "baidu/ernie-4.5-300b-a47b",
       "type": "tokens",
       "channel_type": 1006,
-      "input": 0.15,
-      "output": 0.5
+      "input": 0.14,
+      "output": 0.55
     },
     {
       "model": "cognitivecomputations/dolphin-mixtral-8x22b",
@@ -5569,7 +5569,7 @@
       "type": "tokens",
       "channel_type": 1006,
       "input": 0.005,
-      "output": 0.006
+      "output": 0.005
     },
     {
       "model": "mistralai/mistral-nemo:free",
