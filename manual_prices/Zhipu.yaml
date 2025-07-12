@@ -1,108 +1,107 @@
 models:
+  # https://bigmodel.cn/pricing
+
   Zhipu:
     # llm
     glm-4-plus:
-      input: 0.05 rmb / K
-      output: 0.05 rmb / K
-    glm-4-airx:
-      input: 0.01 rmb / K
-      output: 0.01 rmb / K
-    glm-4-long:
-      input: 0.001 rmb / K
-      output: 0.001 rmb / K
-    glm-4-flashx:
-      input: 0.0001 rmb / K
-      output: 0.0001 rmb / K
+      input: 5 rmb / M
+      output: 5 rmb / M
     glm-4-air-250414:
-      input: 0.0005 rmb / K
-      output: 0.0005 rmb / K
-
-    # reasoning models
-    glm-z1-airx:
-      input: 0.005 rmb / K
-      output: 0.005 rmb / K
+      input: 0.5 rmb / M
+      output: 0.5 rmb / M
+    glm-4-airx:
+      input: 10 rmb / M
+      output: 10 rmb / M
+    glm-4-long:
+      input: 1 rmb / M
+      output: 1 rmb / M
+    glm-4-assistant:
+      input: 5 rmb / M
+      output: 5 rmb / M
     glm-z1-air:
-      input: 0.0005 rmb / K
-      output: 0.0005 rmb / K
-
-    # multimodal
-    glm-4v-plus-0111:
-      input: 0.004 rmb / K
-      output: 0.004 rmb / K
-    cogview-4:
-      output: 0.06 rmb / image
-    cogvideox-2:
-      output: 0.5 rmb / video
-    glm-4-voice:
-      input: 0.08 rmb / K
-      output: 0.08 rmb / K
-
-    # embedding models
-    embedding-3:
-      input: 0.0005 rmb / K
-      output: 0
-    embedding-2:
-      input: 0.0005 rmb / K
-      output: 0
-
-    # some other models
-    emohaa:
-      input: 0.015 rmb / K
-      output: 0.015 rmb / K
-    charglm-4:
-      input: 0.001 rmb / K
-      output: 0.001 rmb / K
-    codegeex-4:
-      input: 0.0001 rmb / K
-      output: 0.0001 rmb / K
-    rerank:
-      input: 0.0008 rmb / K
-    glm-4-alltools:
-      input: 0.1 rmb / K
-      output: 0.1 rmb / K
-
-    # free models
+      input: 0.5 rmb / M
+      output: 0.5 rmb / M
+    glm-z1-airx:
+      input: 5 rmb / M
+      output: 5 rmb / M
+    glm-z1-flashx:
+      input: 0.1 rmb / M
+      output: 0.1 rmb / M
+    glm-4-flashx-250414:
+      input: 0.1 rmb / M
+      output: 0.1 rmb / M
     glm-4-flash-250414:
-      input: 0
-      output: 0
-    glm-4v-flash:
-      input: 0
-      output: 0
-    cogview-3-flash:
-      input: 0
-      output: 0
-    cogvideox-flash:
       input: 0
       output: 0
     glm-z1-flash:
       input: 0
       output: 0
 
-    # legacy models
-    glm-4-0520:
-      input: 0.1 rmb / K
-      output: 0.1 rmb / K
-    glm-4v-plus:
-      input: 0.004 rmb / K
-      output: 0.004 rmb / K
-    glm-4v:
-      input: 0.05 rmb / K
-      output: 0.05 rmb / K
-    cogview-3-plus:
-      output: 0.06 rmb / image
-    cogvideox:
-      output: 0.5 rmb / video
-    glm-4:
-      input: 0.1 rmb / K
-      output: 0.1 rmb / K
-    glm-3-turbo:
-      input: 0.001 rmb / K
-      output: 0.001 rmb / K
-    cogview-3:
-      output: 0.1 rmb / image
-    glm-4-air:
-      input: 0.0005 rmb / K
-      output: 0.0005 rmb / K
-    glm-4-flash:
+    # vision
+    glm-4v-plus-0111:
+      input: 4 rmb / M
+      output: 4 rmb / M
+    glm-4v-flash:
       input: 0
       output: 0
+    glm-4.1v-thinking-flashx:
+      input: 2 rmb / M
+      output: 2 rmb / M
+    glm-4.1v-thinking-flash:
+      input: 0
+      output: 0
+
+    # multimodal generation
+    cogview-4:
+      output: 0.06 rmb / image
+    cogvideox-2:
+      output: 0.5 rmb / video
+    viduq1-text:
+      output: 3.75 rmb / video
+    viduq1-image:
+      output: 3.125 rmb / video
+    viduq1-start-end:
+      output: 3.125 rmb / video
+    vidu2-image:
+      output: 1.25 rmb / image
+    vidu2-start-end:
+      output: 1.25 rmb / image
+    vidu2-reference:
+      output: 2.5 rmb / video
+    cogview-3-flash:
+      input: 0
+      output: 0
+    cogvideox-flash:
+      input: 0
+      output: 0
+
+    # voice models
+    glm-4-voice:
+      input: 80 rmb / M
+      output: 80 rmb / M
+    # glm-asr:
+    #   input: 0.06 rmb / min
+    glm-realtime:
+      input: 0
+      output: 0
+
+    # embedding models
+    embedding-3:
+      input: 0.5 rmb / M
+      output: 0
+    embedding-2:
+      input: 0.5 rmb / M
+      output: 0
+
+    # some other models
+    charglm-4:
+      input: 1 rmb / M
+      output: 1 rmb / M
+    emohaa:
+      input: 15 rmb / M
+      output: 15 rmb / M
+    codegeex-4:
+      input: 0.1 rmb / M
+      output: 0.1 rmb / M
+    rerank:
+      input: 0.8 rmb / M
