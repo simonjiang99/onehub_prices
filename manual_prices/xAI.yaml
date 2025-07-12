@@ -1,11 +1,8 @@
 models:
   xAI:
-    # current models
-    grok-3:
+    grok-4:
       aliases:
-        - grok-3-beta
-        - grok-3
-        - grok-3-latest
+        - grok-4-0709
       input: 3 usd / M
       output: 15 usd / M
       extra_ratios:
@@ -19,15 +16,6 @@ models:
       output: 25 usd / M
       extra_ratios:
         - cached_tokens: 1.25 usd / M
-    grok-3-mini:
-      aliases:
-        - grok-3-mini-beta
-        - grok-3-mini
-        - grok-3-mini-latest
-      input: 0.3 usd / M
-      output: 0.5 usd / M
-      extra_ratios:
-        - cached_tokens: 0.07 usd / M
     grok-3-mini-fast:
       aliases:
         - grok-3-mini-fast-beta
@@ -37,6 +25,24 @@ models:
       output: 4 usd / M
       extra_ratios:
         - cached_tokens: 0.15 usd / M
+    grok-3:
+      aliases:
+        - grok-3-beta
+        - grok-3
+        - grok-3-latest
+      input: 3 usd / M
+      output: 15 usd / M
+      extra_ratios:
+        - cached_tokens: 0.75 usd / M
+    grok-3-mini:
+      aliases:
+        - grok-3-mini-beta
+        - grok-3-mini
+        - grok-3-mini-latest
+      input: 0.3 usd / M
+      output: 0.5 usd / M
+      extra_ratios:
+        - cached_tokens: 0.075 usd / M
 
     grok-2:
       aliases:
