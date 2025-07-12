@@ -3,12 +3,15 @@ models:
     # ernie-4.5
     ernie-4.5-turbo:
       aliases:
+        - ernie-4.5-turbo-128k-preview
         - ernie-4.5-turbo-32k
         - ernie-4.5-turbo-128k
       input: 0.0008 rmb / K
       output: 0.0032 rmb / K
     ernie-4.5-turbo-vl:
-      aliases: ernie-4.5-turbo-vl-32k
+      aliases:
+        - ernie-4.5-turbo-vl-32k
+        - ernie-4.5-turbo-vl-32k-preview
       input: 0.003 rmb / K
       output: 0.009 rmb / K
     ernie-4.5: # deprecation scheduled 06/26/2025
@@ -31,7 +34,9 @@ models:
 
     # 推理模型
     ernie-x1-turbo:
-      aliases: ernie-x1-turbo-32k
+      aliases:
+        - ernie-x1-turbo-32k
+        - ernie-x1-turbo-32k-preview
       input: 0.001 rmb / K
       output: 0.004 rmb / K
     ernie-x1: # deprecation scheduled 06/26/2025
