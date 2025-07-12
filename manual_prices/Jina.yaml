@@ -4,6 +4,7 @@ models:
     # readerlm is not conventional and not supported by onehub, so omitted
     jina-*:
       aliases:
+        - jina-embeddings-v4
         - jina-reranker-m0
         - jina-clip-v2
         - jina-embeddings-v3
