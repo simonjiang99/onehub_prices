@@ -225,6 +225,13 @@
       "output": 0.024999999999999998
     },
     {
+      "model": "Pro/moonshotai/Kimi-K2-Instruct",
+      "type": "tokens",
+      "channel_type": 45,
+      "input": 1.1428571428571428,
+      "output": 1.1428571428571428
+    },
+    {
       "model": "Qwen/QVQ-72B-Preview",
       "type": "tokens",
       "channel_type": 45,
@@ -589,6 +596,13 @@
       "output": 1.5
     },
     {
+      "model": "ascend-tribe/pangu-pro-moe",
+      "type": "tokens",
+      "channel_type": 45,
+      "input": 0.2857142857142857,
+      "output": 0.2857142857142857
+    },
+    {
       "model": "baidu/ERNIE-4.5-300B-A47B",
       "type": "tokens",
       "channel_type": 45,
@@ -727,6 +741,13 @@
       "channel_type": 45,
       "input": 0.5714285714285714,
       "output": 0.5714285714285714
+    },
+    {
+      "model": "moonshotai/Kimi-K2-Instruct",
+      "type": "tokens",
+      "channel_type": 45,
+      "input": 1.1428571428571428,
+      "output": 1.1428571428571428
     },
     {
       "model": "netease-youdao/bce-embedding-base_v1",

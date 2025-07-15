@@ -407,6 +407,13 @@
       "output": 0.55
     },
     {
+      "model": "cognitivecomputations/dolphin-mistral-24b-venice-edition:free",
+      "type": "tokens",
+      "channel_type": 1006,
+      "input": 0.0,
+      "output": 0.0
+    },
+    {
       "model": "cognitivecomputations/dolphin-mixtral-8x22b",
       "type": "tokens",
       "channel_type": 1006,
@@ -494,15 +501,15 @@
       "model": "deepseek/deepseek-chat",
       "type": "tokens",
       "channel_type": 1006,
-      "input": 0.19,
-      "output": 0.445
+      "input": 0.15,
+      "output": 0.425
     },
     {
       "model": "deepseek/deepseek-chat-v3-0324",
       "type": "tokens",
       "channel_type": 1006,
-      "input": 0.14,
-      "output": 0.44
+      "input": 0.125,
+      "output": 0.425
     },
     {
       "model": "deepseek/deepseek-chat-v3-0324:free",
@@ -529,15 +536,15 @@
       "model": "deepseek/deepseek-r1",
       "type": "tokens",
       "channel_type": 1006,
-      "input": 0.225,
-      "output": 1.075
+      "input": 0.2,
+      "output": 1.0
     },
     {
       "model": "deepseek/deepseek-r1-0528",
       "type": "tokens",
       "channel_type": 1006,
       "input": 0.25,
-      "output": 1.075
+      "output": 1.0
     },
     {
       "model": "deepseek/deepseek-r1-0528-qwen3-8b",
@@ -834,6 +841,13 @@
       "output": 0.0
     },
     {
+      "model": "google/gemma-3n-e2b-it:free",
+      "type": "tokens",
+      "channel_type": 1006,
+      "input": 0.0,
+      "output": 0.0
+    },
+    {
       "model": "google/gemma-3n-e4b-it",
       "type": "tokens",
       "channel_type": 1006,
@@ -851,8 +865,8 @@
       "model": "gryphe/mythomax-l2-13b",
       "type": "tokens",
       "channel_type": 1006,
-      "input": 0.032,
-      "output": 0.032
+      "input": 0.03,
+      "output": 0.03
     },
     {
       "model": "inception/mercury",
@@ -946,6 +960,13 @@
       "output": 0.4
     },
     {
+      "model": "meta-llama/llama-3.1-405b-instruct:free",
+      "type": "tokens",
+      "channel_type": 1006,
+      "input": 0.0,
+      "output": 0.0
+    },
+    {
       "model": "meta-llama/llama-3.1-70b-instruct",
       "type": "tokens",
       "channel_type": 1006,
@@ -988,6 +1009,13 @@
       "output": 0.003
     },
     {
+      "model": "meta-llama/llama-3.2-3b-instruct:free",
+      "type": "tokens",
+      "channel_type": 1006,
+      "input": 0.0,
+      "output": 0.0
+    },
+    {
       "model": "meta-llama/llama-3.2-90b-vision-instruct",
       "type": "tokens",
       "channel_type": 1006,
@@ -1016,25 +1044,11 @@
       "output": 0.3
     },
     {
-      "model": "meta-llama/llama-4-maverick:free",
-      "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.0,
-      "output": 0.0
-    },
-    {
       "model": "meta-llama/llama-4-scout",
       "type": "tokens",
       "channel_type": 1006,
       "input": 0.04,
       "output": 0.15
-    },
-    {
-      "model": "meta-llama/llama-4-scout:free",
-      "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.0,
-      "output": 0.0
     },
     {
       "model": "meta-llama/llama-guard-2-8b",
@@ -1135,14 +1149,28 @@
       "output": 0.45
     },
     {
+      "model": "mistralai/devstral-medium",
+      "type": "tokens",
+      "channel_type": 1006,
+      "input": 0.2,
+      "output": 1.0
+    },
+    {
       "model": "mistralai/devstral-small",
+      "type": "tokens",
+      "channel_type": 1006,
+      "input": 0.045,
+      "output": 0.15
+    },
+    {
+      "model": "mistralai/devstral-small-2505",
       "type": "tokens",
       "channel_type": 1006,
       "input": 0.03,
       "output": 0.06
     },
     {
-      "model": "mistralai/devstral-small:free",
+      "model": "mistralai/devstral-small-2505:free",
       "type": "tokens",
       "channel_type": 1006,
       "input": 0.0,
@@ -1251,7 +1279,7 @@
       "type": "tokens",
       "channel_type": 1006,
       "input": 0.004,
-      "output": 0.001
+      "output": 0.025
     },
     {
       "model": "mistralai/mistral-nemo:free",
@@ -1359,6 +1387,20 @@
       "output": 0.0
     },
     {
+      "model": "moonshotai/kimi-k2",
+      "type": "tokens",
+      "channel_type": 1006,
+      "input": 0.275,
+      "output": 1.1
+    },
+    {
+      "model": "moonshotai/kimi-k2:free",
+      "type": "tokens",
+      "channel_type": 1006,
+      "input": 0.0,
+      "output": 0.0
+    },
+    {
       "model": "moonshotai/kimi-vl-a3b-thinking:free",
       "type": "tokens",
       "channel_type": 1006,
@@ -1397,8 +1439,8 @@
       "model": "neversleep/llama-3.1-lumimaid-8b",
       "type": "tokens",
       "channel_type": 1006,
-      "input": 0.1,
-      "output": 0.625
+      "input": 0.09,
+      "output": 0.5
     },
     {
       "model": "neversleep/noromaid-20b",
@@ -1576,13 +1618,6 @@
       "output": 0.2
     },
     {
-      "model": "openai/gpt-4.5-preview",
-      "type": "tokens",
-      "channel_type": 1006,
-      "input": 37.5,
-      "output": 75.0
-    },
-    {
       "model": "openai/gpt-4o",
       "type": "tokens",
       "channel_type": 1006,
@@ -1735,13 +1770,6 @@
       "channel_type": 1006,
       "input": 0.1,
       "output": 0.2
-    },
-    {
-      "model": "openrouter/cypher-alpha:free",
-      "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.0,
-      "output": 0.0
     },
     {
       "model": "perplexity/r1-1776",
@@ -1961,6 +1989,13 @@
       "output": 0.0
     },
     {
+      "model": "qwen/qwen3-4b:free",
+      "type": "tokens",
+      "channel_type": 1006,
+      "input": 0.0,
+      "output": 0.0
+    },
+    {
       "model": "qwen/qwen3-8b",
       "type": "tokens",
       "channel_type": 1006,
@@ -2073,6 +2108,13 @@
       "output": 0.4
     },
     {
+      "model": "switchpoint/router",
+      "type": "tokens",
+      "channel_type": 1006,
+      "input": 0.425,
+      "output": 1.7
+    },
+    {
       "model": "tencent/hunyuan-a13b-instruct:free",
       "type": "tokens",
       "channel_type": 1006,
@@ -2104,8 +2146,8 @@
       "model": "thedrummer/skyfall-36b-v2",
       "type": "tokens",
       "channel_type": 1006,
-      "input": 0.25,
-      "output": 0.4
+      "input": 0.2,
+      "output": 0.35
     },
     {
       "model": "thedrummer/unslopnemo-12b",
@@ -2118,8 +2160,8 @@
       "model": "thedrummer/valkyrie-49b-v1",
       "type": "tokens",
       "channel_type": 1006,
-      "input": 0.325,
-      "output": 0.5
+      "input": 0.3,
+      "output": 0.4
     },
     {
       "model": "thudm/glm-4-32b",
@@ -2134,6 +2176,13 @@
       "channel_type": 1006,
       "input": 0.0,
       "output": 0.0
+    },
+    {
+      "model": "thudm/glm-4.1v-9b-thinking",
+      "type": "tokens",
+      "channel_type": 1006,
+      "input": 0.018,
+      "output": 0.069
     },
     {
       "model": "thudm/glm-z1-32b:free",
@@ -2160,8 +2209,8 @@
       "model": "undi95/remm-slerp-l2-13b",
       "type": "tokens",
       "channel_type": 1006,
-      "input": 0.4,
-      "output": 0.6
+      "input": 0.35,
+      "output": 0.5
     },
     {
       "model": "undi95/toppy-m-7b",
@@ -2211,6 +2260,13 @@
       "channel_type": 1006,
       "input": 0.15,
       "output": 0.25
+    },
+    {
+      "model": "x-ai/grok-4",
+      "type": "tokens",
+      "channel_type": 1006,
+      "input": 1.5,
+      "output": 7.5
     },
     {
       "model": "x-ai/grok-vision-beta",
