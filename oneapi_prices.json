@@ -5113,8 +5113,8 @@
       "model": "google/gemma-2-9b-it",
       "type": "tokens",
       "channel_type": 1006,
-      "input": 0.1,
-      "output": 0.1
+      "input": 0.002,
+      "output": 0.002
     },
     {
       "model": "google/gemma-2-9b-it:free",
@@ -5484,7 +5484,7 @@
       "model": "mistralai/devstral-small",
       "type": "tokens",
       "channel_type": 1006,
-      "input": 0.045,
+      "input": 0.04,
       "output": 0.15
     },
     {
@@ -5631,8 +5631,8 @@
       "model": "mistralai/mistral-small-24b-instruct-2501",
       "type": "tokens",
       "channel_type": 1006,
-      "input": 0.025,
-      "output": 0.04
+      "input": 0.015,
+      "output": 0.015
     },
     {
       "model": "mistralai/mistral-small-24b-instruct-2501:free",
@@ -5843,13 +5843,6 @@
       "channel_type": 1006,
       "input": 0.065,
       "output": 0.2
-    },
-    {
-      "model": "nvidia/llama-3.3-nemotron-super-49b-v1:free",
-      "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.0,
-      "output": 0.0
     },
     {
       "model": "openai/chatgpt-4o-latest",
@@ -6363,6 +6356,13 @@
       "output": 2.25
     },
     {
+      "model": "rekaai/reka-flash-3",
+      "type": "tokens",
+      "channel_type": 1006,
+      "input": 0.007,
+      "output": 0.007
+    },
+    {
       "model": "rekaai/reka-flash-3:free",
       "type": "tokens",
       "channel_type": 1006,
@@ -6438,6 +6438,13 @@
       "channel_type": 1006,
       "input": 0.425,
       "output": 1.7
+    },
+    {
+      "model": "tencent/hunyuan-a13b-instruct",
+      "type": "tokens",
+      "channel_type": 1006,
+      "input": 0.015,
+      "output": 0.015
     },
     {
       "model": "tencent/hunyuan-a13b-instruct:free",
