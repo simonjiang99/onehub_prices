@@ -5512,8 +5512,8 @@
       "model": "mistralai/magistral-small-2506",
       "type": "tokens",
       "channel_type": 1006,
-      "input": 0.05,
-      "output": 0.15
+      "input": 0.25,
+      "output": 0.75
     },
     {
       "model": "mistralai/ministral-3b",
