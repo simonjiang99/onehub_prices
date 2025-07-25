@@ -122,6 +122,9 @@ models:
       output: 24 rmb / M # 32k ~ 128K price
       extra_ratios:
         - cached_tokens: 0.1
+    qwen3-coder-480b-a35b-instruct:
+          input: 9 rmb / M # 32k ~ 128K price
+          output: 36 rmb / M # 32k ~ 128K price
 
     # 翻译模型 qwen3-mt series
     qwen-mt-plus:
