@@ -3,10 +3,13 @@ models:
     # 负载均衡器
     # generic aliases, used as primary calling id, remapped to specific model ids
     qwen3: # qwen3-235b-a22b
-      input: 0.004 rmb / K
+      input: 0.002 rmb / K
       output: 0.008 rmb / K
       extra_ratios:
         - reasoning_tokens: 0.02 rmb / K
+    qwen3-thinking:
+      input: 0.002 rmb / K
+      output: 0.02 rmb / K
     qwen3-mini: # qwen3-30b-a3b
       input: 0.00075 rmb / K
       output: 0.003 rmb / K
@@ -158,7 +161,7 @@ models:
       input: 0.002 rmb / K
       output: 0.008 rmb / K
     deepseek-r1-volcengine:
-      aliases: 
+      aliases:
         - deepseek-r1-250120
         - deepseek-r1-250528
       input: 0.004 rmb / K
