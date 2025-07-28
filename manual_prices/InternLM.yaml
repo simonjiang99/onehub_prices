@@ -1,5 +1,10 @@
 models:
   InternLM:
+    intern-latest:
+      aliases: intern-s1
+      input: 0
+      output: 0
+
     internvl3-latest:
       aliases: internvl3-78b
       input: 0
