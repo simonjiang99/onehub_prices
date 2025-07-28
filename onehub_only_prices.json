@@ -3844,6 +3844,20 @@
       "output": 2.8
     },
     {
+      "model": "zai-org/GLM-4.5",
+      "type": "tokens",
+      "channel_type": 45,
+      "input": 1.0,
+      "output": 1.0
+    },
+    {
+      "model": "zai-org/GLM-4.5-Air",
+      "type": "tokens",
+      "channel_type": 45,
+      "input": 0.42857142857142855,
+      "output": 0.42857142857142855
+    },
+    {
       "model": "jina-*",
       "type": "tokens",
       "channel_type": 47,

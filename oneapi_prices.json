@@ -3844,6 +3844,20 @@
       "output": 2.8
     },
     {
+      "model": "zai-org/GLM-4.5",
+      "type": "tokens",
+      "channel_type": 45,
+      "input": 1.0,
+      "output": 1.0
+    },
+    {
+      "model": "zai-org/GLM-4.5-Air",
+      "type": "tokens",
+      "channel_type": 45,
+      "input": 0.42857142857142855,
+      "output": 0.42857142857142855
+    },
+    {
       "model": "jina-*",
       "type": "tokens",
       "channel_type": 47,
@@ -4401,13 +4415,6 @@
       "channel_type": 1005,
       "input": 0.17857142857142858,
       "output": 0.5714285714285714
-    },
-    {
-      "model": "01-ai/yi-large",
-      "type": "tokens",
-      "channel_type": 1006,
-      "input": 1.5,
-      "output": 1.5
     },
     {
       "model": "agentica-org/deepcoder-14b-preview",
@@ -5652,8 +5659,8 @@
       "model": "moonshotai/kimi-k2",
       "type": "tokens",
       "channel_type": 1006,
-      "input": 0.07,
-      "output": 1.245
+      "input": 0.065,
+      "output": 0.065
     },
     {
       "model": "moonshotai/kimi-k2:free",
@@ -6627,6 +6634,20 @@
       "channel_type": 1006,
       "input": 0.05,
       "output": 0.05
+    },
+    {
+      "model": "z-ai/glm-4.5",
+      "type": "tokens",
+      "channel_type": 1006,
+      "input": 0.3,
+      "output": 1.1
+    },
+    {
+      "model": "z-ai/glm-4.5-air",
+      "type": "tokens",
+      "channel_type": 1006,
+      "input": 0.1,
+      "output": 0.55
     },
     {
       "model": "pl:*",
