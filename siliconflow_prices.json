@@ -435,6 +435,13 @@
       "output": 0.19999999999999998
     },
     {
+      "model": "Qwen/Qwen3-30B-A3B-Thinking-2507",
+      "type": "tokens",
+      "channel_type": 45,
+      "input": 0.19999999999999998,
+      "output": 0.19999999999999998
+    },
+    {
       "model": "Qwen/Qwen3-32B",
       "type": "tokens",
       "channel_type": 45,
@@ -447,6 +454,13 @@
       "channel_type": 45,
       "input": 0.0,
       "output": 0.0
+    },
+    {
+      "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+      "type": "tokens",
+      "channel_type": 45,
+      "input": 1.1428571428571428,
+      "output": 1.1428571428571428
     },
     {
       "model": "Qwen/Qwen3-Embedding-0.6B",
