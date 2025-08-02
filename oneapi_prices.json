@@ -6653,7 +6653,7 @@
       "model": "z-ai/glm-4.5-air",
       "type": "tokens",
       "channel_type": 1006,
-      "input": 0.095,
+      "input": 0.1,
       "output": 0.55
     },
     {
