@@ -28,6 +28,9 @@ models:
         - cached_tokens: 0.2
 
     # 推理大模型
+    step-3:
+      input: 4 rmb / M
+      output: 10 rmb / M
     step-r1-v-mini:
       input: 2.5 rmb / M
       output: 8 rmb / M
