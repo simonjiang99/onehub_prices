@@ -1,5 +1,7 @@
 models:
   InternLM:
+    # model list: https://internlm.intern-ai.org.cn/api/document?lang=zh
+    
     intern-latest:
       aliases: intern-s1
       input: 0
