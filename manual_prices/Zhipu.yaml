@@ -3,6 +3,30 @@ models:
 
   Zhipu:
     # llm
+    glm-4.5:
+      input: 4 rmb / M # 取32k-128k的价格，最为常用
+      output: 16 rmb / M
+      extra_ratios:
+        - cached_tokens: 0.8 rmb / M
+    glm-4.5-x:
+      input: 16 rmb / M # 取32k-128k的价格，最为常用
+      output: 64 rmb / M
+      extra_ratios:
+        - cached_tokens: 3.2 rmb / M
+    glm-4.5-air:
+      input: 1.2 rmb / M # 取32k-128k的价格，最为常用
+      output: 8 rmb / M
+      extra_ratios:
+        - cached_tokens: 0.24 rmb / M
+    glm-4.5-airx:
+      input: 8 rmb / M # 取32k-128k的价格，最为常用
+      output: 32 rmb / M
+      extra_ratios:
+        - cached_tokens: 1.6 rmb / M
+    glm-4.5-flash:
+      input: 0
+      output: 0
+
     glm-4-plus:
       input: 5 rmb / M
       output: 5 rmb / M
