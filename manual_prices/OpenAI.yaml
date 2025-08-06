@@ -1,14 +1,6 @@
 models:
   OpenAI:
     # 模型价格：https://platform.openai.com/docs/pricing
-
-    gpt-4.5-preview:
-      aliases:
-        - gpt-4.5-preview-2025-02-27
-      input: 75 usd / M
-      output: 150 usd / M
-      extra_ratios:
-        - cached_tokens: 37.5 usd / M
     gpt-4.1:
       aliases:
         - gpt-4.1-2025-04-14
@@ -30,6 +22,13 @@ models:
       output: 0.4 usd / M
       extra_ratios:
         - cached_tokens: 0.025 usd / M
+    gpt-4.5-preview:
+      aliases:
+        - gpt-4.5-preview-2025-02-27
+      input: 75 usd / M
+      output: 150 usd / M
+      extra_ratios:
+        - cached_tokens: 37.5 usd / M
     gpt-4o:
       aliases:
         - gpt-4o-2024-11-20
@@ -43,8 +42,7 @@ models:
       output: 15 usd / M
     gpt-4o-audio-preview:
       aliases:
-        - gpt-4o-audio-preview-2024-12-17
-        - gpt-4o-audio-preview-2024-10-01
+        - gpt-4o-audio-preview-*
       input: 2.5 usd / M
       output: 10 usd / M
       extra_ratios:
@@ -52,8 +50,7 @@ models:
         - output_audio_tokens: 80 usd / M
     gpt-4o-realtime-preview:
       aliases:
-        - gpt-4o-realtime-preview-2024-12-17
-        # - gpt-4o-realtime-preview-2024-10-01
+        - gpt-4o-realtime-preview-*
       input: 5 usd / M
       output: 20 usd / M
       extra_ratios:
@@ -97,9 +94,21 @@ models:
         - o1-pro-2025-03-19
       input: 150 usd / M
       output: 600 usd / M
+    o3-pro:
+      aliases:
+        - o3-pro-2025-06-10
+      input: 20 usd / M
+      output: 80 usd / M
     o3:
       aliases:
         - o3-2025-04-16
+      input: 2 usd / M
+      output: 8 usd / M
+      extra_ratios:
+        - cached_tokens: 0.5 usd / M
+    o3-deep-research:
+      aliases:
+        - o3-deep-research-2025-06-26
       input: 10 usd / M
       output: 40 usd / M
       extra_ratios:
@@ -111,6 +120,13 @@ models:
       output: 4.4 usd / M
       extra_ratios:
         - cached_tokens: 0.275 usd / M
+    o4-mini-deep-research:
+      aliases:
+        - o4-mini-deep-research-2025-06-26
+      input: 2 usd / M
+      output: 8 usd / M
+      extra_ratios:
+        - cached_tokens: 0.5 usd / M
     o3-mini:
       aliases:
         - o3-mini-2025-01-31
@@ -125,6 +141,11 @@ models:
       output: 4.4 usd / M
       extra_ratios:
         - cached_tokens: 0.55 usd / M
+    codex-mini-latest:
+      input: 1.5 usd / M
+      output: 6 usd / M
+      extra_ratios:
+        - cached_tokens: 0.375 usd / M
     gpt-4o-mini-search-preview:
       aliases:
         - gpt-4o-mini-search-preview-2025-03-11
