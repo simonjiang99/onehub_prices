@@ -1576,6 +1576,34 @@
       "output": 9.0
     },
     {
+      "model": "openai/gpt-5",
+      "type": "tokens",
+      "channel_type": 1006,
+      "input": 0.625,
+      "output": 5.0
+    },
+    {
+      "model": "openai/gpt-5-chat",
+      "type": "tokens",
+      "channel_type": 1006,
+      "input": 0.625,
+      "output": 5.0
+    },
+    {
+      "model": "openai/gpt-5-mini",
+      "type": "tokens",
+      "channel_type": 1006,
+      "input": 0.125,
+      "output": 1.0
+    },
+    {
+      "model": "openai/gpt-5-nano",
+      "type": "tokens",
+      "channel_type": 1006,
+      "input": 0.025,
+      "output": 0.2
+    },
+    {
       "model": "openai/gpt-oss-120b",
       "type": "tokens",
       "channel_type": 1006,
@@ -1672,13 +1700,6 @@
       "channel_type": 1006,
       "input": 0.1,
       "output": 0.2
-    },
-    {
-      "model": "openrouter/horizon-beta",
-      "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.0,
-      "output": 0.0
     },
     {
       "model": "perplexity/r1-1776",
@@ -1975,13 +1996,6 @@
       "output": 0.0
     },
     {
-      "model": "sao10k/fimbulvetr-11b-v2",
-      "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.4,
-      "output": 0.6
-    },
-    {
       "model": "sao10k/l3-euryale-70b",
       "type": "tokens",
       "channel_type": 1006,
@@ -2122,13 +2136,6 @@
       "output": 0.069
     },
     {
-      "model": "thudm/glm-z1-32b",
-      "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.015,
-      "output": 0.015
-    },
-    {
       "model": "thudm/glm-z1-32b:free",
       "type": "tokens",
       "channel_type": 1006,
@@ -2162,13 +2169,6 @@
       "channel_type": 1006,
       "input": 0.35,
       "output": 0.5
-    },
-    {
-      "model": "undi95/toppy-m-7b",
-      "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.4,
-      "output": 0.6
     },
     {
       "model": "x-ai/grok-2-1212",
