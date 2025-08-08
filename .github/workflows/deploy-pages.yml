@@ -5,6 +5,8 @@ on:
   push:
     branches: [prices, website]
   workflow_dispatch:
+  repository_dispatch:
+    types: [deploy-pages]
 
 # 设置 GITHUB_TOKEN 的权限 - 根据文档要求的最小权限
 permissions:
