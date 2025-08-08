@@ -1,84 +1,45 @@
-name: Trigger GitHub Pages Deployment
+name: Deploy to GitHub Pages
 
-# 触发条件：当 prices 分支有推送时
+# 触发条件：当 prices 或 website 分支有推送时或手动触发
 on:
   push:
-    branches: [prices]
-  # 允许手动触发工作流
+    branches: [prices, website]
   workflow_dispatch:
 
-# 设置 GITHUB_TOKEN 的权限
+# 设置 GITHUB_TOKEN 的权限 - 根据文档要求的最小权限
 permissions:
   contents: read
   pages: write
-  actions: write
   id-token: write
 
+# 允许一个并发部署，跳过正在运行和最新队列之间的运行
+# 但是，不要取消正在进行的运行，因为我们希望允许这些生产部署完成
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
-  deploy-pages:
-    runs-on: ubuntu-latest
+  # 单一部署作业，因为我们只是部署静态文件
+  deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout prices branch
+      - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: prices
+          ref: website
           
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
+          # 上传整个 website 分支的内容
           path: '.'
           
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-  # 备用方案：使用 API 触发部署
-  trigger-pages-deployment:
-    runs-on: ubuntu-latest
-    if: failure()
-    needs: deploy-pages
-    steps:
-      - name: Trigger GitHub Pages deployment via API
-        run: |
-          echo "Primary deployment failed, trying API trigger..."
-
-          # 使用 GitHub API 触发 Pages 重新部署
-          response=$(curl -s -w "%{http_code}" -L \
-            -X POST \
-            -H "Accept: application/vnd.github+json" \
-            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
-            -H "X-GitHub-Api-Version: 2022-11-28" \
-            https://api.github.com/repos/${{ github.repository }}/pages/builds)
-          
-          http_code="${response: -3}"
-          if [ "$http_code" -eq 201 ] || [ "$http_code" -eq 200 ]; then
-            echo "GitHub Pages deployment triggered successfully! (HTTP $http_code)"
-          else
-            echo "Failed to trigger deployment. HTTP code: $http_code"
-            echo "Response: ${response%???}"
-            exit 1
-          fi
-
-      - name: Wait and verify deployment
-        run: |
-          echo "Waiting 30 seconds for deployment to start..."
-          sleep 30
-
-          # 检查最新的 Pages 部署状态
-          response=$(curl -s -L \
-            -H "Accept: application/vnd.github+json" \
-            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
-            -H "X-GitHub-Api-Version: 2022-11-28" \
-            https://api.github.com/repos/${{ github.repository }}/pages/builds)
-          
-          if command -v jq >/dev/null 2>&1; then
-            echo "$response" | jq -r '.[0] | "Latest build status: \(.status), created at: \(.created_at)"'
-          else
-            echo "Latest builds response: $response"
-          fi
