@@ -40,6 +40,42 @@ models:
       aliases: argo:o3-mini
       input: 0
       output: 0
+
+    # anthropic claude
+    argo:claude-4-opus:
+      aliases:
+        - argo:claude-opus-4
+      input: 0
+      output: 0
+    argo:claude-4-sonnet:
+      aliases:
+        - argo:claude-sonnet-4
+      input: 0
+      output: 0
+    argo:claude-3.7-sonnet:
+      aliases:
+        - argo:claude-sonnet-3.7
+      input: 0
+      output: 0
+    argo:claude-3.5-sonnet-v2:
+      aliases:
+        - argo:claude-sonnet-3.5-v2
+      input: 0
+      output: 0
+    argo:claude-3.5-haiku:
+      aliases:
+        - argo:claude-haiku-3.5
+      input: 0
+      output: 0
+
+    # google gemini
+    argo:gemini-2.5-pro:
+      input: 0
+      output: 0
+    argo:gemini-2.5-flash:
+      input: 0
+      output: 0
+      
     # embedding models
     argo:text-embedding-ada-002:
       input: 0
