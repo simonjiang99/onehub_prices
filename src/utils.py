@@ -9,8 +9,9 @@ SCALE_FACTOR_CNY = 0.014
 SCALE_FACTOR_USD = 0.002
 
 
-def round_to_three(num: float) -> float:
-    return round(num * 1000) / 1000
+def round_to_five(num: float) -> float:
+    """Round number to 5 decimal places for better precision display."""
+    return round(num * 100000) / 100000
 
 
 def fetch_and_sort_models(
@@ -309,7 +310,7 @@ def process_extra_ratios(
             else:
                 # 不带单位的情况，直接使用
                 ratio = float(value)
-            result[key] = round_to_three(ratio)
+            result[key] = round_to_five(ratio)
     return result
 
 
@@ -321,8 +322,8 @@ def create_model_entry(
         "model": model_name,
         "type": model_type,
         "channel_type": channel_type,
-        "input": round_to_three(input_price),
-        "output": round_to_three(output_price),
+        "input": round_to_five(input_price),
+        "output": round_to_five(output_price),
     }
     if extra_ratios:
         entry["extra_ratios"] = process_extra_ratios(

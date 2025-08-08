@@ -4,7 +4,7 @@ from utils import (
     SCALE_FACTOR_USD,
     fetch_and_sort_models,
     integrate_prices,
-    round_to_three,
+    round_to_five,
     yaml_to_json,
 )
 
@@ -26,8 +26,8 @@ if __name__ == "__main__":
                 float(model["pricing"]["completion"]) * 1000 / SCALE_FACTOR_USD
             )
 
-            input_price = round_to_three(input_price)
-            output_price = round_to_three(output_price)
+            input_price = round_to_five(input_price)
+            output_price = round_to_five(output_price)
 
             if input_price >= 0 and output_price >= 0:
                 price_data = {
