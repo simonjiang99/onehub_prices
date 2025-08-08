@@ -20,7 +20,7 @@ models:
       input: 1.25 usd / M
       output: 10 usd / M
       extra_ratios:
-        - cached_tokens: 0.125 usd
+        - cached_tokens: 0.125 usd / M
     gpt-4.1:
       aliases:
         - gpt-4.1-2025-04-14
