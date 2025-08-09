@@ -5,6 +5,12 @@
 [![Last Commit](https://img.shields.io/github/last-commit/Oaklight/onehub_prices?style=flat-square)](https://github.com/Oaklight/onehub_prices/commits/master)
 [![License](https://img.shields.io/github/license/Oaklight/onehub_prices?style=flat-square)](LICENSE)
 
+## 🌟 新功能上线
+
+**GitHub Pages 现已支持价格展示与搜索功能！访问 [https://oaklight.github.io/onehub_prices/](https://oaklight.github.io/onehub_prices/) 体验直观的价格对比和搜索** 🔍
+
+## 📜 项目简介
+
 本项目管理多个 AI 供应商的价格信息，支持自动获取和手动维护多种来源的价格数据。包含以下价格表：
 
 1. **oneapi_prices.json**: 适用于 one-hub 的完整价格表，包含所有供应商
@@ -157,7 +163,7 @@ python src/sync_pricing.py [--json_file=./oneapi_prices.json] [--json_url=https:
 1. **增添 CDN 链接**:
    - 添加 jsdelivr 链接
    - 添加 jsdmirror 链接
-2. **自动刷新间隔调整为每6小时**：github action 的运行时间从原来的每天一次改为每6小时一次。
+2. **自动刷新间隔调整为每 6 小时**：github action 的运行时间从原来的每天一次改为每 6 小时一次。
 3. **新增供应商支持**：添加了 Coreshub, Pollinations.AI, OpenRouter, Moonshot 等新供应商的价格支持
 4. **脚本改进**：
    - 新增 `get_ownedby.py` 用于获取供应商归属信息
