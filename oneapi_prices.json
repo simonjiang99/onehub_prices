@@ -6016,8 +6016,8 @@
       "model": "openai/gpt-oss-120b",
       "type": "tokens",
       "channel_type": 1006,
-      "input": 0.045,
-      "output": 0.225
+      "input": 0.036,
+      "output": 0.145
     },
     {
       "model": "openai/gpt-oss-20b",
