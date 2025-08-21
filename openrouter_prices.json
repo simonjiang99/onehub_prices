@@ -1,2249 +1,2200 @@
 {
   "data": [
     {
-      "model": "microsoft/wizardlm-2-8x22b",
-      "type": "tokens",
-      "channel_type": 20,
-      "input": 0.25,
-      "output": 0.25
-    },
-    {
-      "model": "minimax/minimax-01",
-      "type": "tokens",
-      "channel_type": 20,
-      "input": 0.1,
-      "output": 0.55
-    },
-    {
-      "model": "mistralai/mistral-small-24b-instruct-2501",
-      "type": "tokens",
-      "channel_type": 20,
-      "input": 0.035,
-      "output": 0.07
-    },
-    {
-      "model": "nousresearch/hermes-3-llama-3.1-405b",
-      "type": "tokens",
-      "channel_type": 20,
-      "input": 0.4,
-      "output": 0.4
-    },
-    {
-      "model": "or:microsoft/wizardlm-2-8x22b",
-      "type": "tokens",
-      "channel_type": 20,
-      "input": 0.25,
-      "output": 0.25
-    },
-    {
-      "model": "or:minimax/minimax-01",
-      "type": "tokens",
-      "channel_type": 20,
-      "input": 0.1,
-      "output": 0.55
-    },
-    {
-      "model": "or:mistralai/mistral-small-24b-instruct-2501",
-      "type": "tokens",
-      "channel_type": 20,
-      "input": 0.035,
-      "output": 0.07
-    },
-    {
-      "model": "or:nousresearch/hermes-3-llama-3.1-405b",
-      "type": "tokens",
-      "channel_type": 20,
-      "input": 0.4,
-      "output": 0.4
-    },
-    {
       "model": "agentica-org/deepcoder-14b-preview",
       "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.007,
-      "output": 0.007
+      "channel_type": 20,
+      "input": 0.0075,
+      "output": 0.0075
     },
     {
       "model": "agentica-org/deepcoder-14b-preview:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "ai21/jamba-large-1.7",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.0,
       "output": 4.0
     },
     {
       "model": "ai21/jamba-mini-1.7",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.1,
       "output": 0.2
     },
     {
       "model": "aion-labs/aion-1.0",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 2.0,
       "output": 4.0
     },
     {
       "model": "aion-labs/aion-1.0-mini",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.35,
       "output": 0.7
     },
     {
       "model": "aion-labs/aion-rp-llama-3.1-8b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.1,
       "output": 0.1
     },
     {
       "model": "alfredpros/codellama-7b-instruct-solidity",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.35,
       "output": 0.55
     },
     {
       "model": "alpindale/goliath-120b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 2.0,
       "output": 2.75
     },
     {
       "model": "amazon/nova-lite-v1",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.03,
       "output": 0.12
     },
     {
       "model": "amazon/nova-micro-v1",
       "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.018,
+      "channel_type": 20,
+      "input": 0.0175,
       "output": 0.07
     },
     {
       "model": "amazon/nova-pro-v1",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.4,
       "output": 1.6
     },
     {
       "model": "anthracite-org/magnum-v2-72b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.5,
       "output": 1.5
     },
     {
       "model": "anthracite-org/magnum-v4-72b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.0,
       "output": 2.5
     },
     {
       "model": "anthropic/claude-3-haiku",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.125,
       "output": 0.625
     },
     {
       "model": "anthropic/claude-3-opus",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 7.5,
       "output": 37.5
     },
     {
       "model": "anthropic/claude-3.5-haiku",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.4,
       "output": 2.0
     },
     {
       "model": "anthropic/claude-3.5-haiku-20241022",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.4,
       "output": 2.0
     },
     {
       "model": "anthropic/claude-3.5-sonnet",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.5,
       "output": 7.5
     },
     {
       "model": "anthropic/claude-3.5-sonnet-20240620",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.5,
       "output": 7.5
     },
     {
       "model": "anthropic/claude-3.7-sonnet",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.5,
       "output": 7.5
     },
     {
       "model": "anthropic/claude-3.7-sonnet:thinking",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.5,
       "output": 7.5
     },
     {
       "model": "anthropic/claude-opus-4",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 7.5,
       "output": 37.5
     },
     {
       "model": "anthropic/claude-opus-4.1",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 7.5,
       "output": 37.5
     },
     {
       "model": "anthropic/claude-sonnet-4",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.5,
       "output": 7.5
     },
     {
       "model": "arcee-ai/coder-large",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.25,
       "output": 0.4
     },
     {
       "model": "arcee-ai/maestro-reasoning",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.45,
       "output": 1.65
     },
     {
       "model": "arcee-ai/spotlight",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.09,
       "output": 0.09
     },
     {
       "model": "arcee-ai/virtuoso-large",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.375,
       "output": 0.6
     },
     {
       "model": "arliai/qwq-32b-arliai-rpr-v1",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.005,
       "output": 0.02
     },
     {
       "model": "arliai/qwq-32b-arliai-rpr-v1:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "baidu/ernie-4.5-21b-a3b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.035,
       "output": 0.14
     },
     {
       "model": "baidu/ernie-4.5-300b-a47b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.14,
       "output": 0.55
     },
     {
       "model": "baidu/ernie-4.5-vl-28b-a3b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.07,
       "output": 0.28
     },
     {
       "model": "baidu/ernie-4.5-vl-424b-a47b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.21,
       "output": 0.625
     },
     {
       "model": "bytedance/ui-tars-1.5-7b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.05,
       "output": 0.1
     },
     {
       "model": "cognitivecomputations/dolphin-mistral-24b-venice-edition:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "cognitivecomputations/dolphin-mixtral-8x22b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.45,
       "output": 0.45
     },
     {
       "model": "cognitivecomputations/dolphin3.0-mistral-24b",
       "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.019,
-      "output": 0.074
+      "channel_type": 20,
+      "input": 0.01851,
+      "output": 0.07408
     },
     {
       "model": "cognitivecomputations/dolphin3.0-mistral-24b:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "cognitivecomputations/dolphin3.0-r1-mistral-24b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.005,
-      "output": 0.017
+      "output": 0.01704
     },
     {
       "model": "cognitivecomputations/dolphin3.0-r1-mistral-24b:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "cohere/command",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.5,
       "output": 1.0
     },
     {
       "model": "cohere/command-a",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.0,
       "output": 4.0
     },
     {
       "model": "cohere/command-r",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.25,
       "output": 0.75
     },
     {
       "model": "cohere/command-r-03-2024",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.25,
       "output": 0.75
     },
     {
       "model": "cohere/command-r-08-2024",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.075,
       "output": 0.3
     },
     {
       "model": "cohere/command-r-plus",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.5,
       "output": 7.5
     },
     {
       "model": "cohere/command-r-plus-04-2024",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.5,
       "output": 7.5
     },
     {
       "model": "cohere/command-r-plus-08-2024",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.25,
       "output": 5.0
     },
     {
       "model": "cohere/command-r7b-12-2024",
       "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.019,
+      "channel_type": 20,
+      "input": 0.01875,
       "output": 0.075
     },
     {
       "model": "deepseek/deepseek-chat",
       "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.09,
-      "output": 0.36
+      "channel_type": 20,
+      "input": 0.08996,
+      "output": 0.36003
     },
     {
       "model": "deepseek/deepseek-chat-v3-0324",
       "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.09,
-      "output": 0.36
+      "channel_type": 20,
+      "input": 0.08996,
+      "output": 0.36003
     },
     {
       "model": "deepseek/deepseek-chat-v3-0324:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "deepseek/deepseek-prover-v2",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.25,
       "output": 1.09
     },
     {
       "model": "deepseek/deepseek-r1",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.2,
       "output": 1.0
     },
     {
       "model": "deepseek/deepseek-r1-0528",
       "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.09,
-      "output": 0.36
+      "channel_type": 20,
+      "input": 0.08996,
+      "output": 0.36003
     },
     {
       "model": "deepseek/deepseek-r1-0528-qwen3-8b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.005,
       "output": 0.01
     },
     {
       "model": "deepseek/deepseek-r1-0528-qwen3-8b:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "deepseek/deepseek-r1-0528:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "deepseek/deepseek-r1-distill-llama-70b",
       "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.017,
-      "output": 0.067
+      "channel_type": 20,
+      "input": 0.01666,
+      "output": 0.06667
     },
     {
       "model": "deepseek/deepseek-r1-distill-llama-70b:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "deepseek/deepseek-r1-distill-llama-8b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.02,
       "output": 0.02
     },
     {
       "model": "deepseek/deepseek-r1-distill-qwen-1.5b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.09,
       "output": 0.09
     },
     {
       "model": "deepseek/deepseek-r1-distill-qwen-14b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.075,
       "output": 0.075
     },
     {
       "model": "deepseek/deepseek-r1-distill-qwen-14b:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "deepseek/deepseek-r1-distill-qwen-32b",
       "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.038,
+      "channel_type": 20,
+      "input": 0.0375,
       "output": 0.075
     },
     {
       "model": "deepseek/deepseek-r1:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "deepseek/deepseek-v3-base",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
+      "input": 0.09996,
+      "output": 0.40003
+    },
+    {
+      "model": "deepseek/deepseek-v3.1-base",
+      "type": "tokens",
+      "channel_type": 20,
       "input": 0.1,
       "output": 0.4
     },
     {
       "model": "eleutherai/llemma_7b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.4,
       "output": 0.6
     },
     {
       "model": "featherless/qwerky-72b:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "google/gemini-2.0-flash-001",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.05,
       "output": 0.2
     },
     {
       "model": "google/gemini-2.0-flash-exp:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "google/gemini-2.0-flash-lite-001",
       "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.038,
+      "channel_type": 20,
+      "input": 0.0375,
       "output": 0.15
     },
     {
       "model": "google/gemini-2.5-flash",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.15,
       "output": 1.25
     },
     {
       "model": "google/gemini-2.5-flash-lite",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.05,
       "output": 0.2
     },
     {
       "model": "google/gemini-2.5-flash-lite-preview-06-17",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.05,
       "output": 0.2
     },
     {
       "model": "google/gemini-2.5-pro",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.625,
       "output": 5.0
     },
     {
       "model": "google/gemini-2.5-pro-exp-03-25",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "google/gemini-2.5-pro-preview",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.625,
       "output": 5.0
     },
     {
       "model": "google/gemini-2.5-pro-preview-05-06",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.625,
       "output": 5.0
     },
     {
       "model": "google/gemini-flash-1.5",
       "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.038,
+      "channel_type": 20,
+      "input": 0.0375,
       "output": 0.15
     },
     {
       "model": "google/gemini-flash-1.5-8b",
       "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.019,
+      "channel_type": 20,
+      "input": 0.01875,
       "output": 0.075
     },
     {
       "model": "google/gemini-pro-1.5",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.625,
       "output": 2.5
     },
     {
       "model": "google/gemma-2-27b-it",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.325,
       "output": 0.325
     },
     {
       "model": "google/gemma-2-9b-it",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.005,
       "output": 0.005
     },
     {
       "model": "google/gemma-2-9b-it:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "google/gemma-3-12b-it",
       "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.024,
-      "output": 0.096
+      "channel_type": 20,
+      "input": 0.02406,
+      "output": 0.0963
     },
     {
       "model": "google/gemma-3-12b-it:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "google/gemma-3-27b-it",
       "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.033,
-      "output": 0.133
+      "channel_type": 20,
+      "input": 0.03332,
+      "output": 0.13334
     },
     {
       "model": "google/gemma-3-27b-it:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "google/gemma-3-4b-it",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.01,
       "output": 0.02
     },
     {
       "model": "google/gemma-3-4b-it:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "google/gemma-3n-e2b-it:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "google/gemma-3n-e4b-it",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.01,
       "output": 0.02
     },
     {
       "model": "google/gemma-3n-e4b-it:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "gryphe/mythomax-l2-13b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.03,
       "output": 0.03
     },
     {
       "model": "inception/mercury",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.125,
       "output": 0.5
     },
     {
       "model": "inception/mercury-coder",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.125,
       "output": 0.5
     },
     {
       "model": "infermatic/mn-inferor-12b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.3,
       "output": 0.5
     },
     {
       "model": "inflection/inflection-3-pi",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.25,
       "output": 5.0
     },
     {
       "model": "inflection/inflection-3-productivity",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.25,
       "output": 5.0
     },
     {
       "model": "liquid/lfm-3b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.01,
       "output": 0.01
     },
     {
       "model": "liquid/lfm-7b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.005,
       "output": 0.005
     },
     {
       "model": "mancer/weaver",
       "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.562,
-      "output": 0.562
+      "channel_type": 20,
+      "input": 0.5625,
+      "output": 0.5625
     },
     {
       "model": "meta-llama/llama-3-70b-instruct",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.15,
       "output": 0.2
     },
     {
       "model": "meta-llama/llama-3-8b-instruct",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.015,
       "output": 0.03
     },
     {
       "model": "meta-llama/llama-3.1-405b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.0,
       "output": 1.0
     },
     {
       "model": "meta-llama/llama-3.1-405b-instruct",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.4,
       "output": 0.4
     },
     {
       "model": "meta-llama/llama-3.1-405b-instruct:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "meta-llama/llama-3.1-70b-instruct",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.05,
       "output": 0.14
     },
     {
       "model": "meta-llama/llama-3.1-8b-instruct",
       "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.007,
+      "channel_type": 20,
+      "input": 0.0075,
       "output": 0.01
     },
     {
       "model": "meta-llama/llama-3.2-11b-vision-instruct",
       "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.024,
-      "output": 0.024
+      "channel_type": 20,
+      "input": 0.0245,
+      "output": 0.0245
     },
     {
       "model": "meta-llama/llama-3.2-11b-vision-instruct:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "meta-llama/llama-3.2-1b-instruct",
       "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.002,
+      "channel_type": 20,
+      "input": 0.0025,
       "output": 0.005
     },
     {
       "model": "meta-llama/llama-3.2-3b-instruct",
       "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.002,
+      "channel_type": 20,
+      "input": 0.0015,
       "output": 0.003
     },
     {
       "model": "meta-llama/llama-3.2-3b-instruct:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "meta-llama/llama-3.2-90b-vision-instruct",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.6,
       "output": 0.6
     },
     {
       "model": "meta-llama/llama-3.3-70b-instruct",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.019,
       "output": 0.06
     },
     {
       "model": "meta-llama/llama-3.3-70b-instruct:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "meta-llama/llama-4-maverick",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.075,
       "output": 0.3
     },
     {
       "model": "meta-llama/llama-4-scout",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.04,
       "output": 0.15
     },
     {
       "model": "meta-llama/llama-guard-2-8b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.1,
       "output": 0.1
     },
     {
       "model": "meta-llama/llama-guard-3-8b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.01,
       "output": 0.03
     },
     {
       "model": "meta-llama/llama-guard-4-12b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.09,
       "output": 0.09
     },
     {
       "model": "microsoft/mai-ds-r1",
       "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.1,
-      "output": 0.4
+      "channel_type": 20,
+      "input": 0.09996,
+      "output": 0.40003
     },
     {
       "model": "microsoft/mai-ds-r1:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "microsoft/phi-3-medium-128k-instruct",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.5,
       "output": 0.5
     },
     {
       "model": "microsoft/phi-3-mini-128k-instruct",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.05,
       "output": 0.05
     },
     {
       "model": "microsoft/phi-3.5-mini-128k-instruct",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.05,
       "output": 0.05
     },
     {
       "model": "microsoft/phi-4",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.03,
       "output": 0.07
     },
     {
       "model": "microsoft/phi-4-multimodal-instruct",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.025,
       "output": 0.05
     },
     {
       "model": "microsoft/phi-4-reasoning-plus",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.035,
       "output": 0.175
     },
     {
       "model": "microsoft/wizardlm-2-8x22b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.24,
       "output": 0.24
     },
     {
       "model": "minimax/minimax-01",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.1,
       "output": 0.55
     },
     {
       "model": "minimax/minimax-m1",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.15,
       "output": 0.825
     },
     {
       "model": "mistralai/codestral-2501",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.15,
       "output": 0.45
     },
     {
       "model": "mistralai/codestral-2508",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.15,
       "output": 0.45
     },
     {
       "model": "mistralai/devstral-medium",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.2,
       "output": 1.0
     },
     {
       "model": "mistralai/devstral-small",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.035,
       "output": 0.14
     },
     {
       "model": "mistralai/devstral-small-2505",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.01,
       "output": 0.04
     },
     {
       "model": "mistralai/devstral-small-2505:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "mistralai/magistral-medium-2506",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.0,
       "output": 2.5
     },
     {
       "model": "mistralai/magistral-medium-2506:thinking",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.0,
       "output": 2.5
     },
     {
       "model": "mistralai/magistral-small-2506",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.25,
       "output": 0.75
     },
     {
       "model": "mistralai/ministral-3b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.02,
       "output": 0.02
     },
     {
       "model": "mistralai/ministral-8b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.05,
       "output": 0.05
     },
     {
       "model": "mistralai/mistral-7b-instruct",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.014,
       "output": 0.027
     },
     {
       "model": "mistralai/mistral-7b-instruct-v0.1",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.055,
       "output": 0.095
     },
     {
       "model": "mistralai/mistral-7b-instruct-v0.3",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.014,
       "output": 0.027
     },
     {
       "model": "mistralai/mistral-7b-instruct:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "mistralai/mistral-large",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.0,
       "output": 3.0
     },
     {
       "model": "mistralai/mistral-large-2407",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.0,
       "output": 3.0
     },
     {
       "model": "mistralai/mistral-large-2411",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.0,
       "output": 3.0
     },
     {
       "model": "mistralai/mistral-medium-3",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.2,
       "output": 1.0
     },
     {
       "model": "mistralai/mistral-medium-3.1",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.2,
       "output": 1.0
     },
     {
       "model": "mistralai/mistral-nemo",
       "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.004,
+      "channel_type": 20,
+      "input": 0.00375,
       "output": 0.025
     },
     {
       "model": "mistralai/mistral-nemo:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "mistralai/mistral-saba",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.1,
       "output": 0.3
     },
     {
       "model": "mistralai/mistral-small",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.1,
       "output": 0.3
     },
     {
       "model": "mistralai/mistral-small-24b-instruct-2501",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.01,
       "output": 0.04
     },
     {
       "model": "mistralai/mistral-small-24b-instruct-2501:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "mistralai/mistral-small-3.1-24b-instruct",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.009,
       "output": 0.036
     },
     {
       "model": "mistralai/mistral-small-3.1-24b-instruct:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "mistralai/mistral-small-3.2-24b-instruct",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.025,
       "output": 0.05
     },
     {
       "model": "mistralai/mistral-small-3.2-24b-instruct:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "mistralai/mistral-tiny",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.125,
       "output": 0.125
     },
     {
       "model": "mistralai/mixtral-8x22b-instruct",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.45,
       "output": 0.45
     },
     {
       "model": "mistralai/mixtral-8x7b-instruct",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.04,
       "output": 0.12
     },
     {
       "model": "mistralai/pixtral-12b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.05,
       "output": 0.05
     },
     {
       "model": "mistralai/pixtral-large-2411",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.0,
       "output": 3.0
     },
     {
       "model": "moonshotai/kimi-dev-72b:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "moonshotai/kimi-k2",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.07,
       "output": 1.245
     },
     {
       "model": "moonshotai/kimi-k2:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "moonshotai/kimi-vl-a3b-thinking",
       "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.012,
+      "channel_type": 20,
+      "input": 0.01249,
       "output": 0.05
     },
     {
       "model": "moonshotai/kimi-vl-a3b-thinking:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "morph/morph-v3-fast",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.45,
       "output": 0.95
     },
     {
       "model": "morph/morph-v3-large",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.45,
       "output": 0.95
     },
     {
       "model": "neversleep/llama-3-lumimaid-70b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 2.0,
       "output": 3.0
     },
     {
       "model": "neversleep/llama-3.1-lumimaid-8b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.045,
       "output": 0.3
     },
     {
       "model": "neversleep/noromaid-20b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.5,
       "output": 0.875
     },
     {
       "model": "nousresearch/deephermes-3-llama-3-8b-preview:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "nousresearch/deephermes-3-mistral-24b-preview",
       "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.047,
-      "output": 0.187
+      "channel_type": 20,
+      "input": 0.04665,
+      "output": 0.18668
     },
     {
       "model": "nousresearch/hermes-2-pro-llama-3-8b",
       "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.012,
+      "channel_type": 20,
+      "input": 0.0125,
       "output": 0.02
     },
     {
       "model": "nousresearch/hermes-3-llama-3.1-405b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.35,
       "output": 0.4
     },
     {
       "model": "nousresearch/hermes-3-llama-3.1-70b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.05,
       "output": 0.14
     },
     {
       "model": "nousresearch/nous-hermes-2-mixtral-8x7b-dpo",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.3,
       "output": 0.3
     },
     {
       "model": "nvidia/llama-3.1-nemotron-70b-instruct",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.06,
       "output": 0.15
     },
     {
       "model": "nvidia/llama-3.1-nemotron-ultra-253b-v1",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.3,
       "output": 0.9
     },
     {
       "model": "nvidia/llama-3.1-nemotron-ultra-253b-v1:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "nvidia/llama-3.3-nemotron-super-49b-v1",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.065,
       "output": 0.2
     },
     {
       "model": "openai/chatgpt-4o-latest",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 2.5,
       "output": 7.5
     },
     {
       "model": "openai/codex-mini",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.75,
       "output": 3.0
     },
     {
       "model": "openai/gpt-3.5-turbo",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.25,
       "output": 0.75
     },
     {
       "model": "openai/gpt-3.5-turbo-0613",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.5,
       "output": 1.0
     },
     {
       "model": "openai/gpt-3.5-turbo-16k",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.5,
       "output": 2.0
     },
     {
       "model": "openai/gpt-3.5-turbo-instruct",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.75,
       "output": 1.0
     },
     {
       "model": "openai/gpt-4",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 15.0,
       "output": 30.0
     },
     {
       "model": "openai/gpt-4-0314",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 15.0,
       "output": 30.0
     },
     {
       "model": "openai/gpt-4-1106-preview",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 5.0,
       "output": 15.0
     },
     {
       "model": "openai/gpt-4-turbo",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 5.0,
       "output": 15.0
     },
     {
       "model": "openai/gpt-4-turbo-preview",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 5.0,
       "output": 15.0
     },
     {
       "model": "openai/gpt-4.1",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.0,
       "output": 4.0
     },
     {
       "model": "openai/gpt-4.1-mini",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.2,
       "output": 0.8
     },
     {
       "model": "openai/gpt-4.1-nano",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.05,
       "output": 0.2
     },
     {
       "model": "openai/gpt-4o",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.25,
       "output": 5.0
     },
     {
       "model": "openai/gpt-4o-2024-05-13",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 2.5,
       "output": 7.5
     },
     {
       "model": "openai/gpt-4o-2024-08-06",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.25,
       "output": 5.0
     },
     {
       "model": "openai/gpt-4o-2024-11-20",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.25,
       "output": 5.0
     },
     {
       "model": "openai/gpt-4o-audio-preview",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.25,
       "output": 5.0
     },
     {
       "model": "openai/gpt-4o-mini",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.075,
       "output": 0.3
     },
     {
       "model": "openai/gpt-4o-mini-2024-07-18",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.075,
       "output": 0.3
     },
     {
       "model": "openai/gpt-4o-mini-search-preview",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.075,
       "output": 0.3
     },
     {
       "model": "openai/gpt-4o-search-preview",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.25,
       "output": 5.0
     },
     {
       "model": "openai/gpt-4o:extended",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 3.0,
       "output": 9.0
     },
     {
       "model": "openai/gpt-5",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.625,
       "output": 5.0
     },
     {
       "model": "openai/gpt-5-chat",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.625,
       "output": 5.0
     },
     {
       "model": "openai/gpt-5-mini",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.125,
       "output": 1.0
     },
     {
       "model": "openai/gpt-5-nano",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.025,
       "output": 0.2
     },
     {
       "model": "openai/gpt-oss-120b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.036,
       "output": 0.14
     },
     {
       "model": "openai/gpt-oss-20b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.02,
       "output": 0.075
     },
     {
       "model": "openai/gpt-oss-20b:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "openai/o1",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 7.5,
       "output": 30.0
     },
     {
       "model": "openai/o1-mini",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.55,
       "output": 2.2
     },
     {
       "model": "openai/o1-mini-2024-09-12",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.55,
       "output": 2.2
     },
     {
       "model": "openai/o1-pro",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 75.0,
       "output": 300.0
     },
     {
       "model": "openai/o3",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.0,
       "output": 4.0
     },
     {
       "model": "openai/o3-mini",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.55,
       "output": 2.2
     },
     {
       "model": "openai/o3-mini-high",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.55,
       "output": 2.2
     },
     {
       "model": "openai/o3-pro",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 10.0,
       "output": 40.0
     },
     {
       "model": "openai/o4-mini",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.55,
       "output": 2.2
     },
     {
       "model": "openai/o4-mini-high",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.55,
       "output": 2.2
     },
     {
       "model": "opengvlab/internvl3-14b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.1,
       "output": 0.2
     },
     {
       "model": "perplexity/r1-1776",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.0,
       "output": 4.0
     },
     {
       "model": "perplexity/sonar",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.5,
       "output": 0.5
     },
     {
       "model": "perplexity/sonar-deep-research",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.0,
       "output": 4.0
     },
     {
       "model": "perplexity/sonar-pro",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.5,
       "output": 7.5
     },
     {
       "model": "perplexity/sonar-reasoning",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.5,
       "output": 2.5
     },
     {
       "model": "perplexity/sonar-reasoning-pro",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.0,
       "output": 4.0
     },
     {
       "model": "pygmalionai/mythalion-13b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.35,
       "output": 0.55
     },
     {
       "model": "qwen/qwen-2-72b-instruct",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.45,
       "output": 0.45
     },
     {
       "model": "qwen/qwen-2.5-72b-instruct",
       "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.033,
-      "output": 0.133
+      "channel_type": 20,
+      "input": 0.03332,
+      "output": 0.13334
     },
     {
       "model": "qwen/qwen-2.5-72b-instruct:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "qwen/qwen-2.5-7b-instruct",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.02,
       "output": 0.05
     },
     {
       "model": "qwen/qwen-2.5-coder-32b-instruct",
       "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.025,
-      "output": 0.1
+      "channel_type": 20,
+      "input": 0.02499,
+      "output": 0.10001
     },
     {
       "model": "qwen/qwen-2.5-coder-32b-instruct:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "qwen/qwen-2.5-vl-7b-instruct",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.1,
       "output": 0.1
     },
     {
       "model": "qwen/qwen-max",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.8,
       "output": 3.2
     },
     {
       "model": "qwen/qwen-plus",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.2,
       "output": 0.6
     },
     {
       "model": "qwen/qwen-turbo",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.025,
       "output": 0.1
     },
     {
       "model": "qwen/qwen-vl-max",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.4,
       "output": 1.6
     },
     {
       "model": "qwen/qwen-vl-plus",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.105,
       "output": 0.315
     },
     {
       "model": "qwen/qwen2.5-vl-32b-instruct",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.01,
       "output": 0.04
     },
     {
       "model": "qwen/qwen2.5-vl-32b-instruct:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "qwen/qwen2.5-vl-72b-instruct",
       "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.05,
-      "output": 0.2
+      "channel_type": 20,
+      "input": 0.04998,
+      "output": 0.20002
     },
     {
       "model": "qwen/qwen2.5-vl-72b-instruct:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "qwen/qwen3-14b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.03,
       "output": 0.12
     },
     {
       "model": "qwen/qwen3-14b:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "qwen/qwen3-235b-a22b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.065,
       "output": 0.3
     },
     {
       "model": "qwen/qwen3-235b-a22b-2507",
       "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.039,
-      "output": 0.156
+      "channel_type": 20,
+      "input": 0.03898,
+      "output": 0.15601
     },
     {
       "model": "qwen/qwen3-235b-a22b-thinking-2507",
       "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.039,
-      "output": 0.156
+      "channel_type": 20,
+      "input": 0.03898,
+      "output": 0.15601
     },
     {
       "model": "qwen/qwen3-235b-a22b:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "qwen/qwen3-30b-a3b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.01,
       "output": 0.04
     },
     {
       "model": "qwen/qwen3-30b-a3b-instruct-2507",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.1,
       "output": 0.4
     },
     {
       "model": "qwen/qwen3-30b-a3b:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "qwen/qwen3-32b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.009,
       "output": 0.036
     },
     {
       "model": "qwen/qwen3-4b:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "qwen/qwen3-8b",
       "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.018,
+      "channel_type": 20,
+      "input": 0.0175,
       "output": 0.069
     },
     {
       "model": "qwen/qwen3-8b:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "qwen/qwen3-coder",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.1,
       "output": 0.4
     },
     {
       "model": "qwen/qwen3-coder:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "qwen/qwq-32b",
       "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.038,
+      "channel_type": 20,
+      "input": 0.0375,
       "output": 0.075
     },
     {
       "model": "qwen/qwq-32b-preview",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.1,
       "output": 0.1
     },
     {
       "model": "qwen/qwq-32b:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "raifle/sorcererlm-8x22b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 2.25,
       "output": 2.25
     },
     {
       "model": "rekaai/reka-flash-3:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "sao10k/l3-euryale-70b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.74,
       "output": 0.74
     },
     {
       "model": "sao10k/l3-lunaris-8b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.01,
       "output": 0.025
     },
     {
       "model": "sao10k/l3.1-euryale-70b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.325,
       "output": 0.375
     },
     {
       "model": "sao10k/l3.3-euryale-70b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.325,
       "output": 0.375
     },
     {
       "model": "sarvamai/sarvam-m:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "scb10x/llama3.1-typhoon2-70b-instruct",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.44,
       "output": 0.44
     },
     {
       "model": "shisa-ai/shisa-v2-llama3.3-70b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.01,
       "output": 0.04
     },
     {
       "model": "shisa-ai/shisa-v2-llama3.3-70b:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "sophosympatheia/midnight-rose-70b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.4,
       "output": 0.4
     },
     {
       "model": "switchpoint/router",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.425,
       "output": 1.7
     },
     {
       "model": "tencent/hunyuan-a13b-instruct",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.015,
       "output": 0.015
     },
     {
       "model": "tencent/hunyuan-a13b-instruct:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "thedrummer/anubis-70b-v1.1",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.2,
       "output": 0.35
     },
     {
       "model": "thedrummer/anubis-pro-105b-v1",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.25,
       "output": 0.5
     },
     {
       "model": "thedrummer/rocinante-12b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.085,
       "output": 0.215
     },
     {
       "model": "thedrummer/skyfall-36b-v2",
       "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.024,
-      "output": 0.096
+      "channel_type": 20,
+      "input": 0.02406,
+      "output": 0.0963
     },
     {
       "model": "thedrummer/unslopnemo-12b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.2,
       "output": 0.2
     },
     {
       "model": "thudm/glm-4-32b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.12,
       "output": 0.12
     },
     {
       "model": "thudm/glm-4.1v-9b-thinking",
       "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.018,
+      "channel_type": 20,
+      "input": 0.0175,
       "output": 0.069
     },
     {
       "model": "thudm/glm-z1-32b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.01,
       "output": 0.04
     },
     {
       "model": "tngtech/deepseek-r1t-chimera",
       "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.09,
-      "output": 0.36
+      "channel_type": 20,
+      "input": 0.08996,
+      "output": 0.36003
     },
     {
       "model": "tngtech/deepseek-r1t-chimera:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "tngtech/deepseek-r1t2-chimera:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "undi95/remm-slerp-l2-13b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.225,
       "output": 0.325
     },
     {
       "model": "x-ai/grok-2-1212",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.0,
       "output": 5.0
     },
     {
       "model": "x-ai/grok-2-vision-1212",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.0,
       "output": 5.0
     },
     {
       "model": "x-ai/grok-3",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.5,
       "output": 7.5
     },
     {
       "model": "x-ai/grok-3-beta",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.5,
       "output": 7.5
     },
     {
       "model": "x-ai/grok-3-mini",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.15,
       "output": 0.25
     },
     {
       "model": "x-ai/grok-3-mini-beta",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.15,
       "output": 0.25
     },
     {
       "model": "x-ai/grok-4",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 1.5,
       "output": 7.5
     },
     {
       "model": "x-ai/grok-vision-beta",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 2.5,
       "output": 7.5
     },
     {
       "model": "z-ai/glm-4-32b",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.05,
       "output": 0.05
     },
     {
       "model": "z-ai/glm-4.5",
       "type": "tokens",
-      "channel_type": 1006,
-      "input": 0.1,
-      "output": 0.4
+      "channel_type": 20,
+      "input": 0.09996,
+      "output": 0.40003
     },
     {
       "model": "z-ai/glm-4.5-air",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.1,
       "output": 0.55
     },
     {
       "model": "z-ai/glm-4.5-air:free",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.0,
       "output": 0.0
     },
     {
       "model": "z-ai/glm-4.5v",
       "type": "tokens",
-      "channel_type": 1006,
+      "channel_type": 20,
       "input": 0.25,
       "output": 0.85
     }
